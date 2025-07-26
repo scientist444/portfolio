@@ -1,0 +1,39 @@
+Git Repository Setup Commands
+============================
+
+After creating your GitHub repository, run these commands:
+
+1. Connect to your GitHub repository:
+   git remote add origin https://github.com/scientist444/portfolio.git
+
+2. Push your code:
+   git push -u origin main
+
+3. Enable GitHub Pages:
+   - Go to your repository on GitHub
+   - Click "Settings" tab
+   - Scroll down to "Pages" section
+   - Under "Source", select "Deploy from a branch"
+   - Choose "main" branch and "/ (root)" folder
+   - Click "Save"
+
+Your website will be live at: https://scientist444.github.io/portfolio
+
+Alternative Repository URLs (if username differs):
+- https://github.com/YOUR_USERNAME/portfolio.git
+
+Commands to run in your terminal:
+=================================
+cd "C:\Users\Umers\OneDrive\Desktop\Portfolio"
+git remote add origin https://github.com/scientist444/portfolio.git
+git push -u origin main
+
+GitHub Pages Setup:
+==================
+1. Repository Settings → Pages
+2. Source: "Deploy from a branch"
+3. Branch: "main", Folder: "/ (root)"
+4. Save
+
+Your site will be live in a few minutes at:
+https://scientist444.github.io/portfolio
