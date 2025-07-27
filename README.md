@@ -1,6 +1,6 @@
 # Muhammad Umer Sajid - Portfolio Website
 
-A modern, responsive portfolio website showcasing my work as an Embedded RF Engineer and final year Electrical Engineering student at NUST.
+A modern, responsive portfolio website showcasing my work as an Embedded & High Speed Digital Design Engineer and final year Electrical Engineering student at NUST.
 
 ## 🚀 Live Demo
 
@@ -154,4 +154,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Muhammad Umer Sajid** - Embedded RF Engineer | NUST Electrical Engineering Student
+**Muhammad Umer Sajid** - Embedded & High Speed Digital Design Engineer | NUST Electrical Engineering Student
