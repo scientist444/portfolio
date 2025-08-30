@@ -533,6 +533,228 @@
     </section>
 
     <!-- Skills Section -->
+                        <div class="project-content">
+                            <p class="project-description">
+                                Advanced medical device for real-time epilepsy detection and monitoring. 
+                                Utilizes biosensor integration and machine learning algorithms for 
+                                accurate seizure prediction and early warning systems.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Biosensors</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Real-time Processing</span>
+                                <span class="tech-tag">Medical Device</span>
+                                <span class="tech-tag">Early Warning System</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ergonomic Mouse -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/ergonomic-mouse-pcb.png" alt="Ergonomic Mouse Internal PCB Design" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">Ergonomic Mouse PCB</h4>
+                            <span class="project-category">PCB Design • BLE • Embedded</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Internal circuit PCB designed for ergonomic mouse with BLE connectivity. 
+                                Features integrated joysticks for control and optimized component layout 
+                                for ergonomic constraints within limited space.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">BLE Connectivity</span>
+                                <span class="tech-tag">Joystick Controls</span>
+                                <span class="tech-tag">Ergonomic Layout</span>
+                                <span class="tech-tag">Custom PCB</span>
+                                <span class="tech-tag">Component Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PCB Designs -->
+            <div class="project-section">
+                <h3 class="subsection-title">PCB Designs</h3>
+                <div class="projects-grid">
+
+                    <!-- Audio Amplifier -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/motor-controller-hardware.png" alt="5W Audio Amplifier PCB Design" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">5W Audio Amplifier</h4>
+                            <span class="project-category">Analog Design • Audio</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Two-stage audio amplifier design (preamp and power stage) for 5W 6Ω speaker. 
+                                Extensive datasheet analysis and component tuning for optimal audio performance. 
+                                Complete analog design with careful component selection.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Two-Stage Design</span>
+                                <span class="tech-tag">Preamp & Power Stage</span>
+                                <span class="tech-tag">5W 6Ω Speaker</span>
+                                <span class="tech-tag">Component Tuning</span>
+                                <span class="tech-tag">Analog Circuit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- T Power Divider -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/t-power-divider-simulation.png" alt="T Power Divider HFSS Simulation" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">T Power Divider</h4>
+                            <span class="project-category">RF Design • HFSS Simulation</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                RF power divider design with ANSYS HFSS simulation followed by hand-etched PCB implementation. 
+                                Complete RF design process from electromagnetic simulation to physical realization.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">ANSYS HFSS</span>
+                                <span class="tech-tag">RF Simulation</span>
+                                <span class="tech-tag">Hand Etched PCB</span>
+                                <span class="tech-tag">Power Divider</span>
+                                <span class="tech-tag">EM Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PCB Portfolio Link -->
+                <div class="pcb-portfolio-link">
+                    <div class="portfolio-link-card">
+                        <div class="link-content">
+                            <i class="fab fa-github"></i>
+                            <h4>Complete PCB Design Portfolio</h4>
+                            <p>View my comprehensive collection of PCB designs, schematics, and manufacturing files</p>
+                            <a href="https://github.com/scientist444/pcb-portfolio" target="_blank" class="portfolio-btn">
+                                Visit PCB Portfolio on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SDR (Python GUI, Linux, LabVIEW) -->
+            <div class="project-section">
+                <h3 class="subsection-title">SDR (Python GUI, Linux, LabVIEW)</h3>
+                <div class="projects-grid">
+                    <!-- GNU Radio -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/gnu-radio-usrp-x310.jpeg" alt="GNU Radio USRP X310 Setup" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">GNU Radio SDR System</h4>
+                            <span class="project-category">SDR • GNU Radio Companion</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Software Defined Radio implementation using USRP X310 with GNU Radio Companion. 
+                                Complete transmission and receiving system for RF signal processing and analysis.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">USRP X310</span>
+                                <span class="tech-tag">GNU Radio Companion</span>
+                                <span class="tech-tag">RF Transmission</span>
+                                <span class="tech-tag">Signal Processing</span>
+                                <span class="tech-tag">SDR</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Python GUI System Monitor -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/python-gui-system-monitor.JPG" alt="Ubuntu System Health Monitor GUI" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">Python System Health Monitor</h4>
+                            <span class="project-category">Python GUI • Ubuntu • Military Standards</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Ubuntu-based system health monitoring application with military standard ports. 
+                                Features real-time temperature and performance plots per CPU core, GPS data, 
+                                and Ethernet monitoring with comprehensive frontend visualization.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python GUI</span>
+                                <span class="tech-tag">Ubuntu System</span>
+                                <span class="tech-tag">Military Standard Ports</span>
+                                <span class="tech-tag">Temperature Monitoring</span>
+                                <span class="tech-tag">GPS Integration</span>
+                                <span class="tech-tag">Ethernet Data</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Arduino OPTA PLC -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/arduino-opta-labview.jpg" alt="Arduino OPTA PLC LabVIEW Control Interface" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">Arduino OPTA PLC Control</h4>
+                            <span class="project-category">PLC Programming • LabVIEW • Network Control</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Arduino OPTA PLC programmed in Structured Text and Ladder Logic with peripheral 
+                                control via TCP and UDP protocols. LabVIEW VI interface for comprehensive 
+                                PLC control and monitoring.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Arduino OPTA</span>
+                                <span class="tech-tag">Structured Text</span>
+                                <span class="tech-tag">Ladder Logic</span>
+                                <span class="tech-tag">TCP/UDP Control</span>
+                                <span class="tech-tag">LabVIEW VI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Heart Rate from ECG -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/heartrate-ecg-dataset.png" alt="Heart Rate Extraction from ECG Dataset" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">Heart Rate Monitor from ECG Dataset</h4>
+                            <span class="project-category">Signal Processing • MIT Dataset</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Signal processing project using MIT ECG dataset to extract heart rate information. 
+                                Applied digital filters and signal processing techniques for accurate heart rate 
+                                detection and analysis from ECG waveforms.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">MIT ECG Dataset</span>
+                                <span class="tech-tag">Digital Filters</span>
+                                <span class="tech-tag">Signal Processing</span>
+                                <span class="tech-tag">Heart Rate Extraction</span>
+                                <span class="tech-tag">ECG Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-title">Technical Expertise</h2>
