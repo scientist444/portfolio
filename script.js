@@ -1,36 +1,36 @@
-// Page Navigation System
-let currentPage = 'home';
+// Tab Navigation System
+let currentTab = 'about';
 
-function showPage(pageName) {
-    // Hide all pages
-    document.querySelectorAll('.page').forEach(page => {
-        page.classList.remove('active');
+function showTab(tabName) {
+    // Hide all tab contents
+    document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
     });
     
-    // Show selected page
-    const targetPage = document.getElementById(pageName + '-page');
-    if (targetPage) {
-        targetPage.classList.add('active');
-        currentPage = pageName;
+    // Show selected tab content
+    const targetContent = document.getElementById(tabName + '-content');
+    if (targetContent) {
+        targetContent.classList.add('active');
+        currentTab = tabName;
     }
     
-    // Update navigation buttons
-    document.querySelectorAll('.nav-btn').forEach(btn => {
+    // Update tab buttons
+    document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('active');
     });
     
-    const activeBtn = document.querySelector(`[data-page="${pageName}"]`);
+    const activeBtn = document.querySelector(`[data-tab="${tabName}"]`);
     if (activeBtn) {
         activeBtn.classList.add('active');
     }
 }
 
-// Navigation button event listeners
+// Tab button event listeners
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.nav-btn').forEach(btn => {
+    document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-            const pageName = btn.getAttribute('data-page');
-            showPage(pageName);
+            const tabName = btn.getAttribute('data-tab');
+            showTab(tabName);
         });
     });
 });
@@ -171,23 +171,23 @@ if (contactForm) {
     });
 }
 
-// Typing animation for hero title
-const heroTitle = document.querySelector('.hero-title .title-line:first-child');
-if (heroTitle) {
-    const text = heroTitle.textContent;
-    heroTitle.textContent = '';
+// Typing animation for header title
+const nameTitle = document.querySelector('.name-title');
+if (nameTitle) {
+    const text = nameTitle.textContent;
+    nameTitle.textContent = '';
     
     let i = 0;
     const typeWriter = () => {
         if (i < text.length) {
-            heroTitle.textContent += text.charAt(i);
+            nameTitle.textContent += text.charAt(i);
             i++;
             setTimeout(typeWriter, 100);
         }
     };
     
     // Start typing animation after a short delay
-    setTimeout(typeWriter, 1000);
+    setTimeout(typeWriter, 1500);
 }
 
 // Add glitch effect to hero title on hover
@@ -201,11 +201,33 @@ titleLines.forEach(line => {
     });
 });
 
-// Stats counter animation
-const statsNumbers = document.querySelectorAll('.stat-number');
-const animateStats = () => {
+// Stats counter animation for header showcase
+const animateHeaderStats = () => {
+    const headerStats = document.querySelectorAll('.stats-showcase .stat-number');
+    headerStats.forEach(stat => {
+        const target = parseInt(stat.getAttribute('data-target'));
+        const increment = target / 30;
+        let current = 0;
+        
+        const updateStat = () => {
+            if (current < target) {
+                current += increment;
+                stat.textContent = Math.floor(current);
+                requestAnimationFrame(updateStat);
+            } else {
+                stat.textContent = target;
+            }
+        };
+        
+        updateStat();
+    });
+};
+
+// Stats counter animation for about section
+const statsNumbers = document.querySelectorAll('.about-stats .stat-number');
+const animateAboutStats = () => {
     statsNumbers.forEach(stat => {
-        const target = parseInt(stat.textContent);
+        const target = parseInt(stat.textContent.replace('+', ''));
         const increment = target / 20;
         let current = 0;
         
@@ -223,13 +245,18 @@ const animateStats = () => {
     });
 };
 
-// Trigger stats animation when about section is visible
-const aboutSection = document.querySelector('.about');
+// Trigger header stats animation on page load
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(animateHeaderStats, 2000);
+});
+
+// Trigger about stats animation when about section is visible
+const aboutSection = document.querySelector('#about-content');
 if (aboutSection) {
     const statsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                animateStats();
+                animateAboutStats();
                 statsObserver.unobserve(entry.target);
             }
         });
@@ -279,12 +306,19 @@ document.addEventListener('DOMContentLoaded', () => {
     addCircuitNodes();
 });
 
-// Parallax effect for hero section
+// Parallax effect for header section
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
-    const heroVisual = document.querySelector('.hero-visual');
-    if (heroVisual) {
-        heroVisual.style.transform = `translateY(${scrolled * 0.3}px)`;
+    const headerBackground = document.querySelector('.header-background');
+    if (headerBackground) {
+        headerBackground.style.transform = `translateY(${scrolled * 0.2}px)`;
+    }
+    
+    // Fade out header on scroll
+    const header = document.querySelector('.portfolio-header');
+    if (header && scrolled > 0) {
+        const opacity = Math.max(1 - scrolled / (window.innerHeight * 0.5), 0);
+        header.style.opacity = opacity;
     }
 });
 
