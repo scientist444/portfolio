@@ -116,178 +116,397 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <!-- EKKO Portable -->
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <h3 class="project-title">EKKO Portable Medical Device</h3>
-                        <span class="project-category">Medical Device • RISETech</span>
-                    </div>
-                    <div class="project-content">
-                        <p class="project-description">
-                            A therapeutic device using vibrational waves (5–100 Hz) based on Neurotransmission 
-                            Cognitive Theory to treat neurological disorders in children. EN 60601-1 certified. 
-                            Responsible for maintaining proper device function at RISETech.
-                        </p>
-                        <div class="project-role">
-                            <strong>Role:</strong> Hardware & Firmware Maintenance Engineer
+            <h2 class="section-title">Projects Portfolio</h2>
+            
+            <!-- Embedded MVPs -->
+            <div class="project-section">
+                <h3 class="subsection-title">Embedded MVPs</h3>
+                <div class="projects-grid">
+                    <!-- EKKO Device -->
+                    <div class="project-card featured">
+                        <div class="project-image">
+                            <img src="images/ekko-device.jpg" alt="EKKO Portable and Clinical Device" loading="lazy">
                         </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">ESP32</span>
-                            <span class="tech-tag">RTOS</span>
-                            <span class="tech-tag">BLE</span>
-                            <span class="tech-tag">PWM</span>
-                            <span class="tech-tag">Custom PCB</span>
-                            <span class="tech-tag">Mobile App</span>
+                        <div class="project-header">
+                            <h4 class="project-title">EKKO Device (Portable & Clinical)</h4>
+                            <span class="project-category">Medical Device • RISETech</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Therapeutic device using vibrational waves (5–100 Hz) based on Neurotransmission 
+                                Cognitive Theory. Two versions: portable and clinical. Worked as maintainer with 
+                                continuous advancements over time. EN 60601-1 certified.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">ESP32</span>
+                                <span class="tech-tag">RTOS</span>
+                                <span class="tech-tag">BLE</span>
+                                <span class="tech-tag">PWM</span>
+                                <span class="tech-tag">Medical Grade PCB</span>
+                                <span class="tech-tag">Mobile App</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Profiling -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/vehicle-profiling-v1.png" alt="Vehicle Profiling Device Prototype V1" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">Vehicle Profiling Device (V1 & V2)</h4>
+                            <span class="project-category">Automotive • Surveillance</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Underground surveillance device for secret vehicle classification. V1 for proof of concept, 
+                                V2 with enhanced performance, edge data processing, and SD card storage. Multiple sensors 
+                                for comprehensive vehicle profiling.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">STM32</span>
+                                <span class="tech-tag">Multiple Sensors</span>
+                                <span class="tech-tag">Edge Processing</span>
+                                <span class="tech-tag">SD Card Storage</span>
+                                <span class="tech-tag">Underground Deployment</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AQI Monitor -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/aqi-monitor.png" alt="AQI Multi-Gas Monitoring Device" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">Multi-Gas AQI Monitor</h4>
+                            <span class="project-category">Environmental • IoT</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Comprehensive air quality monitoring system measuring CO2, TVOC, humidity, NH3, SO2, 
+                                alcohol, toluene, smoke, and particulate matter (PM1.0, PM2.5, PM10.0). 
+                                Real-time monitoring with data logging capabilities.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">ESP32</span>
+                                <span class="tech-tag">Multi-Gas Sensors</span>
+                                <span class="tech-tag">PM Sensors</span>
+                                <span class="tech-tag">Data Logging</span>
+                                <span class="tech-tag">Wi-Fi Connectivity</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- P2P LoRa Device -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/p2p-lora-device.jpeg" alt="P2P LoRa QR Scanner Device" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">P2P LoRa Communication Device</h4>
+                            <span class="project-category">Communication • Security</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                LoRa-based P2P device with QR code scanning capability. Designed for environments 
+                                with signal jammers, enabling wireless data transmission to PC when conventional 
+                                communication methods are compromised.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">LoRa</span>
+                                <span class="tech-tag">QR Code Scanner</span>
+                                <span class="tech-tag">P2P Communication</span>
+                                <span class="tech-tag">Anti-Jamming</span>
+                                <span class="tech-tag">Wireless Data Transfer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Motor Controller -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/motor-controller-gui.png" alt="STM32 Motor Controller Hardware" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">Motor Controller (Position & Speed)</h4>
+                            <span class="project-category">Control Systems • Hardware</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Complete motor control system with position and speed control capabilities. 
+                                Custom hardware design with STM32, encoder feedback, and MATLAB GUI integration 
+                                for real-time control and monitoring.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">STM32</span>
+                                <span class="tech-tag">Encoder Motor</span>
+                                <span class="tech-tag">Motor Driver</span>
+                                <span class="tech-tag">MATLAB GUI</span>
+                                <span class="tech-tag">Position/Speed Control</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LFR Bot -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/lfr-airtech24-winner.jpeg" alt="Line Following Robot - AirTech 24 Winner" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">Line Following Robot (LFR)</h4>
+                            <span class="project-category">Robotics • Competition Winner</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Award-winning mini bot designed for line follower competition. 
+                                First place winner at AirTech 24 Roboline competition with optimized 
+                                sensor placement and control algorithms.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Microcontroller</span>
+                                <span class="tech-tag">IR Sensors</span>
+                                <span class="tech-tag">Motor Control</span>
+                                <span class="tech-tag">Competition Winner</span>
+                                <span class="tech-tag">Algorithm Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Epilepsy Detection Device -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/epic.png" alt="Epilepsy Detection Device - EPIC" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">Epilepsy Detection Device (EPIC)</h4>
+                            <span class="project-category">Medical Device • AI/ML</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Advanced medical device for real-time epilepsy detection and monitoring. 
+                                Utilizes biosensor integration and machine learning algorithms for 
+                                accurate seizure prediction and early warning systems.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Biosensors</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Real-time Processing</span>
+                                <span class="tech-tag">Medical Device</span>
+                                <span class="tech-tag">Early Warning System</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Custom ESP Boards -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Custom ESP Board Designs</h3>
-                        <span class="project-category">PCB Design • Manufacturing</span>
-                    </div>
-                    <div class="project-content">
-                        <p class="project-description">
-                            Designed and manufactured custom ESP32/ESP8266 boards for various applications. 
-                            Complete PCB design process from schematic to production using JLC PCB manufacturing.
-                        </p>
-                        <div class="project-role">
-                            <strong>Role:</strong> PCB Designer & Project Lead
+            <!-- PCB Designs -->
+            <div class="project-section">
+                <h3 class="subsection-title">PCB Designs</h3>
+                <div class="projects-grid">
+                    <!-- Ergonomic Mouse -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/ergonomic-mouse-pcb.jpg" alt="Ergonomic Mouse Internal PCB Design" loading="lazy">
                         </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">ESP32/ESP8266</span>
-                            <span class="tech-tag">Custom PCB Design</span>
-                            <span class="tech-tag">JLC PCB</span>
-                            <span class="tech-tag">Schematic Design</span>
-                            <span class="tech-tag">Manufacturing</span>
+                        <div class="project-header">
+                            <h4 class="project-title">Ergonomic Mouse PCB</h4>
+                            <span class="project-category">PCB Design • BLE</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Internal circuit PCB designed for ergonomic mouse with BLE connectivity. 
+                                Features integrated joysticks for control and optimized component layout 
+                                for ergonomic constraints.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">BLE Connectivity</span>
+                                <span class="tech-tag">Joystick Controls</span>
+                                <span class="tech-tag">Ergonomic Layout</span>
+                                <span class="tech-tag">Custom PCB</span>
+                                <span class="tech-tag">Component Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Custom Boards -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/ergonomic-mouse-pcb.png" alt="Various Custom PCB Designs" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">Custom PCB Collection</h4>
+                            <span class="project-category">PCB Design • <a href="https://github.com/scientist444/pcb-portfolio" target="_blank" style="color: var(--primary-color);">GitHub Portfolio</a></span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Collection of various custom PCB designs for different applications. 
+                                Complete design portfolio available on 
+                                <a href="https://github.com/scientist444/pcb-portfolio" target="_blank" style="color: var(--primary-color); text-decoration: underline;">GitHub</a> 
+                                with images and specifications for each board design.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Multi-layer PCBs</span>
+                                <span class="tech-tag">Custom Designs</span>
+                                <span class="tech-tag">GitHub Portfolio</span>
+                                <span class="tech-tag">Various Applications</span>
+                                <span class="tech-tag">Manufacturing Ready</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Audio Amplifier -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/motor-controller-hardware.png" alt="5W Audio Amplifier PCB Design" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">5W Audio Amplifier</h4>
+                            <span class="project-category">Analog Design • Audio</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Two-stage audio amplifier design (preamp and power stage) for 5W 6Ω speaker. 
+                                Extensive datasheet analysis and component tuning for optimal audio performance. 
+                                Complete analog design with careful component selection.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Two-Stage Design</span>
+                                <span class="tech-tag">Preamp & Power Stage</span>
+                                <span class="tech-tag">5W 6Ω Speaker</span>
+                                <span class="tech-tag">Component Tuning</span>
+                                <span class="tech-tag">Analog Circuit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- T Power Divider -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/t-power-divider-simulation.png" alt="T Power Divider HFSS Simulation" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">T Power Divider</h4>
+                            <span class="project-category">RF Design • HFSS Simulation</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                RF power divider design with ANSYS HFSS simulation followed by hand-etched PCB implementation. 
+                                Complete RF design process from electromagnetic simulation to physical realization.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">ANSYS HFSS</span>
+                                <span class="tech-tag">RF Simulation</span>
+                                <span class="tech-tag">Hand Etched PCB</span>
+                                <span class="tech-tag">Power Divider</span>
+                                <span class="tech-tag">EM Design</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Ergonomic Hardware Design -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Ergonomic Internal Hardware Design</h3>
-                        <span class="project-category">Hardware Design • BLE Integration</span>
-                    </div>
-                    <div class="project-content">
-                        <p class="project-description">
-                            Designed ergonomic internal hardware architecture given only the outer casing constraints. 
-                            Integrated BLE connectivity while optimizing component placement for user comfort and functionality.
-                        </p>
-                        <div class="project-role">
-                            <strong>Role:</strong> Hardware Design Engineer
+            <!-- SDR (Python GUI, Linux, LabVIEW) -->
+            <div class="project-section">
+                <h3 class="subsection-title">SDR (Python GUI, Linux, LabVIEW)</h3>
+                <div class="projects-grid">
+                    <!-- GNU Radio -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/gnu-radio-usrp-x310.jpeg" alt="GNU Radio USRP X310 Setup" loading="lazy">
                         </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Ergonomic Design</span>
-                            <span class="tech-tag">BLE Integration</span>
-                            <span class="tech-tag">Component Layout</span>
-                            <span class="tech-tag">Hardware Architecture</span>
-                            <span class="tech-tag">Constraint Engineering</span>
+                        <div class="project-header">
+                            <h4 class="project-title">GNU Radio SDR System</h4>
+                            <span class="project-category">SDR • GNU Radio Companion</span>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Air Quality Meter -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Air Quality Monitoring System</h3>
-                        <span class="project-category">IoT • Environmental Monitoring</span>
-                    </div>
-                    <div class="project-content">
-                        <p class="project-description">
-                            Real-time air quality monitoring device with OLED display and Wi-Fi connectivity 
-                            for data upload and remote monitoring.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">PIC18F4620</span>
-                            <span class="tech-tag">ESP8266</span>
-                            <span class="tech-tag">MQ135/MQ2/MQ5</span>
-                            <span class="tech-tag">DHT11</span>
-                            <span class="tech-tag">OLED</span>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Software Defined Radio implementation using USRP X310 with GNU Radio Companion. 
+                                Complete transmission and receiving system for RF signal processing and analysis.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">USRP X310</span>
+                                <span class="tech-tag">GNU Radio Companion</span>
+                                <span class="tech-tag">RF Transmission</span>
+                                <span class="tech-tag">Signal Processing</span>
+                                <span class="tech-tag">SDR</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Fuel Monitoring -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Fuel Monitoring System</h3>
-                        <span class="project-category">Industrial • IoT</span>
-                    </div>
-                    <div class="project-content">
-                        <p class="project-description">
-                            Low-cost, high-accuracy system for measuring fuel flow and quality in tankers 
-                            and station tanks with real-time data transmission.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">ESP32</span>
-                            <span class="tech-tag">Audiowell US0014-001</span>
-                            <span class="tech-tag">Bosch Fuel Sensor</span>
-                            <span class="tech-tag">AS7265x</span>
-                            <span class="tech-tag">Wi-Fi</span>
+                    <!-- Python GUI System Monitor -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/python-gui-system-monitor.JPG" alt="Ubuntu System Health Monitor GUI" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">Python System Health Monitor</h4>
+                            <span class="project-category">Python GUI • Ubuntu • Military Standards</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Ubuntu-based system health monitoring application with military standard ports. 
+                                Features real-time temperature and performance plots per CPU core, GPS data, 
+                                and Ethernet monitoring with comprehensive frontend visualization.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python GUI</span>
+                                <span class="tech-tag">Ubuntu System</span>
+                                <span class="tech-tag">Military Standard Ports</span>
+                                <span class="tech-tag">Temperature Monitoring</span>
+                                <span class="tech-tag">GPS Integration</span>
+                                <span class="tech-tag">Ethernet Data</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Access Control -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">GRPC Access Control System</h3>
-                        <span class="project-category">Security • Embedded Systems</span>
-                    </div>
-                    <div class="project-content">
-                        <p class="project-description">
-                            GRPC-based access system with RFID authentication, relay control, and 
-                            remote unlock capabilities via Wi-Fi.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">STM32F103C8T6</span>
-                            <span class="tech-tag">STM32F756ZG</span>
-                            <span class="tech-tag">GRPC C++</span>
-                            <span class="tech-tag">RFID</span>
-                            <span class="tech-tag">Wiegand</span>
+                    <!-- Arduino OPTA PLC -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/arduino-opta-labview.jpg" alt="Arduino OPTA PLC LabVIEW Control Interface" loading="lazy">
+                        </div>
+                        <div class="project-header">
+                            <h4 class="project-title">Arduino OPTA PLC Control</h4>
+                            <span class="project-category">PLC Programming • LabVIEW • Network Control</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Arduino OPTA PLC programmed in Structured Text and Ladder Logic with peripheral 
+                                control via TCP and UDP protocols. LabVIEW VI interface for comprehensive 
+                                PLC control and monitoring.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Arduino OPTA</span>
+                                <span class="tech-tag">Structured Text</span>
+                                <span class="tech-tag">Ladder Logic</span>
+                                <span class="tech-tag">TCP/UDP Control</span>
+                                <span class="tech-tag">LabVIEW VI</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Vehicle Profiling -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Underground Vehicle Profiling Device</h3>
-                        <span class="project-category">Automotive • Embedded Systems</span>
-                    </div>
-                    <div class="project-content">
-                        <p class="project-description">
-                            Currently developing an underground device for vehicle profiling and 
-                            monitoring systems. (Work in Progress)
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">In Development</span>
+                    <!-- Heart Rate from ECG -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/heartrate-ecg-dataset.png" alt="Heart Rate Extraction from ECG Dataset" loading="lazy">
                         </div>
-                    </div>
-                </div>
-
-                <!-- Audio Processing -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Audio Signal Convolution System</h3>
-                        <span class="project-category">Signal Processing • MATLAB</span>
-                    </div>
-                    <div class="project-content">
-                        <p class="project-description">
-                            Developed generalized MATLAB code for discrete-time convolution and 
-                            real audio signal processing using Simulink.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">MATLAB</span>
-                            <span class="tech-tag">Simulink</span>
-                            <span class="tech-tag">DSP</span>
-                            <span class="tech-tag">Audio Processing</span>
+                        <div class="project-header">
+                            <h4 class="project-title">Heart Rate Monitor from ECG Dataset</h4>
+                            <span class="project-category">Signal Processing • MIT Dataset</span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Signal processing project using MIT ECG dataset to extract heart rate information. 
+                                Applied digital filters and signal processing techniques for accurate heart rate 
+                                detection and analysis from ECG waveforms.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">MIT ECG Dataset</span>
+                                <span class="tech-tag">Digital Filters</span>
+                                <span class="tech-tag">Signal Processing</span>
+                                <span class="tech-tag">Heart Rate Extraction</span>
+                                <span class="tech-tag">ECG Analysis</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -464,65 +683,186 @@
     <section id="achievements" class="achievements">
         <div class="container">
             <h2 class="section-title">Achievements & Certifications</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-trophy"></i>
+            
+            <!-- Certifications -->
+            <div class="achievement-section">
+                <h3 class="subsection-title">Certifications and Awards</h3>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-image">
+                            <img src="images/certificates/easyeda-campus-ambassador.jpg" alt="EasyEDA Campus Ambassador Certificate" loading="lazy">
+                        </div>
+                        <div class="achievement-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h4 class="achievement-title">EasyEDA Campus Ambassador</h4>
+                        <p class="achievement-description">
+                            Official campus ambassador for EasyEDA PCB design platform, promoting 
+                            PCB design education and tools among students.
+                        </p>
                     </div>
-                    <h3 class="achievement-title">AirTech 24 Roboline Competition Winner</h3>
-                    <p class="achievement-description">
-                        First place winner with shield and cash prize in prestigious robotics competition.
-                    </p>
-                </div>
 
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-star"></i>
+                    <div class="achievement-card">
+                        <div class="achievement-image">
+                            <img src="images/certificates/airtech-roboline-winner.jpeg" alt="AirTech Roboline Winner Certificate" loading="lazy">
+                        </div>
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4 class="achievement-title">AirTech 24 Roboline Competition Winner</h4>
+                        <p class="achievement-description">
+                            First place winner with shield and cash prize in prestigious robotics 
+                            line following competition at AirTech 24.
+                        </p>
                     </div>
-                    <h3 class="achievement-title">Multiple Academic Excellence Awards</h3>
-                    <p class="achievement-description">
-                        Consistently recognized as best student with multiple academic awards at NUST.
-                    </p>
-                </div>
 
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-microchip"></i>
+                    <div class="achievement-card">
+                        <div class="achievement-image">
+                            <img src="images/certificates/easyeda-campus-ambassador.jpg" alt="Academic Excellence Awards" loading="lazy">
+                        </div>
+                        <div class="achievement-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="achievement-title">Multiple Academic Excellence Awards</h4>
+                        <p class="achievement-description">
+                            Consistently recognized as best student with multiple academic 
+                            excellence awards at NUST for outstanding academic performance.
+                        </p>
                     </div>
-                    <h3 class="achievement-title">High-Speed PCB Design Expertise</h3>
-                    <p class="achievement-description">
-                        Designed multiple PCBs and currently enrolled in Signal Integrity Academy by Eric Bogatin.
-                    </p>
-                </div>
 
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-medal"></i>
+                    <div class="achievement-card">
+                        <div class="achievement-image">
+                            <img src="images/certificates/matlab-onramp.jpg" alt="MATLAB Onramp Certificate" loading="lazy">
+                        </div>
+                        <div class="achievement-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h4 class="achievement-title">MATLAB Onramp Certification</h4>
+                        <p class="achievement-description">
+                            Completed MATLAB Onramp certification demonstrating proficiency 
+                            in MATLAB programming and computational analysis.
+                        </p>
                     </div>
-                    <h3 class="achievement-title">EN 60601-1 Certification</h3>
-                    <p class="achievement-description">
-                        Successfully contributed to achieving medical device certification for EKKO Portable.
-                    </p>
-                </div>
 
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-cogs"></i>
+                    <div class="achievement-card">
+                        <div class="achievement-image">
+                            <img src="images/certificates/cadence-essential-guide.jpg" alt="Cadence Design Systems Essential Guide Certificate" loading="lazy">
+                        </div>
+                        <div class="achievement-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h4 class="achievement-title">Cadence Design Systems: Essential Guide</h4>
+                        <p class="achievement-description">
+                            Completed comprehensive training in Cadence design tools for 
+                            high-speed PCB design and signal integrity analysis.
+                        </p>
                     </div>
-                    <h3 class="achievement-title">System on Module (SoM) Development</h3>
-                    <p class="achievement-description">
-                        Currently working on high-speed design of System on Module with RK chip technology.
-                    </p>
-                </div>
 
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-wave-square"></i>
+                    <div class="achievement-card">
+                        <div class="achievement-image">
+                            <img src="images/certificates/ai-for-everyone.jpg" alt="AI For Everyone Certificate" loading="lazy">
+                        </div>
+                        <div class="achievement-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4 class="achievement-title">AI For Everyone Certification</h4>
+                        <p class="achievement-description">
+                            Completed comprehensive course on artificial intelligence fundamentals 
+                            and applications across various industries and domains.
+                        </p>
                     </div>
-                    <h3 class="achievement-title">Signal Integrity Specialization</h3>
-                    <p class="achievement-description">
-                        Focused expertise in signal integrity for high-speed PCB design and embedded systems.
-                    </p>
+
+                    <div class="achievement-card">
+                        <div class="achievement-image">
+                            <img src="images/certificates/cmc-mentorship.jpeg" alt="CMC Mentorship Program Certificate" loading="lazy">
+                        </div>
+                        <div class="achievement-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="achievement-title">CMC Mentorship Program</h4>
+                        <p class="achievement-description">
+                            Participated in CMC mentorship program, gaining valuable industry 
+                            insights and professional development guidance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Co-curricular Activities -->
+            <div class="achievement-section">
+                <h3 class="subsection-title">Co-curricular Activities</h3>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4 class="achievement-title">Robotics Competition Participation</h4>
+                        <p class="achievement-description">
+                            Active participation in various robotics competitions including 
+                            line following robots and autonomous navigation systems.
+                        </p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="achievement-title">Technical Workshop Conductor</h4>
+                        <p class="achievement-description">
+                            Conducted technical workshops on embedded systems, PCB design, 
+                            and IoT development for fellow students.
+                        </p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h4 class="achievement-title">Open Source Contributor</h4>
+                        <p class="achievement-description">
+                            Active contributor to open source projects, sharing PCB designs 
+                            and embedded systems code on GitHub platform.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ongoing Skills and Courses -->
+            <div class="achievement-section">
+                <h3 class="subsection-title">Ongoing Skills Learning and Courses</h3>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-wave-square"></i>
+                        </div>
+                        <h4 class="achievement-title">Signal Integrity Academy</h4>
+                        <p class="achievement-description">
+                            Currently enrolled in Signal Integrity Academy by Eric Bogatin, 
+                            advancing expertise in high-speed PCB design and signal integrity.
+                        </p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4 class="achievement-title">System on Module (SoM) Development</h4>
+                        <p class="achievement-description">
+                            Currently working on high-speed design of System on Module 
+                            with RK chip technology for advanced embedded applications.
+                        </p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4 class="achievement-title">Continuous Learning</h4>
+                        <p class="achievement-description">
+                            Actively pursuing advanced courses in embedded systems, 
+                            RF design, and signal processing to stay current with technology.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
