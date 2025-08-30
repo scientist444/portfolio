@@ -31,9 +31,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+        navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+        navbar.style.backdropFilter = 'blur(10px)';
     } else {
-        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+        navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+        navbar.style.backdropFilter = 'blur(8px)';
     }
 });
 
@@ -335,3 +337,51 @@ const lazyAnimations = () => {
 
 // Initialize lazy animations
 document.addEventListener('DOMContentLoaded', lazyAnimations);
+
+// Image Modal Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalCaption = document.querySelector('.modal-caption');
+    const closeModal = document.querySelector('.close-modal');
+    
+    // Make all project and achievement images clickable
+    const clickableImages = document.querySelectorAll('.project-image img, .achievement-image img');
+    
+    clickableImages.forEach(img => {
+        img.parentElement.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.style.display = 'block';
+            modalImage.src = img.src;
+            modalCaption.textContent = img.alt;
+            document.body.style.overflow = 'hidden'; // Prevent background scroll
+        });
+    });
+    
+    // Close modal functionality
+    const closeModalFunc = () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    };
+    
+    closeModal.addEventListener('click', closeModalFunc);
+    
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModalFunc();
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            closeModalFunc();
+        }
+    });
+    
+    // Prevent modal image from closing when clicked
+    modalImage.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+});

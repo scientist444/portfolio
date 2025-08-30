@@ -297,27 +297,21 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- PCB Designs -->
-            <div class="project-section">
-                <h3 class="subsection-title">PCB Designs</h3>
-                <div class="projects-grid">
                     <!-- Ergonomic Mouse -->
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="images/ergonomic-mouse-pcb.jpg" alt="Ergonomic Mouse Internal PCB Design" loading="lazy">
+                            <img src="images/ergonomic-mouse-pcb.png" alt="Ergonomic Mouse Internal PCB Design" loading="lazy">
                         </div>
                         <div class="project-header">
                             <h4 class="project-title">Ergonomic Mouse PCB</h4>
-                            <span class="project-category">PCB Design • BLE</span>
+                            <span class="project-category">PCB Design • BLE • Embedded</span>
                         </div>
                         <div class="project-content">
                             <p class="project-description">
                                 Internal circuit PCB designed for ergonomic mouse with BLE connectivity. 
                                 Features integrated joysticks for control and optimized component layout 
-                                for ergonomic constraints.
+                                for ergonomic constraints within limited space.
                             </p>
                             <div class="tech-stack">
                                 <span class="tech-tag">BLE Connectivity</span>
@@ -328,32 +322,13 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Custom Boards -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/ergonomic-mouse-pcb.png" alt="Various Custom PCB Designs" loading="lazy">
-                        </div>
-                        <div class="project-header">
-                            <h4 class="project-title">Custom PCB Collection</h4>
-                            <span class="project-category">PCB Design • <a href="https://github.com/scientist444/pcb-portfolio" target="_blank" style="color: var(--primary-color);">GitHub Portfolio</a></span>
-                        </div>
-                        <div class="project-content">
-                            <p class="project-description">
-                                Collection of various custom PCB designs for different applications. 
-                                Complete design portfolio available on 
-                                <a href="https://github.com/scientist444/pcb-portfolio" target="_blank" style="color: var(--primary-color); text-decoration: underline;">GitHub</a> 
-                                with images and specifications for each board design.
-                            </p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Multi-layer PCBs</span>
-                                <span class="tech-tag">Custom Designs</span>
-                                <span class="tech-tag">GitHub Portfolio</span>
-                                <span class="tech-tag">Various Applications</span>
-                                <span class="tech-tag">Manufacturing Ready</span>
-                            </div>
-                        </div>
-                    </div>
+            <!-- PCB Designs -->
+            <div class="project-section">
+                <h3 class="subsection-title">PCB Designs</h3>
+                <div class="projects-grid">
 
                     <!-- Audio Amplifier -->
                     <div class="project-card">
@@ -401,6 +376,20 @@
                                 <span class="tech-tag">Power Divider</span>
                                 <span class="tech-tag">EM Design</span>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PCB Portfolio Link -->
+                <div class="pcb-portfolio-link">
+                    <div class="portfolio-link-card">
+                        <div class="link-content">
+                            <i class="fab fa-github"></i>
+                            <h4>Complete PCB Design Portfolio</h4>
+                            <p>View my comprehensive collection of PCB designs, schematics, and manufacturing files</p>
+                            <a href="https://github.com/scientist444/pcb-portfolio" target="_blank" class="portfolio-btn">
+                                Visit PCB Portfolio on GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1080,6 +1069,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modalImage" class="modal-image" alt="">
+            <div class="modal-caption"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
