@@ -2004,6 +2004,311 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-dark);
 }
 
+/* ============================================================
+   HERO SPLIT LAYOUT — Professional Redesign
+   ============================================================ */
+
+.hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    text-align: left;
+    max-width: 1200px;
+    padding: 2rem 4rem;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+/* Availability Badge */
+.availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 1.1rem;
+    background: rgba(0, 255, 136, 0.08);
+    border: 1px solid rgba(0, 255, 136, 0.35);
+    border-radius: 25px;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    width: fit-content;
+    letter-spacing: 0.3px;
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.4); }
+    50% { opacity: 0.7; transform: scale(0.85); box-shadow: 0 0 0 4px rgba(0, 255, 136, 0); }
+}
+
+/* Role subtitle */
+.role-subtitle {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    margin-top: -1.2rem;
+    font-weight: 500;
+}
+
+/* Specialization Tags */
+.specialization-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.spec-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.85rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.spec-tag:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: rgba(0, 255, 136, 0.05);
+}
+
+.spec-tag i {
+    color: var(--primary-color);
+    font-size: 0.75rem;
+}
+
+/* Hero CTA Buttons */
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-hero-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2rem;
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: 8px;
+    color: #0a0a0a;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.35);
+}
+
+.btn-hero-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2rem;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.btn-hero-secondary:hover {
+    background: var(--primary-color);
+    color: #0a0a0a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+}
+
+/* ============================================================
+   ABOUT — Core Competencies
+   ============================================================ */
+
+.core-competencies {
+    margin-top: 2.5rem;
+}
+
+.competencies-heading {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.competency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 0.85rem;
+}
+
+.competency-item {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.7rem 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.competency-item:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.1);
+}
+
+.competency-item i {
+    color: var(--primary-color);
+    font-size: 1rem;
+    width: 18px;
+    text-align: center;
+}
+
+.competency-item span {
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+/* ============================================================
+   EXPERIENCE — Work / Education Subsections
+   ============================================================ */
+
+.experience-section {
+    margin-bottom: 4rem;
+}
+
+.experience-section:last-child {
+    margin-bottom: 0;
+}
+
+.experience-section-title {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.experience-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
+}
+
+.experience-section-title i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* ============================================================
+   CONTACT SECTION SPACING
+   ============================================================ */
+
+.contact-section {
+    margin-top: 4rem;
+}
+
+/* ============================================================
+   HERO PROFILE IMAGE — override generic .profile-image reset
+   ============================================================ */
+
+.profile-image-wrapper .profile-image {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 40px rgba(0, 255, 136, 0.3);
+    position: relative;
+    z-index: 3;
+    transition: none;
+}
+
+.profile-image-wrapper .profile-image:hover {
+    transform: none;
+}
+
+/* ============================================================
+   RESPONSIVE — Hero Split
+   ============================================================ */
+
+@media (max-width: 900px) {
+    .hero-split {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 3rem 2rem;
+        gap: 2.5rem;
+    }
+
+    .hero-right {
+        order: -1;
+    }
+
+    .availability-badge {
+        margin: 0 auto;
+    }
+
+    .specialization-tags {
+        justify-content: center;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .competency-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+
+    .experience-section-title {
+        font-size: 1.2rem;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     /* Header responsive design */
