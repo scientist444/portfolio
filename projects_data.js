@@ -262,22 +262,6 @@ const projectsData = [
         "architectureImage": "images/lorawan_architecture.png"
     },
     {
-        "id": "ankle-band",
-        "title": "Ankle Band \u2014 BLE Wearable",
-        "category": "Wearable \u2022 BLE \u2022 PCB Design",
-        "description": "BLE-based wearable ankle band device built around the DA1453x SoC. Custom PCB design with EasyEDA featuring ultra-low-power boost converter, OTP programming support, and multiple communication interfaces including I2C, SPI, and UART.",
-        "techStack": ["BLE", "DA1453x SoC", "EasyEDA", "I2C", "SPI", "UART"],
-        "facts": [
-            "DA1453x BLE SoC-based design",
-            "Boost converter: 1.8V\u20133.3V VBAT supply range",
-            "OTP programming support (min 1.62V read, 2.0V write)",
-            "Ultra-low-power wearable form factor",
-            "Custom PCB with EasyEDA"
-        ],
-        "mainImage": "images/projects/Ankle_band_9358ECB1DA7C52D8F39392648E599102.pdf_0_0.jpeg",
-        "architectureImage": "images/projects/Ankle_band_9358ECB1DA7C52D8F39392648E599102.pdf_0_1.png"
-    },
-    {
         "id": "ekko-clinic",
         "title": "EKKO Clinical Interface",
         "category": "Medical \u2022 Raspberry Pi \u2022 GUI",
@@ -357,21 +341,5 @@ const projectsData = [
         ],
         "mainImage": "images/projects/Stethoscope_stethoscope.pdf_1_0.png",
         "architectureImage": "images/stethoscope_architecture.png"
-    },
-    {
-        "id": "fuel-quality",
-        "title": "Fuel Quality Monitoring System",
-        "category": "IoT \u2022 Sensors \u2022 Embedded",
-        "description": "Embedded system for real-time fuel quality analysis and monitoring. Designed to detect fuel adulteration and measure quality parameters for industrial and automotive applications.",
-        "techStack": ["Embedded Systems", "Sensors", "Signal Processing", "PCB", "Data Logging"],
-        "facts": [
-            "Real-time fuel quality parameter measurement",
-            "Fuel adulteration detection capability",
-            "Custom sensor interface design",
-            "Industrial and automotive applications",
-            "Embedded data logging and analysis"
-        ],
-        "mainImage": "images/aqi-monitor.png",
-        "architectureImage": "images/aqi-monitor.png"
     }
 ];
