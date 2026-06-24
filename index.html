@@ -221,416 +221,53 @@
                 <div class="page-container">
                     <h2 class="section-title">Engineering Projects</h2>
 
-                    <!-- Medical & Healthcare Devices -->
-                    <div class="project-section">
-                        <h3 class="subsection-title">Medical &amp; Healthcare Devices</h3>
-                        <div class="projects-grid">
-                            <div class="project-card featured">
-                                <div class="project-image">
-                                    <img src="images/ekko-device.jpg" alt="EKKO Portable and Clinical Device" loading="lazy">
-                                </div>
-                                <div class="project-header">
-                                    <h4 class="project-title">EKKO Device (Portable &amp; Clinical)</h4>
-                                    <span class="project-category">Medical Device • RISETech • EN 60601-1</span>
-                                </div>
-                                <div class="project-content">
-                                    <p class="project-description">
-                                        Therapeutic device using vibrational waves (5–100 Hz) based on Neurotransmission
-                                        Cognitive Theory. Hardware maintainer delivering 15% PCB defect reduction via
-                                        Multi-Layer PCB and Signal Integrity improvements. EN 60601-1 certified.
-                                        Firmware on Renesas MCUs; two versions — portable and clinical.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span class="tech-tag">Renesas MCU</span>
-                                        <span class="tech-tag">RTOS</span>
-                                        <span class="tech-tag">BLE</span>
-                                        <span class="tech-tag">Signal Integrity</span>
-                                        <span class="tech-tag">Medical Grade PCB</span>
-                                        <span class="tech-tag">EN 60601-1</span>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- Dynamic Projects Grid -->
+                    <div class="projects-grid" id="dynamic-projects-grid">
+                        <!-- Filled by JavaScript -->
+                    </div>
 
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/epic.png" alt="Epilepsy Detection Device - EPIC" loading="lazy">
-                                </div>
-                                <div class="project-header">
-                                    <h4 class="project-title">Epilepsy Detection Device (EPIC)</h4>
-                                    <span class="project-category">Medical Device • AI/ML • Active Project</span>
-                                </div>
-                                <div class="project-content">
-                                    <p class="project-description">
-                                        Real-time epilepsy detection system (Feb 2025 – present) with 30% accuracy
-                                        improvement over baseline via biosensor fusion and ML algorithms. Achieved
-                                        25% faster early-warning alerts through optimized signal processing pipeline.
-                                        Deployed for continuous seizure monitoring and prediction.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span class="tech-tag">Biosensors</span>
-                                        <span class="tech-tag">Machine Learning</span>
-                                        <span class="tech-tag">Real-time Processing</span>
-                                        <span class="tech-tag">+30% Accuracy</span>
-                                        <span class="tech-tag">25% Faster Alerts</span>
-                                    </div>
-                                </div>
+                    <!-- PCB Portfolio Link -->
+                    <div class="pcb-portfolio-link" style="margin-top: 40px;">
+                        <div class="portfolio-link-card">
+                            <div class="link-content">
+                                <i class="fab fa-github"></i>
+                                <h4>Complete PCB Design Portfolio</h4>
+                                <p>View my comprehensive collection of PCB designs, schematics, and manufacturing files</p>
+                                <a href="https://github.com/scientist444/pcb-portfolio" target="_blank" class="portfolio-btn">
+                                    Visit PCB Portfolio on GitHub
+                                </a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <!-- IoT & Environmental Monitoring -->
-                    <div class="project-section">
-                        <h3 class="subsection-title">IoT &amp; Environmental Monitoring</h3>
-                        <div class="projects-grid">
-                            <div class="project-card">
-                                <div class="project-images">
-                                    <div class="project-image">
-                                        <img src="images/vehicle-profiling-v1.png" alt="Vehicle Profiling Device V1 - Proof of Concept" loading="lazy">
-                                        <div class="image-label">V1 - Proof of Concept</div>
-                                    </div>
-                                    <div class="project-image">
-                                        <img src="images/vehicle-profiling-v2.png" alt="Vehicle Profiling Device V2 - Enhanced Performance" loading="lazy">
-                                        <div class="image-label">V2 - Enhanced Performance</div>
-                                    </div>
-                                </div>
-                                <div class="project-header">
-                                    <h4 class="project-title">Vehicle Profiling Device — FYP (V1 &amp; V2)</h4>
-                                    <span class="project-category">Automotive • Surveillance • Edge AI</span>
-                                </div>
-                                <div class="project-content">
-                                    <p class="project-description">
-                                        Final Year Project: covert underground vehicle classification system achieving
-                                        95% accuracy via sensor fusion (seismic, magnetic, IR, ultrasonic) and Edge AI
-                                        inference. V1 proof-of-concept; V2 with dual-version firmware (UART + BLE),
-                                        40% faster edge data processing, and SD card storage for field deployment.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span class="tech-tag">STM32</span>
-                                        <span class="tech-tag">Edge AI</span>
-                                        <span class="tech-tag">Sensor Fusion</span>
-                                        <span class="tech-tag">95% Accuracy</span>
-                                        <span class="tech-tag">BLE / UART Firmware</span>
-                                        <span class="tech-tag">SD Card Storage</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/aqi-monitor.png" alt="AQI Multi-Gas Monitoring Device" loading="lazy">
-                                </div>
-                                <div class="project-header">
-                                    <h4 class="project-title">Multi-Gas AQI Monitor</h4>
-                                    <span class="project-category">Environmental • IoT</span>
-                                </div>
-                                <div class="project-content">
-                                    <p class="project-description">
-                                        Comprehensive air quality monitoring system tracking 9 atmospheric variables:
-                                        CO2, TVOC, humidity, NH3, SO2, alcohol, toluene, smoke, and particulate
-                                        matter (PM1.0, PM2.5, PM10.0). Achieves &lt;5% calibration error with
-                                        real-time cloud data logging and Wi-Fi connectivity.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span class="tech-tag">ESP32</span>
-                                        <span class="tech-tag">Multi-Gas Sensors</span>
-                                        <span class="tech-tag">PM Sensors</span>
-                                        <span class="tech-tag">Data Logging</span>
-                                        <span class="tech-tag">Wi-Fi Connectivity</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/python-gui-system-monitor.JPG" alt="Ubuntu System Health Monitor GUI" loading="lazy">
-                                </div>
-                                <div class="project-header">
-                                    <h4 class="project-title">Avionics ATP &amp; System Health Monitor</h4>
-                                    <span class="project-category">Python • LabVIEW • RIMS / NASTP Alpha</span>
-                                </div>
-                                <div class="project-content">
-                                    <p class="project-description">
-                                        Two Python-based Automated Test Procedure (ATP) tools developed at RIMS
-                                        (NASTP Alpha): Avionics LRU ATP for testing aerospace-grade Line Replaceable
-                                        Units, and Portable Tester ATP for field diagnostics. Complemented by an
-                                        Ubuntu system health monitor with military-standard ports — real-time CPU
-                                        temperature per core, GPS data, and Ethernet monitoring via LabVIEW frontend.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span class="tech-tag">Python ATP Tools</span>
-                                        <span class="tech-tag">Avionics LRU Testing</span>
-                                        <span class="tech-tag">LabVIEW Frontend</span>
-                                        <span class="tech-tag">NI myRIO / myDAQ</span>
-                                        <span class="tech-tag">Military Standard Ports</span>
-                                        <span class="tech-tag">GPS / Ethernet</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Project Details Modal (Hidden by default) -->
+            <div id="project-modal" class="modal-overlay">
+                <div class="modal-content glass-panel">
+                    <button id="close-modal" class="modal-close-btn"><i class="fas fa-times"></i></button>
+                    <div class="modal-header">
+                        <h2 id="modal-title">Project Title</h2>
+                        <span id="modal-category" class="project-category">Category</span>
+                    </div>
+                    
+                    <div class="modal-tabs">
+                        <button class="modal-tab-btn active" data-target="modal-overview">Overview</button>
+                        <button class="modal-tab-btn" data-target="modal-architecture">Architecture</button>
+                        <button class="modal-tab-btn" data-target="modal-facts">Facts &amp; Figures</button>
                     </div>
 
-                    <!-- Communication & Control Systems -->
-                    <div class="project-section">
-                        <h3 class="subsection-title">Communication &amp; Control Systems</h3>
-                        <div class="projects-grid">
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/p2p-lora-device.jpeg" alt="P2P LoRa QR Scanner Device" loading="lazy">
-                                </div>
-                                <div class="project-header">
-                                    <h4 class="project-title">P2P LoRa Communication Device</h4>
-                                    <span class="project-category">Communication • Security</span>
-                                </div>
-                                <div class="project-content">
-                                    <p class="project-description">
-                                        LoRa-based P2P device with QR code scanning capability. Engineered for
-                                        environments with signal jammers, enabling reliable wireless data
-                                        transmission to PC when conventional channels are compromised.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span class="tech-tag">LoRa</span>
-                                        <span class="tech-tag">QR Code Scanner</span>
-                                        <span class="tech-tag">P2P Communication</span>
-                                        <span class="tech-tag">Anti-Jamming</span>
-                                        <span class="tech-tag">Wireless Data Transfer</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/arduino-opta-labview.jpg" alt="Arduino OPTA PLC LabVIEW Control Interface" loading="lazy">
-                                </div>
-                                <div class="project-header">
-                                    <h4 class="project-title">Arduino OPTA Embedded Controller API</h4>
-                                    <span class="project-category">PLC • LabVIEW • RIMS / Aerospace</span>
-                                </div>
-                                <div class="project-content">
-                                    <p class="project-description">
-                                        Arduino OPTA PLC programmed in Structured Text and Ladder Logic with peripheral
-                                        control via TCP and UDP. Developed Opta Embedded Controller API in LabVIEW for
-                                        the RIMS Test &amp; Measurement Department at NASTP Alpha — enabling
-                                        aerospace-grade hardware control and monitoring workflows.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span class="tech-tag">Arduino OPTA</span>
-                                        <span class="tech-tag">Structured Text</span>
-                                        <span class="tech-tag">Ladder Logic</span>
-                                        <span class="tech-tag">TCP/UDP Control</span>
-                                        <span class="tech-tag">LabVIEW VI</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-images">
-                                    <div class="project-image">
-                                        <img src="images/motor-controller-hardware.png" alt="STM32 Motor Controller Hardware" loading="lazy">
-                                        <div class="image-label">Hardware Design</div>
-                                    </div>
-                                    <div class="project-image">
-                                        <img src="images/motor-controller-gui.png" alt="MATLAB GUI Control Interface" loading="lazy">
-                                        <div class="image-label">MATLAB GUI Interface</div>
-                                    </div>
-                                </div>
-                                <div class="project-header">
-                                    <h4 class="project-title">Motor Controller (Position &amp; Speed)</h4>
-                                    <span class="project-category">Control Systems • Hardware</span>
-                                </div>
-                                <div class="project-content">
-                                    <p class="project-description">
-                                        Complete motor control system with position and speed control capabilities.
-                                        Custom PCB design with STM32, encoder feedback, and MATLAB GUI integration
-                                        for real-time control and monitoring.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span class="tech-tag">STM32</span>
-                                        <span class="tech-tag">Encoder Motor</span>
-                                        <span class="tech-tag">Motor Driver</span>
-                                        <span class="tech-tag">MATLAB GUI</span>
-                                        <span class="tech-tag">Position/Speed Control</span>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="modal-body">
+                        <div id="modal-overview" class="modal-section active">
+                            <img id="modal-main-image" src="" alt="Project Image" class="modal-featured-img">
+                            <p id="modal-description" class="modal-desc"></p>
+                            <div class="modal-tech-stack" id="modal-tech-stack"></div>
                         </div>
-                    </div>
-
-                    <!-- RF & Signal Processing -->
-                    <div class="project-section">
-                        <h3 class="subsection-title">RF &amp; Signal Processing</h3>
-                        <div class="projects-grid">
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/gnu-radio-usrp-x310.jpeg" alt="GNU Radio USRP X310 Setup" loading="lazy">
-                                </div>
-                                <div class="project-header">
-                                    <h4 class="project-title">GNU Radio SDR System</h4>
-                                    <span class="project-category">SDR • GNU Radio Companion</span>
-                                </div>
-                                <div class="project-content">
-                                    <p class="project-description">
-                                        Software Defined Radio system using USRP X310 operating up to 5 GHz with
-                                        580 Mbps throughput via GNU Radio Companion. Full transmission and receiving
-                                        pipeline for RF signal processing and spectral analysis — deployed for
-                                        aerospace &amp; defense instrumentation at RIMS.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span class="tech-tag">USRP X310</span>
-                                        <span class="tech-tag">GNU Radio Companion</span>
-                                        <span class="tech-tag">5 GHz / 580 Mbps</span>
-                                        <span class="tech-tag">Signal Processing</span>
-                                        <span class="tech-tag">UHD Python API</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-images">
-                                    <div class="project-image">
-                                        <img src="images/t-power-divider-simulation.png" alt="T Power Divider HFSS Simulation" loading="lazy">
-                                        <div class="image-label">ANSYS HFSS Simulation</div>
-                                    </div>
-                                    <div class="project-image">
-                                        <img src="images/t-power-divider-pcb.jpeg" alt="T Power Divider Hand-Etched PCB" loading="lazy">
-                                        <div class="image-label">Hand-Etched PCB</div>
-                                    </div>
-                                </div>
-                                <div class="project-header">
-                                    <h4 class="project-title">T Power Divider</h4>
-                                    <span class="project-category">RF Design • HFSS Simulation</span>
-                                </div>
-                                <div class="project-content">
-                                    <p class="project-description">
-                                        RF power divider design with ANSYS HFSS electromagnetic simulation followed
-                                        by hand-etched PCB realization. Full RF design pipeline from EM simulation
-                                        to physical prototyping and verification.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span class="tech-tag">ANSYS HFSS</span>
-                                        <span class="tech-tag">RF Simulation</span>
-                                        <span class="tech-tag">Hand Etched PCB</span>
-                                        <span class="tech-tag">Power Divider</span>
-                                        <span class="tech-tag">EM Design</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/heartrate-ecg-dataset.png" alt="Heart Rate Extraction from ECG Dataset" loading="lazy">
-                                </div>
-                                <div class="project-header">
-                                    <h4 class="project-title">Heart Rate Monitor from ECG Dataset</h4>
-                                    <span class="project-category">Signal Processing • MIT Dataset</span>
-                                </div>
-                                <div class="project-content">
-                                    <p class="project-description">
-                                        Signal processing implementation using MIT ECG dataset to extract heart rate
-                                        information. Applied digital filters and DSP techniques for accurate heart
-                                        rate detection and analysis from ECG waveforms.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span class="tech-tag">MIT ECG Dataset</span>
-                                        <span class="tech-tag">Digital Filters</span>
-                                        <span class="tech-tag">Signal Processing</span>
-                                        <span class="tech-tag">Heart Rate Extraction</span>
-                                        <span class="tech-tag">ECG Analysis</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div id="modal-architecture" class="modal-section">
+                            <img id="modal-arch-image" src="" alt="Architecture Diagram" class="modal-arch-img">
                         </div>
-                    </div>
-
-                    <!-- Robotics & PCB Design -->
-                    <div class="project-section">
-                        <h3 class="subsection-title">Robotics &amp; PCB Design</h3>
-                        <div class="projects-grid">
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/lfr-airtech24-winner.jpeg" alt="Line Following Robot - AirTech 24 Winner" loading="lazy">
-                                </div>
-                                <div class="project-header">
-                                    <h4 class="project-title">Line Following Robot (LFR)</h4>
-                                    <span class="project-category">Robotics • Competition Winner</span>
-                                </div>
-                                <div class="project-content">
-                                    <p class="project-description">
-                                        Award-winning autonomous robot designed for line-following competition.
-                                        First place winner at AirTech 24 Roboline with optimized sensor placement
-                                        and precision control algorithms.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span class="tech-tag">Microcontroller</span>
-                                        <span class="tech-tag">IR Sensors</span>
-                                        <span class="tech-tag">Motor Control</span>
-                                        <span class="tech-tag">Competition Winner</span>
-                                        <span class="tech-tag">Algorithm Optimization</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/ergonomic-mouse-pcb.png" alt="Ergonomic Mouse Internal PCB Design" loading="lazy">
-                                </div>
-                                <div class="project-header">
-                                    <h4 class="project-title">Tarantula Mouse PCB</h4>
-                                    <span class="project-category">PCB Design • BLE • Embedded • RISETech</span>
-                                </div>
-                                <div class="project-content">
-                                    <p class="project-description">
-                                        Custom internal PCB for the Tarantula ergonomic mouse (RISETech product) with
-                                        BLE wireless connectivity. Integrated joystick controls with highly optimized
-                                        multi-layer component placement within strict ergonomic form-factor constraints.
-                                        Manufactured via JLCPCB with full production lifecycle ownership.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span class="tech-tag">BLE Connectivity</span>
-                                        <span class="tech-tag">Joystick Controls</span>
-                                        <span class="tech-tag">Ergonomic Layout</span>
-                                        <span class="tech-tag">Custom PCB</span>
-                                        <span class="tech-tag">Component Optimization</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/Amplifier.jpg" alt="5W Audio Amplifier PCB Design" loading="lazy">
-                                </div>
-                                <div class="project-header">
-                                    <h4 class="project-title">5W Audio Amplifier</h4>
-                                    <span class="project-category">Analog Design • Audio PCB</span>
-                                </div>
-                                <div class="project-content">
-                                    <p class="project-description">
-                                        Two-stage audio amplifier (preamp and power stage) for 5W 6Ω speaker.
-                                        Extensive datasheet analysis and component tuning for optimal audio
-                                        performance with careful analog design methodology.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span class="tech-tag">Two-Stage Design</span>
-                                        <span class="tech-tag">Preamp &amp; Power Stage</span>
-                                        <span class="tech-tag">5W 6Ω Speaker</span>
-                                        <span class="tech-tag">Component Tuning</span>
-                                        <span class="tech-tag">Analog Circuit</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- PCB Portfolio Link -->
-                        <div class="pcb-portfolio-link">
-                            <div class="portfolio-link-card">
-                                <div class="link-content">
-                                    <i class="fab fa-github"></i>
-                                    <h4>Complete PCB Design Portfolio</h4>
-                                    <p>View my comprehensive collection of PCB designs, schematics, and manufacturing files</p>
-                                    <a href="https://github.com/scientist444/pcb-portfolio" target="_blank" class="portfolio-btn">
-                                        Visit PCB Portfolio on GitHub
-                                    </a>
-                                </div>
-                            </div>
+                        <div id="modal-facts" class="modal-section">
+                            <ul id="modal-facts-list" class="facts-list"></ul>
                         </div>
                     </div>
                 </div>
@@ -1339,6 +976,7 @@
 
     </div>
 
+    <script src="projects_data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

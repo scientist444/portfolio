@@ -1,0 +1,6 @@
+DRC Rules Export File for PCB: E:\aSim Data\Usama Projects\Dock Electronics_v1.0\Design File\DOCK_ESP32_v1.0.PcbDoc
+RuleKind=Width|RuleName=RF|Scope=Board|Minimum=11.03
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=10.00
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=4.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0

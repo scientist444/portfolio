@@ -462,3 +462,101 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
     });
 });
+// --- Dynamic Projects & New Modal Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.getElementById('dynamic-projects-grid');
+    if (!grid || typeof projectsData === 'undefined') return;
+
+    // Render projects
+    projectsData.forEach(proj => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        
+        // Generate tech tags HTML
+        let techHtml = '';
+        if(proj.techStack && proj.techStack.length > 0) {
+            techHtml = proj.techStack.slice(0, 5).map(tech => <span class="tech-tag"></span>).join('');
+        }
+
+        // Project Description Snippet
+        let descSnippet = proj.description;
+        if(descSnippet.length > 150) {
+            descSnippet = descSnippet.substring(0, 150) + '...';
+        }
+
+        card.innerHTML = 
+            <div class="project-image">
+                <img src="" alt="" loading="lazy" onerror="this.src='images/ekko-device.jpg'">
+            </div>
+            <div class="project-header">
+                <h4 class="project-title"></h4>
+                <span class="project-category"></span>
+            </div>
+            <div class="project-content">
+                <p class="project-description"></p>
+                <div class="tech-stack"></div>
+            </div>
+        ;
+        
+        card.addEventListener('click', () => openProjectModal(proj));
+        grid.appendChild(card);
+    });
+
+    // Modal elements
+    const modal = document.getElementById('project-modal');
+    const closeBtn = document.getElementById('close-modal');
+    const tabs = modal.querySelectorAll('.modal-tab-btn');
+    const sections = modal.querySelectorAll('.modal-section');
+
+    function openProjectModal(proj) {
+        document.getElementById('modal-title').textContent = proj.title;
+        document.getElementById('modal-category').textContent = proj.category;
+        
+        const mainImg = document.getElementById('modal-main-image');
+        mainImg.src = proj.mainImage;
+        mainImg.onerror = () => { mainImg.src = 'images/ekko-device.jpg'; };
+
+        document.getElementById('modal-description').textContent = proj.description;
+        
+        const techStackContainer = document.getElementById('modal-tech-stack');
+        techStackContainer.innerHTML = proj.techStack.map(t => <span class="tech-tag"></span>).join('');
+        
+        const archImg = document.getElementById('modal-arch-image');
+        archImg.src = proj.architectureImage;
+        archImg.onerror = () => { archImg.src = 'images/epic.png'; }; // fallback
+        
+        const factsList = document.getElementById('modal-facts-list');
+        factsList.innerHTML = proj.facts.map(f => <li></li>).join('');
+
+        // Reset tabs
+        tabs.forEach(t => t.classList.remove('active'));
+        sections.forEach(s => s.classList.remove('active'));
+        tabs[0].classList.add('active');
+        document.getElementById('modal-overview').classList.add('active');
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // prevent background scrolling
+    }
+
+    closeBtn.addEventListener('click', closeProjectModal);
+    
+    modal.addEventListener('click', (e) => {
+        if(e.target === modal) closeProjectModal();
+    });
+
+    function closeProjectModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            sections.forEach(s => s.classList.remove('active'));
+            
+            tab.classList.add('active');
+            const targetId = tab.getAttribute('data-target');
+            document.getElementById(targetId).classList.add('active');
+        });
+    });
+});

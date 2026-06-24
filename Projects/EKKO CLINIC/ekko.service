@@ -1,0 +1,30 @@
+[Unit]
+Description=EKKO Therapy Device UI
+After=network.target display-manager.service
+Wants=display-manager.service
+
+[Service]
+Type=simple
+User=EKKO
+Group=EKKO
+# netdev → allows nmcli to create/manage WiFi hotspot via NetworkManager polkit
+SupplementaryGroups=netdev
+# CAP_NET_BIND_SERVICE → allows captive-portal HTTP server to bind to port 80
+# CAP_NET_ADMIN        → allows ip address management when NM is not available
+AmbientCapabilities=CAP_NET_BIND_SERVICE CAP_NET_ADMIN
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE CAP_NET_ADMIN
+WorkingDirectory=/home/EKKO/Desktop/EKKO
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/EKKO/.Xauthority
+Environment=KIVY_GL_BACKEND=sdl2
+Environment=KIVY_WINDOW=sdl2
+# Wait until X11 socket is ready before launching
+ExecStartPre=/bin/bash -c 'for i in $(seq 1 30); do [ -e /tmp/.X11-unix/X0 ] && exit 0; sleep 1; done; exit 1'
+ExecStart=/usr/bin/python3 /home/EKKO/Desktop/EKKO/ekko_app.py
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=graphical.target

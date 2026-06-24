@@ -1,0 +1,27 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: DOCK_ESP32_v1.0.GBR   5/26/2026  3:44:21 PM
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.GTO                Top Overlay                             
+.GTP                Top Paste                               
+.GTS                Top Solder                              
+.GTL                Top Layer                               
+.G1                 GROUND                                  
+.G2                 POWER                                   
+.GBL                Bottom Layer                            
+.GBS                Bottom Solder                           
+.GBP                Bottom Paste                            
+.GBO                Bottom Overlay                          
+.GM1                Dimensions                              
+.GM2                Board Outline                           
+.GKO                Keep-Out Layer                          
+.GPT                Top Pad Master                          
+.GPB                Bottom Pad Master                       
+.GD1                Drill Drawing                           
+.GG1                Drill Guide                             
+.GM                 Profile                                 
+------------------------------------------------------------------------------------------
