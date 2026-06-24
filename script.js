@@ -422,11 +422,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalCaption = document.querySelector('.modal-caption');
     const closeModal = document.querySelector('.close-modal');
     
-    // Make all project and achievement images clickable
+    // Make all project and achievement images clickable (skip dynamic project cards)
     const clickableImages = document.querySelectorAll('.project-image img, .achievement-image img');
     
     clickableImages.forEach(img => {
         img.parentElement.addEventListener('click', (e) => {
+            // Skip if this is inside a dynamic project card
+            if (img.closest('[data-dynamic-project]')) return;
             e.preventDefault();
             modal.style.display = 'block';
             modalImage.src = img.src;
@@ -462,101 +464,130 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
     });
 });
-// --- Dynamic Projects & New Modal Logic ---
-document.addEventListener('DOMContentLoaded', () => {
-    const grid = document.getElementById('dynamic-projects-grid');
-    if (!grid || typeof projectsData === 'undefined') return;
 
-    // Render projects
-    projectsData.forEach(proj => {
-        const card = document.createElement('div');
-        card.className = 'project-card';
-        
-        // Generate tech tags HTML
-        let techHtml = '';
-        if(proj.techStack && proj.techStack.length > 0) {
-            techHtml = proj.techStack.slice(0, 5).map(tech => `<span class="tech-tag">${tech}</span>`).join('');
+// --- Dynamic Projects Grid & Project Detail Modal ---
+(function() {
+    document.addEventListener('DOMContentLoaded', function() {
+        var grid = document.getElementById('dynamic-projects-grid');
+        if (!grid || typeof projectsData === 'undefined') return;
+
+        // Build project cards
+        projectsData.forEach(function(proj) {
+            var card = document.createElement('div');
+            card.className = 'project-card';
+
+            // Tech tags (max 5)
+            var techHtml = '';
+            if (proj.techStack && proj.techStack.length > 0) {
+                techHtml = proj.techStack.slice(0, 5).map(function(t) {
+                    return '<span class="tech-tag">' + t + '</span>';
+                }).join('');
+            }
+
+            // Truncate description
+            var desc = proj.description || '';
+            if (desc.length > 150) desc = desc.substring(0, 150) + '...';
+
+            card.innerHTML = '<div class="project-image">' +
+                '<img src="' + (proj.mainImage || '') + '" alt="' + (proj.title || '') + '" loading="lazy" onerror="this.style.display=\'none\'">' +
+                '</div>' +
+                '<div class="project-header">' +
+                '<h4 class="project-title">' + (proj.title || '') + '</h4>' +
+                '<span class="project-category">' + (proj.category || '') + '</span>' +
+                '</div>' +
+                '<div class="project-content">' +
+                '<p class="project-description">' + desc + '</p>' +
+                '<div class="tech-stack">' + techHtml + '</div>' +
+                '</div>';
+
+            // Mark as dynamic card so old image modal ignores it
+            card.setAttribute('data-dynamic-project', 'true');
+
+            card.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                openProjectDetail(proj);
+            });
+
+            // Force visibility (override IntersectionObserver opacity:0)
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+
+            grid.appendChild(card);
+        });
+
+        // --- Project Detail Modal ---
+        var modal = document.getElementById('project-modal');
+        var closeBtn = document.getElementById('close-project-modal');
+        if (!modal || !closeBtn) return;
+
+        var tabs = modal.querySelectorAll('.project-modal-tab');
+        var sections = modal.querySelectorAll('.project-modal-section');
+
+        function openProjectDetail(proj) {
+            document.getElementById('modal-title').textContent = proj.title || '';
+            document.getElementById('modal-category').textContent = proj.category || '';
+
+            var mainImg = document.getElementById('modal-main-image');
+            mainImg.src = proj.mainImage || '';
+            mainImg.style.display = '';
+            mainImg.onerror = function() { this.style.display = 'none'; };
+
+            document.getElementById('modal-description').textContent = proj.description || '';
+
+            var techContainer = document.getElementById('modal-tech-stack');
+            techContainer.innerHTML = (proj.techStack || []).map(function(t) {
+                return '<span class="tech-tag">' + t + '</span>';
+            }).join('');
+
+            var archImg = document.getElementById('modal-arch-image');
+            archImg.src = proj.architectureImage || '';
+            archImg.style.display = '';
+            archImg.onerror = function() { this.style.display = 'none'; };
+
+            var factsList = document.getElementById('modal-facts-list');
+            factsList.innerHTML = (proj.facts || []).map(function(f) {
+                return '<li>' + f + '</li>';
+            }).join('');
+
+            // Reset to overview tab
+            tabs.forEach(function(t) { t.classList.remove('active'); });
+            sections.forEach(function(s) { s.classList.remove('active'); });
+            if (tabs.length > 0) tabs[0].classList.add('active');
+            var overview = document.getElementById('modal-overview');
+            if (overview) overview.classList.add('active');
+
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
         }
 
-        // Project Description Snippet
-        let descSnippet = proj.description;
-        if(descSnippet.length > 150) {
-            descSnippet = descSnippet.substring(0, 150) + '...';
+        // Close modal
+        closeBtn.addEventListener('click', closeProjectDetail);
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) closeProjectDetail();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('open')) {
+                closeProjectDetail();
+            }
+        });
+
+        function closeProjectDetail() {
+            modal.classList.remove('open');
+            document.body.style.overflow = '';
         }
 
-        card.innerHTML = `
-            <div class="project-image">
-                <img src="${proj.mainImage}" alt="${proj.title}" loading="lazy" onerror="this.src='images/ekko-device.jpg'">
-            </div>
-            <div class="project-header">
-                <h4 class="project-title">${proj.title}</h4>
-                <span class="project-category">${proj.category}</span>
-            </div>
-            <div class="project-content">
-                <p class="project-description">${descSnippet}</p>
-                <div class="tech-stack">${techHtml}</div>
-            </div>
-        `;
-        
-        card.addEventListener('click', () => openProjectModal(proj));
-        grid.appendChild(card);
-    });
-
-    // Modal elements
-    const modal = document.getElementById('project-modal');
-    const closeBtn = document.getElementById('close-modal');
-    const tabs = modal.querySelectorAll('.modal-tab-btn');
-    const sections = modal.querySelectorAll('.modal-section');
-
-    function openProjectModal(proj) {
-        document.getElementById('modal-title').textContent = proj.title;
-        document.getElementById('modal-category').textContent = proj.category;
-        
-        const mainImg = document.getElementById('modal-main-image');
-        mainImg.src = proj.mainImage;
-        mainImg.onerror = () => { mainImg.src = 'images/ekko-device.jpg'; };
-
-        document.getElementById('modal-description').textContent = proj.description;
-        
-        const techStackContainer = document.getElementById('modal-tech-stack');
-        techStackContainer.innerHTML = proj.techStack.map(t => `<span class="tech-tag">${t}</span>`).join('');
-        
-        const archImg = document.getElementById('modal-arch-image');
-        archImg.src = proj.architectureImage;
-        archImg.onerror = () => { archImg.src = 'images/epic.png'; }; // fallback
-        
-        const factsList = document.getElementById('modal-facts-list');
-        factsList.innerHTML = proj.facts.map(f => `<li>${f}</li>`).join('');
-
-        // Reset tabs
-        tabs.forEach(t => t.classList.remove('active'));
-        sections.forEach(s => s.classList.remove('active'));
-        if(tabs.length > 0) tabs[0].classList.add('active');
-        if(document.getElementById('modal-overview')) document.getElementById('modal-overview').classList.add('active');
-
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // prevent background scrolling
-    }
-
-    closeBtn.addEventListener('click', closeProjectModal);
-    
-    modal.addEventListener('click', (e) => {
-        if(e.target === modal) closeProjectModal();
-    });
-
-    function closeProjectModal() {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            tabs.forEach(t => t.classList.remove('active'));
-            sections.forEach(s => s.classList.remove('active'));
-            
-            tab.classList.add('active');
-            const targetId = tab.getAttribute('data-target');
-            document.getElementById(targetId).classList.add('active');
+        // Tab switching
+        tabs.forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                tabs.forEach(function(t) { t.classList.remove('active'); });
+                sections.forEach(function(s) { s.classList.remove('active'); });
+                tab.classList.add('active');
+                var targetId = tab.getAttribute('data-target');
+                var targetSection = document.getElementById(targetId);
+                if (targetSection) targetSection.classList.add('active');
+            });
         });
     });
-});
+})();
+

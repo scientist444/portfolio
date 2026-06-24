@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Umer Sajid — Embedded Electronics Engineer</title>
-    <link rel="stylesheet" href="style.css?v=2.1">
+    <link rel="stylesheet" href="style.css?v=3.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -237,37 +237,6 @@
                                     Visit PCB Portfolio on GitHub
                                 </a>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Details Modal (Hidden by default) -->
-            <div id="project-modal" class="modal-overlay">
-                <div class="modal-content glass-panel">
-                    <button id="close-modal" class="modal-close-btn"><i class="fas fa-times"></i></button>
-                    <div class="modal-header">
-                        <h2 id="modal-title">Project Title</h2>
-                        <span id="modal-category" class="project-category">Category</span>
-                    </div>
-                    
-                    <div class="modal-tabs">
-                        <button class="modal-tab-btn active" data-target="modal-overview">Overview</button>
-                        <button class="modal-tab-btn" data-target="modal-architecture">Architecture</button>
-                        <button class="modal-tab-btn" data-target="modal-facts">Facts &amp; Figures</button>
-                    </div>
-
-                    <div class="modal-body">
-                        <div id="modal-overview" class="modal-section active">
-                            <img id="modal-main-image" src="" alt="Project Image" class="modal-featured-img">
-                            <p id="modal-description" class="modal-desc"></p>
-                            <div class="modal-tech-stack" id="modal-tech-stack"></div>
-                        </div>
-                        <div id="modal-architecture" class="modal-section">
-                            <img id="modal-arch-image" src="" alt="Architecture Diagram" class="modal-arch-img">
-                        </div>
-                        <div id="modal-facts" class="modal-section">
-                            <ul id="modal-facts-list" class="facts-list"></ul>
                         </div>
                     </div>
                 </div>
@@ -965,6 +934,37 @@
             </div>
         </footer>
 
+        <!-- Project Details Modal -->
+        <div id="project-modal" class="project-modal-overlay">
+            <div class="project-modal-content">
+                <button id="close-project-modal" class="project-modal-close"><i class="fas fa-times"></i></button>
+                <div class="project-modal-header">
+                    <h2 id="modal-title">Project Title</h2>
+                    <span id="modal-category" class="project-modal-category">Category</span>
+                </div>
+                
+                <div class="project-modal-tabs">
+                    <button class="project-modal-tab active" data-target="modal-overview">Overview</button>
+                    <button class="project-modal-tab" data-target="modal-architecture">Architecture</button>
+                    <button class="project-modal-tab" data-target="modal-facts">Facts & Figures</button>
+                </div>
+
+                <div class="project-modal-body">
+                    <div id="modal-overview" class="project-modal-section active">
+                        <img id="modal-main-image" src="" alt="Project Image" class="project-modal-img">
+                        <p id="modal-description" class="project-modal-desc"></p>
+                        <div id="modal-tech-stack" class="project-modal-tech"></div>
+                    </div>
+                    <div id="modal-architecture" class="project-modal-section">
+                        <img id="modal-arch-image" src="" alt="Architecture Diagram" class="project-modal-img">
+                    </div>
+                    <div id="modal-facts" class="project-modal-section">
+                        <ul id="modal-facts-list" class="project-modal-facts"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Image Modal -->
         <div id="imageModal" class="image-modal">
             <div class="modal-content">
@@ -976,7 +976,7 @@
 
     </div>
 
-    <script src="projects_data.js?v=2.1"></script>
-    <script src="script.js?v=2.1"></script>
+    <script src="projects_data.js?v=3.0"></script>
+    <script src="script.js?v=3.0"></script>
 </body>
 </html>
