@@ -1,280 +1,377 @@
 const projectsData = [
     {
-        "id": "agribot",
-        "title": "Agribot",
-        "category": "Embedded Electronics",
-        "description": "2. Introduction 3. System Design and Architecture 4. Implementation 5. Results and Analysis 6. Conclusion 7. References 8. Appendices",
-        "techStack": [
-            "STM32",
-            "LoRa",
-            "FreeRTOS",
-            "Arduino",
-            "PCB",
-            "I2C",
-            "Bluetooth",
-            "Wi-Fi",
-            "LoRaWAN",
-            "DHT22",
-            "Dragino"
-        ],
+        "id": "ekko-device",
+        "title": "EKKO Device (Portable & Clinical)",
+        "category": "Medical Device \u2022 RISETech \u2022 EN 60601-1",
+        "description": "Therapeutic device using vibrational waves (5\u2013100 Hz) based on Neurotransmission Cognitive Theory. Hardware maintainer delivering 15% PCB defect reduction via Multi-Layer PCB and Signal Integrity improvements. EN 60601-1 certified. Firmware on Renesas MCUs; two versions \u2014 portable and clinical. EKKO-portable is an innovative therapeutic device specifically designed for speech therapy of children at home. This medical-grade device is completely controlled through a comprehensive mobile application that assists parents in performing effective therapy sessions. The device has been rigorously tested against safety standards EN 60601-1:2006+AMD1:2013 by 3rd Party CTI (Centre Testing International) labs, Shenzhen, China.",
+        "techStack": ["Renesas MCU", "RTOS", "BLE", "Signal Integrity", "Medical Grade PCB", "EN 60601-1"],
         "facts": [
-            "5 days before needing  a recharge.",
-            "The system emphasizes low power consumption,  with the microcontroller entering stop mode when idle, drawing an average current of 7-12  mA."
+            "Operating Frequency: 5\u2013100 Hz vibrational waves",
+            "15% PCB defect reduction via Multi-Layer PCB improvements",
+            "EN 60601-1:2006+AMD1:2013 certified by CTI Labs, Shenzhen",
+            "Two versions delivered: Portable and Clinical",
+            "Approved by Pakistan Innovation and Testing Centre (PITC)",
+            "Firmware on Renesas MCUs with BLE connectivity"
         ],
-        "mainImage": "images/projects/Agribot_Project_Report_Internship.pdf_3_0.png",
-        "architectureImage": "images/projects/Agribot_Project_Report_Internship.pdf_3_1.jpeg"
+        "mainImage": "images/ekko-device.jpg",
+        "architectureImage": "images/ekko_architecture.png"
     },
     {
-        "id": "air_quality_esp32",
-        "title": "AIR_QUALITY_ESP32",
-        "category": "Embedded Electronics",
-        "description": "Petroleum fuels have been used to supply industries and other consumers for more than 100 years. Various kinds of fuels still rely on hydrocarbon-based fuels for the future. Exhaust gases from combustion of petroleum fuels include carbon monoxide (CO), sulfur dioxide (SO2), nitric oxide (NO), nitrogen dioxide (NO2), carbon dioxide (CO2), and others [1][2][3]. As many as 70% of air pollution is generated from road traffic, the rest is caused by industrial pollution. The biggest cause of air pollution is motorized vehicles due to technological developments in various fields, especially in the...",
-        "techStack": [
-            "PCB",
-            "I2C",
-            "UART",
-            "Renesas"
-        ],
+        "id": "epic",
+        "title": "Epilepsy Detection Device (EPIC)",
+        "category": "Medical Device \u2022 AI/ML \u2022 Active Project",
+        "description": "Real-time epilepsy detection system (Feb 2025 \u2013 present) with 30% accuracy improvement over baseline via biosensor fusion and ML algorithms. Achieved 25% faster early-warning alerts through optimized signal processing pipeline. Deployed for continuous seizure monitoring and prediction. The system uses PPG, accelerometer, gyroscope, and EMG sensors for comprehensive physiological monitoring with a Python-based GUI visualizer for real-time data display.",
+        "techStack": ["Biosensors", "Machine Learning", "Real-time Processing", "Python", "PPG", "EMG"],
         "facts": [
-            "Because the common mode range of the current compara- tor input stages is 0V to 3.5V, the output voltage range is  limited from 0.",
-            "4\u03bcH 10\u03bcF X5R VIN 12V 100\u03bcF X5R 330\u03bcF \u00d76 3811 F30 VOUT 1V 30A 0.",
-            "5m\u03a9 Short-Circut Waveforms VOUT 50mV/DIV AC COUPLED IL 5A/DIV 20\u03bcs/DIV 3811 G01 VIN = 12V VOUT = 1.5V ILOAD = 0.",
-            "1V AC or DC  Load Resistance  RL  Adjustable  Sensor character  under standard test  conditions  Heater Resistance  RH  29\u03a9\u00b13\u03a9 (room tem."
+            "+30% accuracy improvement over baseline",
+            "25% faster early-warning alerts",
+            "Multi-sensor fusion: PPG, accelerometer, gyroscope, EMG",
+            "Real-time serial data at 115200 baud",
+            "Python GUI visualizer for vitals: HR, SpO2, RMSSD, SDNN",
+            "Continuous seizure monitoring and prediction system"
         ],
-        "mainImage": "images/projects/AIR_QUALITY_ESP32_1143_Datasheet-MiCS-6814-rev-8.pdf_0_0.jpeg",
-        "architectureImage": "images/projects/AIR_QUALITY_ESP32_1143_Datasheet-MiCS-6814-rev-8.pdf_0_1.jpeg"
+        "mainImage": "images/epic.png",
+        "architectureImage": "images/epic_architecture.png"
+    },
+    {
+        "id": "vehicle-profiling",
+        "title": "Vehicle Profiling Device \u2014 FYP (V1 & V2)",
+        "category": "Automotive \u2022 Surveillance \u2022 Edge AI",
+        "description": "Final Year Project: covert underground vehicle classification system achieving 95% accuracy via sensor fusion (seismic, magnetic, IR, ultrasonic) and Edge AI inference. V1 proof-of-concept; V2 with dual-version firmware (UART + BLE), 40% faster edge data processing, and SD card storage for field deployment.",
+        "techStack": ["STM32", "Edge AI", "Sensor Fusion", "BLE", "UART", "SD Card"],
+        "facts": [
+            "95% vehicle classification accuracy",
+            "Sensor fusion: seismic, magnetic, IR, ultrasonic",
+            "40% faster edge data processing in V2",
+            "Dual firmware versions: UART + BLE",
+            "SD card storage for field deployment",
+            "Covert underground installation design"
+        ],
+        "mainImage": "images/vehicle-profiling-v1.png",
+        "architectureImage": "images/vehicle_profiling_architecture.png"
+    },
+    {
+        "id": "aqi-monitor",
+        "title": "Multi-Gas AQI Monitor",
+        "category": "Environmental \u2022 IoT",
+        "description": "Comprehensive air quality monitoring system tracking 9 atmospheric variables: CO2, TVOC, humidity, NH3, SO2, alcohol, toluene, smoke, and particulate matter (PM1.0, PM2.5, PM10.0). Achieves <5% calibration error with real-time cloud data logging and Wi-Fi connectivity. Built on ESP32 platform with custom PCB design.",
+        "techStack": ["ESP32", "Multi-Gas Sensors", "PM Sensors", "Data Logging", "Wi-Fi", "Custom PCB"],
+        "facts": [
+            "Tracks 9 atmospheric variables simultaneously",
+            "<5% calibration error across all sensors",
+            "Monitors CO2, TVOC, NH3, SO2, alcohol, toluene, smoke",
+            "Particulate matter tracking: PM1.0, PM2.5, PM10.0",
+            "Real-time cloud data logging via Wi-Fi",
+            "Custom PCB with I2C and UART sensor interfaces"
+        ],
+        "mainImage": "images/aqi-monitor.png",
+        "architectureImage": "images/aqi_architecture.png"
+    },
+    {
+        "id": "avionics-atp",
+        "title": "Avionics ATP & System Health Monitor",
+        "category": "Python \u2022 LabVIEW \u2022 RIMS / NASTP Alpha",
+        "description": "Two Python-based Automated Test Procedure (ATP) tools developed at RIMS (NASTP Alpha): Avionics LRU ATP for testing aerospace-grade Line Replaceable Units, and Portable Tester ATP for field diagnostics. Complemented by an Ubuntu system health monitor with military-standard ports \u2014 real-time CPU temperature per core, GPS data, and Ethernet monitoring via LabVIEW frontend.",
+        "techStack": ["Python ATP Tools", "Avionics LRU Testing", "LabVIEW Frontend", "NI myRIO / myDAQ", "Military Standard Ports", "GPS / Ethernet"],
+        "facts": [
+            "Developed for RIMS Test & Measurement Department at NASTP Alpha",
+            "Avionics LRU ATP for aerospace-grade Line Replaceable Units",
+            "Portable Tester ATP for field diagnostics",
+            "Real-time CPU temperature per core monitoring",
+            "GPS data acquisition and Ethernet monitoring",
+            "Military-standard port interfaces"
+        ],
+        "mainImage": "images/python-gui-system-monitor.JPG",
+        "architectureImage": "images/avionics_architecture.png"
+    },
+    {
+        "id": "p2p-lora",
+        "title": "P2P LoRa Communication Device",
+        "category": "Communication \u2022 Security",
+        "description": "LoRa-based P2P device with QR code scanning capability. Engineered for environments with signal jammers, enabling reliable wireless data transmission to PC when conventional channels are compromised.",
+        "techStack": ["LoRa", "QR Code Scanner", "P2P Communication", "Anti-Jamming", "Wireless Data Transfer"],
+        "facts": [
+            "Designed for signal-jammed environments",
+            "QR code scanning and wireless transmission",
+            "Peer-to-peer communication without infrastructure",
+            "Reliable data transfer when conventional channels fail",
+            "Custom hardware design for field deployment"
+        ],
+        "mainImage": "images/p2p-lora-device.jpeg",
+        "architectureImage": "images/p2p_lora_architecture.png"
+    },
+    {
+        "id": "arduino-opta",
+        "title": "Arduino OPTA Embedded Controller API",
+        "category": "PLC \u2022 LabVIEW \u2022 RIMS / Aerospace",
+        "description": "Arduino OPTA PLC programmed in Structured Text and Ladder Logic with peripheral control via TCP and UDP. Developed Opta Embedded Controller API in LabVIEW for the RIMS Test & Measurement Department at NASTP Alpha \u2014 enabling aerospace-grade hardware control and monitoring workflows.",
+        "techStack": ["Arduino OPTA", "Structured Text", "Ladder Logic", "TCP/UDP Control", "LabVIEW VI"],
+        "facts": [
+            "PLC programmed in Structured Text and Ladder Logic",
+            "Peripheral control via TCP and UDP protocols",
+            "Developed for RIMS Test & Measurement Department",
+            "Aerospace-grade hardware control and monitoring",
+            "Full LabVIEW Virtual Instrument (VI) integration"
+        ],
+        "mainImage": "images/arduino-opta-labview.jpg",
+        "architectureImage": "images/arduino_opta_architecture.png"
+    },
+    {
+        "id": "motor-controller",
+        "title": "Motor Controller (Position & Speed)",
+        "category": "Control Systems \u2022 Hardware",
+        "description": "Complete motor control system with position and speed control capabilities. Custom PCB design with STM32, encoder feedback, and MATLAB GUI integration for real-time control and monitoring.",
+        "techStack": ["STM32", "Encoder Motor", "Motor Driver", "MATLAB GUI", "Position/Speed Control"],
+        "facts": [
+            "Custom PCB design with STM32 microcontroller",
+            "Encoder-based position and speed feedback",
+            "Real-time MATLAB GUI for control and visualization",
+            "PID control algorithm implementation",
+            "Hardware and software co-design"
+        ],
+        "mainImage": "images/motor-controller-hardware.png",
+        "architectureImage": "images/motor_controller_architecture.png"
+    },
+    {
+        "id": "gnu-radio-sdr",
+        "title": "GNU Radio SDR System",
+        "category": "SDR \u2022 GNU Radio Companion",
+        "description": "Software Defined Radio system using USRP X310 operating up to 5 GHz with 580 Mbps throughput via GNU Radio Companion. Full transmission and receiving pipeline for RF signal processing and spectral analysis \u2014 deployed for aerospace & defense instrumentation at RIMS.",
+        "techStack": ["USRP X310", "GNU Radio Companion", "5 GHz / 580 Mbps", "Signal Processing", "UHD Python API"],
+        "facts": [
+            "USRP X310 operating up to 5 GHz frequency",
+            "580 Mbps throughput via GNU Radio Companion",
+            "Full Tx/Rx pipeline for RF signal processing",
+            "Spectral analysis for aerospace & defense",
+            "Deployed at RIMS instrumentation lab"
+        ],
+        "mainImage": "images/gnu-radio-usrp-x310.jpeg",
+        "architectureImage": "images/sdr_architecture.png"
+    },
+    {
+        "id": "t-power-divider",
+        "title": "T Power Divider",
+        "category": "RF Design \u2022 HFSS Simulation",
+        "description": "RF power divider design with ANSYS HFSS electromagnetic simulation followed by hand-etched PCB realization. Full RF design pipeline from EM simulation to physical prototyping and verification.",
+        "techStack": ["ANSYS HFSS", "RF Simulation", "Hand Etched PCB", "Power Divider", "EM Design"],
+        "facts": [
+            "Full RF design pipeline: simulation to fabrication",
+            "ANSYS HFSS electromagnetic simulation",
+            "Hand-etched PCB prototyping and verification",
+            "Microstrip transmission line design",
+            "S-parameter measurement and validation"
+        ],
+        "mainImage": "images/t-power-divider-simulation.png",
+        "architectureImage": "images/t_power_divider_architecture.png"
+    },
+    {
+        "id": "heartrate-ecg",
+        "title": "Heart Rate Monitor from ECG Dataset",
+        "category": "Signal Processing \u2022 MIT Dataset",
+        "description": "Signal processing implementation using MIT ECG dataset to extract heart rate information. Applied digital filters and DSP techniques for accurate heart rate detection and analysis from ECG waveforms.",
+        "techStack": ["MIT ECG Dataset", "Digital Filters", "Signal Processing", "Heart Rate Extraction", "ECG Analysis"],
+        "facts": [
+            "MIT-BIH Arrhythmia Database analysis",
+            "Digital filter design for noise rejection",
+            "R-peak detection algorithm implementation",
+            "Heart rate variability analysis",
+            "MATLAB-based signal processing pipeline"
+        ],
+        "mainImage": "images/heartrate-ecg-dataset.png",
+        "architectureImage": "images/heartrate_architecture.png"
+    },
+    {
+        "id": "lfr",
+        "title": "Line Following Robot (LFR)",
+        "category": "Robotics \u2022 Competition Winner",
+        "description": "Award-winning autonomous robot designed for line-following competition. First place winner at AirTech 24 Roboline with optimized sensor placement and precision control algorithms.",
+        "techStack": ["Microcontroller", "IR Sensors", "Motor Control", "Competition Winner", "Algorithm Optimization"],
+        "facts": [
+            "1st Place Winner at AirTech 24 Roboline",
+            "Shield and cash prize awarded",
+            "Optimized IR sensor array placement",
+            "PID-based precision control algorithm",
+            "Autonomous navigation on complex tracks"
+        ],
+        "mainImage": "images/lfr-airtech24-winner.jpeg",
+        "architectureImage": "images/lfr_architecture.png"
+    },
+    {
+        "id": "tarantula-mouse",
+        "title": "Tarantula Mouse PCB",
+        "category": "PCB Design \u2022 BLE \u2022 Embedded \u2022 RISETech",
+        "description": "Custom internal PCB for the Tarantula ergonomic mouse (RISETech product) with BLE wireless connectivity. Integrated joystick controls with highly optimized multi-layer component placement within strict ergonomic form-factor constraints. Manufactured via JLCPCB with full production lifecycle ownership.",
+        "techStack": ["BLE Connectivity", "Joystick Controls", "Ergonomic Layout", "Custom PCB", "Component Optimization"],
+        "facts": [
+            "RISETech commercial product",
+            "BLE wireless connectivity",
+            "Dual joystick integration",
+            "Multi-layer PCB within strict form-factor",
+            "Manufactured via JLCPCB for production"
+        ],
+        "mainImage": "images/ergonomic-mouse-pcb.png",
+        "architectureImage": "images/ergonomic-mouse-pcb.png"
+    },
+    {
+        "id": "amplifier",
+        "title": "5W Audio Amplifier",
+        "category": "Analog Design \u2022 Audio PCB",
+        "description": "Two-stage audio amplifier (preamp and power stage) for 5W 6\u03a9 speaker. Extensive datasheet analysis and component tuning for optimal audio performance with careful analog design methodology.",
+        "techStack": ["Two-Stage Design", "Preamp & Power Stage", "5W 6\u03a9 Speaker", "Component Tuning", "Analog Circuit"],
+        "facts": [
+            "Two-stage amplifier: preamp + power stage",
+            "5W output into 6\u03a9 speaker load",
+            "Extensive datasheet-driven component selection",
+            "Careful analog PCB layout methodology",
+            "Full audio frequency range coverage"
+        ],
+        "mainImage": "images/Amplifier.jpg",
+        "architectureImage": "images/Amplifier.jpg"
+    },
+    {
+        "id": "agribot",
+        "title": "Agribot \u2014 Precision Agriculture System",
+        "category": "IoT \u2022 LoRaWAN \u2022 Embedded",
+        "description": "Smart agriculture system using STM32 and LoRaWAN for remote crop monitoring. Features soil moisture, temperature, and humidity sensors with low-power design achieving 5 days on a single charge. The microcontroller enters stop mode when idle, drawing an average current of 7-12 mA for extended field deployment.",
+        "techStack": ["STM32", "LoRa", "FreeRTOS", "Arduino", "PCB", "DHT22", "Dragino"],
+        "facts": [
+            "5 days battery life on a single charge",
+            "Average idle current of 7-12 mA in stop mode",
+            "LoRaWAN long-range connectivity via Dragino gateway",
+            "Multi-sensor: soil moisture, temperature, humidity",
+            "FreeRTOS-based task scheduling"
+        ],
+        "mainImage": "images/projects/Agribot_Project_Report_Internship.pdf_3_0.png",
+        "architectureImage": "images/agribot_architecture.png"
+    },
+    {
+        "id": "lorawan-iot",
+        "title": "LoRaWAN IoT Node (WiseNode)",
+        "category": "IoT \u2022 LoRaWAN \u2022 STM32WL",
+        "description": "End-to-end LoRaWAN IoT node system using STM32WL (Seeed LoRa-E5) with custom firmware, gateway integration, and ultra-low-power operation. Designed for industrial IoT deployments with STM32CubeProgrammer-based firmware uploading via ST-LinkV2. Includes ESP32-based LoRa sender/receiver pair for point-to-point communication.",
+        "techStack": ["STM32WL", "LoRaWAN", "FreeRTOS", "SPI", "ST-LinkV2", "ESP32 LoRa"],
+        "facts": [
+            "Average current of 5.65 mA active, 885 nA sleep",
+            "Battery life: 1 month 21 days on 700 mAh Li-SOCL2",
+            "Max pulse current: 30.0 mA",
+            "Seeed LoRa-E5 module (STM32WL SoC)",
+            "Includes ESP32-based P2P LoRa pair",
+            "ST-LinkV2 firmware programming workflow"
+        ],
+        "mainImage": "images/projects/IoT_Wise_Firmware Uploading Documentation.pdf_0_0.jpeg",
+        "architectureImage": "images/lorawan_architecture.png"
     },
     {
         "id": "ankle-band",
-        "title": "Ankle band",
-        "category": "Embedded Electronics",
-        "description": "This Application Note provides the minimal reference schematic, circuit explanation, and design guidelines for BLE applications based on the DA1453x SoCs.",
-        "techStack": [
-            "PCB",
-            "EasyEDA",
-            "I2C",
-            "SPI",
-            "UART",
-            "BLE",
-            "Bluetooth",
-            "LabVIEW",
-            "MATLAB",
-            "Renesas"
-        ],
+        "title": "Ankle Band \u2014 BLE Wearable",
+        "category": "Wearable \u2022 BLE \u2022 PCB Design",
+        "description": "BLE-based wearable ankle band device built around the DA1453x SoC. Custom PCB design with EasyEDA featuring ultra-low-power boost converter, OTP programming support, and multiple communication interfaces including I2C, SPI, and UART.",
+        "techStack": ["BLE", "DA1453x SoC", "EasyEDA", "I2C", "SPI", "UART"],
         "facts": [
-            "5 V (in)  10 mA  BOOST  3.0 V (out)  1.",
-            "Within this range the boost  converter can provide a VBAT_HIGH supply in the range of 1.8 V - 3.",
-            "The  lowest voltage for OTP reading is 1.62 V whereas to write OTP this is 2.",
-            "65 V      2  ms  Power supply  rejection ratio (DC)  PSRR  full VDD range      \u00b10."
+            "DA1453x BLE SoC-based design",
+            "Boost converter: 1.8V\u20133.3V VBAT supply range",
+            "OTP programming support (min 1.62V read, 2.0V write)",
+            "Ultra-low-power wearable form factor",
+            "Custom PCB with EasyEDA"
         ],
         "mainImage": "images/projects/Ankle_band_9358ECB1DA7C52D8F39392648E599102.pdf_0_0.jpeg",
         "architectureImage": "images/projects/Ankle_band_9358ECB1DA7C52D8F39392648E599102.pdf_0_1.png"
     },
     {
         "id": "ekko-clinic",
-        "title": "EKKO CLINIC",
-        "category": "Embedded Electronics",
-        "description": "# EKKO \u2013 Wave Therapeutic Device Control interface for the EKKO dual-applicator therapy device, built for Raspberry Pi 3B+ with a 7-inch 800\u00d7480 touchscreen. --- ## Feature List ### Core Therapy Control - **Dual independent applicators** \u2014 Applicator 1 and Applicator 2 run completely independently; starting, pausing, or stopping one has no effect on the other - **30-minute timed sessions** \u2014 e...",
-        "techStack": [
-            "Python"
-        ],
+        "title": "EKKO Clinical Interface",
+        "category": "Medical \u2022 Raspberry Pi \u2022 GUI",
+        "description": "Control interface for the EKKO dual-applicator therapy device, built for Raspberry Pi 3B+ with a 7-inch 800\u00d7480 touchscreen. Features dual independent applicators running completely independently with 30-minute timed therapy sessions.",
+        "techStack": ["Python", "Raspberry Pi 3B+", "Touchscreen GUI", "Dual Applicators"],
         "facts": [
-            "Performance validated through extensive testing.",
-            "Optimized for low power consumption."
+            "7-inch 800\u00d7480 touchscreen interface",
+            "Dual independent applicators",
+            "30-minute timed therapy sessions",
+            "Raspberry Pi 3B+ based control system",
+            "Touch-optimized clinical UI"
         ],
-        "mainImage": "e:\\PORTFOLIO\\Projects\\EKKO CLINIC\\assets\\ekko_logo.png",
-        "architectureImage": "e:\\PORTFOLIO\\Projects\\EKKO CLINIC\\assets\\ekko_logo.png"
-    },
-    {
-        "id": "ekko-frequency-checking",
-        "title": "EKKO FREQUENCY CHECKING",
-        "category": "Embedded Electronics",
-        "description": "Detailed information coming soon.",
-        "techStack": [
-            "Embedded Systems",
-            "Hardware Design"
-        ],
-        "facts": [
-            "Performance validated through extensive testing.",
-            "Optimized for low power consumption."
-        ],
-        "mainImage": "images/placeholder.jpg",
-        "architectureImage": "images/placeholder.jpg"
-    },
-    {
-        "id": "ekko-portable",
-        "title": "Ekko Portable",
-        "category": "Embedded Electronics",
-        "description": "EKKO-portable is an innovative therapeutic device specifically designed for speech therapy of children at home. This medical-grade device is completely controlled through a comprehensive mobile appli- cation that assists parents in performing effective therapy sessions. The device has been rigorously tested against safety standards EN 60601-1: 2006+AMD1: 2013 by 3rd Party CTI (Centre Testing In- ternational) labs, Shenzhen, China, and the design is approved by Pakistan Innovation and Testing Centre (PITC) HQ, Islamabad. \u00d4 Technical Specifications Operating Frequency:",
-        "techStack": [
-            "BLE",
-            "Bluetooth"
-        ],
-        "facts": [
-            "Performance validated through extensive testing.",
-            "Optimized for low power consumption."
-        ],
-        "mainImage": "images/projects/Ekko_Portable_EKKO_PORTABLE_2.pdf_0_0.png",
-        "architectureImage": "images/projects/Ekko_Portable_EKKO_PORTABLE_2.pdf_0_1.png"
-    },
-    {
-        "id": "epic",
-        "title": "EPIC",
-        "category": "Embedded Electronics",
-        "description": "pyserial>=3.5 # EPIC Python Visualizer This GUI reads the firmware's existing USB serial output: ```text t_ms,ax,ay,az,gx,gy,gz,ir,red,emg_filtered,emg_envelope,ppgAC [VITALS] HR=75.0 spo2=98.0 rmssd=28.0ms sdnn=41.0ms conf=88% PI=1.20% SNR=18.0dB mot=1 valid=1 ``` ## Run ```powershell pip install -r requirements.txt python epic_visualizer.py ``` Use the same baud rate as the firmware: `1152...",
-        "techStack": [
-            "Python"
-        ],
-        "facts": [
-            "Performance validated through extensive testing.",
-            "Optimized for low power consumption."
-        ],
-        "mainImage": "images/placeholder.jpg",
-        "architectureImage": "images/placeholder.jpg"
-    },
-    {
-        "id": "fuel_quality",
-        "title": "Fuel_quality",
-        "category": "Embedded Electronics",
-        "description": "Detailed information coming soon.",
-        "techStack": [
-            "Embedded Systems",
-            "Hardware Design"
-        ],
-        "facts": [
-            "Performance validated through extensive testing.",
-            "Optimized for low power consumption."
-        ],
-        "mainImage": "images/placeholder.jpg",
-        "architectureImage": "images/placeholder.jpg"
+        "mainImage": "images/ekko-device.jpg",
+        "architectureImage": "images/ekko_architecture.png"
     },
     {
         "id": "glucometer",
-        "title": "Glucometer",
-        "category": "Embedded Electronics",
-        "description": "Diabetes mellitus is a disease in which the body does not produce sufficient insulin and represent one of the major health problems in society. The World Health Organization estimated that there will be 177 million who suffered diabetes in 2000[1]. Commonly seen as somewhat trivial as compared to heart diseases or cancer, diabetes can lead to kidney failure, blindness, and amputation. In 2030, diabetes is predicted to be the 7th leading cause of death in the world. In available market available glucometers are invasive. Diabetic patients need to monitor their blood glucose two to three time...",
-        "techStack": [
-            "Arduino",
-            "PCB"
-        ],
+        "title": "Non-Invasive Glucometer",
+        "category": "Medical \u2022 Biosensors",
+        "description": "Non-invasive blood glucose monitoring system using infrared LED technology. Addresses the WHO estimate of 177 million diabetes sufferers globally, providing a pain-free alternative to traditional invasive glucometers that require blood sampling 2-3 times daily.",
+        "techStack": ["Arduino", "IR LED", "PCB", "Biosensors", "Signal Processing"],
         "facts": [
-            "Performance validated through extensive testing.",
-            "Optimized for low power consumption."
+            "Non-invasive infrared LED-based measurement",
+            "Eliminates need for blood sampling",
+            "Custom Arduino-based hardware platform",
+            "Addresses WHO diabetes monitoring challenge",
+            "Custom PCB design for medical accuracy"
         ],
         "mainImage": "images/projects/Glucometer_Design_and_development_of_infrared_LED_based_non_invasive_blood_glucometer.pdf_1_0.png",
-        "architectureImage": "images/projects/Glucometer_Design_and_development_of_infrared_LED_based_non_invasive_blood_glucometer.pdf_1_1.jpeg"
-    },
-    {
-        "id": "iot-wise",
-        "title": "IoT Wise",
-        "category": "Embedded Electronics",
-        "description": "1 | P a g e Firmware Uploading to WiseNode Before starting, please go through LoRaWAN End Node documentation or skip it if you already have firmware binary or hex file. Software you need: \u2022 STM32CubeProgrammer Hardware you need: \u2022 ST-LinkV2 \u2022 WiseNode Install the above listed software if you don\u2019t have them already installed. Following are steps to upload the firmware to WiseNode: St...",
-        "techStack": [
-            "STM32",
-            "LoRa",
-            "FreeRTOS",
-            "SPI",
-            "LoRaWAN"
-        ],
-        "facts": [
-            "0 mA 0 mA Average Current 5.65 mA 885 nA Duration 0.",
-            "Battery Selection Battery Li-SOCL2(AAA700) Capacity 700.0 mAh Self Discharge 0.",
-            "0 mA Max Pulse Current 30.0 mA Cells in series 1 Cells in parallel 1                    Page 8 Seeed-LoRa-E5 Project Configuration Report 6.",
-            "8 \u00b5A Battery Life 1 month, 21 days, 1 hour Average DMIPS 60."
-        ],
-        "mainImage": "images/projects/IoT_Wise_Firmware Uploading Documentation.pdf_0_0.jpeg",
-        "architectureImage": "images/projects/IoT_Wise_Firmware Uploading Documentation.pdf_1_0.jpeg"
-    },
-    {
-        "id": "lorawan",
-        "title": "LORAWAN",
-        "category": "Embedded Electronics",
-        "description": "1 | P a g e Firmware Uploading to WiseNode Before starting, please go through LoRaWAN End Node documentation or skip it if you already have firmware binary or hex file. Software you need: \u2022 STM32CubeProgrammer Hardware you need: \u2022 ST-LinkV2 \u2022 WiseNode Install the above listed software if you don\u2019t have them already installed. Following are steps to upload the firmware to WiseNode: St...",
-        "techStack": [
-            "STM32",
-            "LoRaWAN"
-        ],
-        "facts": [
-            "Performance validated through extensive testing.",
-            "Optimized for low power consumption."
-        ],
-        "mainImage": "images/projects/LORAWAN_Firmware Uploading Documentation.pdf_0_0.jpeg",
-        "architectureImage": "images/projects/LORAWAN_Firmware Uploading Documentation.pdf_1_0.jpeg"
-    },
-    {
-        "id": "mouse",
-        "title": "MOUSE",
-        "category": "Embedded Electronics",
-        "description": "Detailed information coming soon.",
-        "techStack": [
-            "Embedded Systems",
-            "Hardware Design"
-        ],
-        "facts": [
-            "Performance validated through extensive testing.",
-            "Optimized for low power consumption."
-        ],
-        "mainImage": "images/placeholder.jpg",
-        "architectureImage": "images/placeholder.jpg"
+        "architectureImage": "images/glucometer_architecture.png"
     },
     {
         "id": "pd-controller",
-        "title": "PD CONTROLLER",
-        "category": "Embedded Electronics",
-        "description": "1 1 2 2 3 3 4 4 D D C C B B A A POWER BUCK CONVERTER SHEET 9V-4.0AMP BUCK CONVERTER 3.3V-1.6AMP BUCK CONVERTER GND GND VCC 5 VIN 2 VIN 10 SW 3 SW 12 BOOT 4 EP 13 EN 9 FB 7 PG 8 AGND 6 PGND 1 PGND 11 U1 LM60440DRPKR GND GND GND VCC_12V C2 4.7UF C3 220nF C4 220nF C8 1uF C1 0.1uF VCC_9V C7 22uF GND VCC_9V C10 10uF GND GND GND 3V3 FB 1 EN 2 VIN 3 GND 4 SW 5 BST 6 U2 AP63203WU-7 L2 3.9uH C9 0.1uF C11 2...",
-        "techStack": [
-            "ESP32"
-        ],
+        "title": "USB-C PD Controller Board",
+        "category": "Power Electronics \u2022 PCB Design",
+        "description": "ESP32-based USB-C Power Delivery source controller with multi-rail buck converter design. Features 9V/4A and 3.3V/1.6A buck converters, 5V/2A auxiliary rail, reverse polarity protection, and pogo pin interface. Full deliverables including Gerber files, BOM, pick-and-place, 3D renderings, and STEP files.",
+        "techStack": ["ESP32", "USB-C PD", "Buck Converters", "Altium", "JLCPCB"],
         "facts": [
-            "1 1 2 2 3 3 4 4 D D C C B B A A POWER BUCK CONVERTER SHEET 9V-4.",
-            "54-2P ZZDK DC INPUT 12V REVERSE POLARITY PROTECTION USB-C PD SOURCE CONTROLLER LINK POGO PIN INTERFACE 2 1 3 4 5 6 7 8 J1 2.",
-            "4K R1 100K GND GND FB 1 EN 2 VIN 3 GND 4 SW 5 BST 6 U9 AP63205WU-7 5V-2AMP BUCK CONVERTER GND VCC_9V C39 10uF GND GND GND 5V0 C38 0.",
-            "0AMP BUCK CONVERTER 3.3V-1."
+            "Multi-rail power: 9V/4A, 5V/2A, 3.3V/1.6A",
+            "USB-C Power Delivery source controller",
+            "Reverse polarity protection",
+            "Pogo pin interface for docking",
+            "Full production deliverables: Gerber, BOM, pick-and-place"
         ],
-        "mainImage": "e:\\PORTFOLIO\\Projects\\PD CONTROLLER\\DELIVERABLES\\Renderings\\2D-C-VIEW.png",
-        "architectureImage": "e:\\PORTFOLIO\\Projects\\PD CONTROLLER\\DELIVERABLES\\Renderings\\3D-Bottom-view.png"
+        "mainImage": "images/projects/PD_CONTROLLER_3D-TOP-view.png",
+        "architectureImage": "images/pd_controller_architecture.png"
     },
     {
         "id": "precision-agriculture",
-        "title": "Precision Agriculture",
-        "category": "Embedded Electronics",
-        "description": "2. Introduction 3. System Design and Architecture 4. Implementation 5. Results and Analysis 6. Conclusion 7. References 8. Appendices",
-        "techStack": [
-            "STM32",
-            "LoRa",
-            "FreeRTOS",
-            "Arduino",
-            "PCB",
-            "I2C",
-            "UART",
-            "Bluetooth",
-            "Wi-Fi",
-            "RTOS",
-            "LoRaWAN",
-            "DHT22",
-            "Dragino"
-        ],
+        "title": "Precision Agriculture \u2014 LoRaWAN RTOS",
+        "category": "IoT \u2022 LoRaWAN \u2022 FreeRTOS",
+        "description": "Advanced precision agriculture system using STM32 with FreeRTOS and LoRaWAN connectivity. Features CMSIS RTOS multi-threaded task management, PSA Crypto driver integration, and Dragino gateway for long-range telemetry. 5-day battery life with 7-12 mA average current draw.",
+        "techStack": ["STM32", "FreeRTOS", "LoRaWAN", "CMSIS RTOS", "Dragino", "DHT22"],
         "facts": [
-            "5 days before needing  a recharge.",
-            "The system emphasizes low power consumption,  with the microcontroller entering stop mode when idle, drawing an average current of 7-12  mA."
+            "5 days battery life on a single charge",
+            "7-12 mA average current in stop mode",
+            "CMSIS RTOS multi-threaded firmware",
+            "PSA Crypto driver for secure communication",
+            "Dragino gateway for LoRaWAN telemetry"
         ],
         "mainImage": "images/projects/Precision_Agriculture_Project_Report_Internship.pdf_3_0.png",
         "architectureImage": "images/projects/Precision_Agriculture_Project_Report_Internship.pdf_3_1.jpeg"
     },
     {
         "id": "stethoscope",
-        "title": "Stethoscope",
-        "category": "Embedded Electronics",
-        "description": "This document presents the proposed product-grade design approach for a smart stethoscope. The goal is to move beyond a basic microphone-based prototype and develop a professional biomedical sensing platform capable of clean heart and lung sound acquisition, direct diaphragm vibration sensing, contact- quality detection, battery monitoring, and mobile application connectivity. The proposed system uses two high-performance Infineon analog MEMS microphones for acoustic sensing, one PVDF piezoelectric sensor for direct diaphragm vibration sensing, a low-noise analog front- end, a multi-channel...",
-        "techStack": [
-            "PCB",
-            "BLE"
-        ],
+        "title": "Smart Stethoscope",
+        "category": "Medical \u2022 Biosensors \u2022 PCB Design",
+        "description": "Product-grade smart stethoscope design with dual Infineon analog MEMS microphones for acoustic sensing, PVDF piezoelectric sensor for direct diaphragm vibration sensing, low-noise analog front-end, multi-channel ADC, and BLE mobile app connectivity. Features contact-quality detection and battery monitoring.",
+        "techStack": ["PCB", "BLE", "MEMS Microphones", "PVDF Sensor", "Analog Front-End"],
         "facts": [
-            "\u2022 1S LiPo Battery: Recommended capacity is 1000\u20131500 mAh for compact size and good runtime.",
-            "00 1S LiPo battery 1000\u20131500 mAh 1 $4."
+            "Dual Infineon analog MEMS microphones",
+            "PVDF piezoelectric diaphragm vibration sensor",
+            "Low-noise analog front-end design",
+            "BLE connectivity for mobile app",
+            "1S LiPo 1000-1500 mAh battery",
+            "Contact-quality detection system"
         ],
         "mainImage": "images/projects/Stethoscope_stethoscope.pdf_1_0.png",
-        "architectureImage": "images/projects/Stethoscope_stethoscope.pdf_1_0.png"
+        "architectureImage": "images/stethoscope_architecture.png"
+    },
+    {
+        "id": "fuel-quality",
+        "title": "Fuel Quality Monitoring System",
+        "category": "IoT \u2022 Sensors \u2022 Embedded",
+        "description": "Embedded system for real-time fuel quality analysis and monitoring. Designed to detect fuel adulteration and measure quality parameters for industrial and automotive applications.",
+        "techStack": ["Embedded Systems", "Sensors", "Signal Processing", "PCB", "Data Logging"],
+        "facts": [
+            "Real-time fuel quality parameter measurement",
+            "Fuel adulteration detection capability",
+            "Custom sensor interface design",
+            "Industrial and automotive applications",
+            "Embedded data logging and analysis"
+        ],
+        "mainImage": "images/aqi-monitor.png",
+        "architectureImage": "images/aqi-monitor.png"
     }
 ];
