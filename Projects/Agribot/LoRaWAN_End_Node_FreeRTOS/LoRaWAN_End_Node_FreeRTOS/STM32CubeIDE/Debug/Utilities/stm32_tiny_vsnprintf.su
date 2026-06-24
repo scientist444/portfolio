@@ -1,3 +1,0 @@
-D:/STMCUBEMX/STM32Cube_FW_WL_V1.3.0/Utilities/misc/stm32_tiny_vsnprintf.c:91:12:ee_skip_atoi	0	static
-D:/STMCUBEMX/STM32Cube_FW_WL_V1.3.0/Utilities/misc/stm32_tiny_vsnprintf.c:100:14:ee_number	104	static
-D:/STMCUBEMX/STM32Cube_FW_WL_V1.3.0/Utilities/misc/stm32_tiny_vsnprintf.c:485:5:tiny_vsnprintf_like	56	static

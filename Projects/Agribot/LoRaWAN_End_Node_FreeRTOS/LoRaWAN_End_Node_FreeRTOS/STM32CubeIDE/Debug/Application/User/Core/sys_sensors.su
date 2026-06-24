@@ -1,2 +1,0 @@
-D:/STMCUBEMX/STM32Cube_FW_WL_V1.3.0/Projects/NUCLEO-WL55JC/Applications/LoRaWAN/LoRaWAN_End_Node_FreeRTOS/Core/Src/sys_sensors.c:122:9:EnvSensors_Read	8	static
-D:/STMCUBEMX/STM32Cube_FW_WL_V1.3.0/Projects/NUCLEO-WL55JC/Applications/LoRaWAN/LoRaWAN_End_Node_FreeRTOS/Core/Src/sys_sensors.c:161:9:EnvSensors_Init	0	static

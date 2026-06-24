@@ -1,3 +1,0 @@
-D:/STMCUBEMX/STM32Cube_FW_WL_V1.3.0/Projects/NUCLEO-WL55JC/Applications/LoRaWAN/LoRaWAN_End_Node_FreeRTOS/Core/Src/usart.c:32:6:MX_USART2_UART_Init	5
-D:/STMCUBEMX/STM32Cube_FW_WL_V1.3.0/Projects/NUCLEO-WL55JC/Applications/LoRaWAN/LoRaWAN_End_Node_FreeRTOS/Core/Src/usart.c:75:6:HAL_UART_MspInit	5
-D:/STMCUBEMX/STM32Cube_FW_WL_V1.3.0/Projects/NUCLEO-WL55JC/Applications/LoRaWAN/LoRaWAN_End_Node_FreeRTOS/Core/Src/usart.c:142:6:HAL_UART_MspDeInit	2

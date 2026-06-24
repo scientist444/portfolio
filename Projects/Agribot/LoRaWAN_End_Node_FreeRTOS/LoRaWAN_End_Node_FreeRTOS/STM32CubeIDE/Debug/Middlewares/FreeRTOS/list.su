@@ -1,5 +1,0 @@
-D:/STMCUBEMX/STM32Cube_FW_WL_V1.3.0/Middlewares/Third_Party/FreeRTOS/Source/list.c:37:6:vListInitialise	0	static
-D:/STMCUBEMX/STM32Cube_FW_WL_V1.3.0/Middlewares/Third_Party/FreeRTOS/Source/list.c:62:6:vListInitialiseItem	0	static
-D:/STMCUBEMX/STM32Cube_FW_WL_V1.3.0/Middlewares/Third_Party/FreeRTOS/Source/list.c:74:6:vListInsertEnd	0	static
-D:/STMCUBEMX/STM32Cube_FW_WL_V1.3.0/Middlewares/Third_Party/FreeRTOS/Source/list.c:103:6:vListInsert	8	static
-D:/STMCUBEMX/STM32Cube_FW_WL_V1.3.0/Middlewares/Third_Party/FreeRTOS/Source/list.c:170:13:uxListRemove	0	static
