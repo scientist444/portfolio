@@ -475,7 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Generate tech tags HTML
         let techHtml = '';
         if(proj.techStack && proj.techStack.length > 0) {
-            techHtml = proj.techStack.slice(0, 5).map(tech => <span class="tech-tag"></span>).join('');
+            techHtml = proj.techStack.slice(0, 5).map(tech => `<span class="tech-tag">${tech}</span>`).join('');
         }
 
         // Project Description Snippet
@@ -484,19 +484,19 @@ document.addEventListener('DOMContentLoaded', () => {
             descSnippet = descSnippet.substring(0, 150) + '...';
         }
 
-        card.innerHTML = 
+        card.innerHTML = `
             <div class="project-image">
-                <img src="" alt="" loading="lazy" onerror="this.src='images/ekko-device.jpg'">
+                <img src="${proj.mainImage}" alt="${proj.title}" loading="lazy" onerror="this.src='images/ekko-device.jpg'">
             </div>
             <div class="project-header">
-                <h4 class="project-title"></h4>
-                <span class="project-category"></span>
+                <h4 class="project-title">${proj.title}</h4>
+                <span class="project-category">${proj.category}</span>
             </div>
             <div class="project-content">
-                <p class="project-description"></p>
-                <div class="tech-stack"></div>
+                <p class="project-description">${descSnippet}</p>
+                <div class="tech-stack">${techHtml}</div>
             </div>
-        ;
+        `;
         
         card.addEventListener('click', () => openProjectModal(proj));
         grid.appendChild(card);
@@ -519,20 +519,20 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('modal-description').textContent = proj.description;
         
         const techStackContainer = document.getElementById('modal-tech-stack');
-        techStackContainer.innerHTML = proj.techStack.map(t => <span class="tech-tag"></span>).join('');
+        techStackContainer.innerHTML = proj.techStack.map(t => `<span class="tech-tag">${t}</span>`).join('');
         
         const archImg = document.getElementById('modal-arch-image');
         archImg.src = proj.architectureImage;
         archImg.onerror = () => { archImg.src = 'images/epic.png'; }; // fallback
         
         const factsList = document.getElementById('modal-facts-list');
-        factsList.innerHTML = proj.facts.map(f => <li></li>).join('');
+        factsList.innerHTML = proj.facts.map(f => `<li>${f}</li>`).join('');
 
         // Reset tabs
         tabs.forEach(t => t.classList.remove('active'));
         sections.forEach(s => s.classList.remove('active'));
-        tabs[0].classList.add('active');
-        document.getElementById('modal-overview').classList.add('active');
+        if(tabs.length > 0) tabs[0].classList.add('active');
+        if(document.getElementById('modal-overview')) document.getElementById('modal-overview').classList.add('active');
 
         modal.classList.add('active');
         document.body.style.overflow = 'hidden'; // prevent background scrolling
