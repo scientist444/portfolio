@@ -1,982 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Umer Sajid — Embedded Electronics Engineer</title>
-    <link rel="stylesheet" href="style.css?v=3.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Muhammad Umer Sajid — embedded electronics engineer building connected hardware, PCBs, firmware and test systems.">
+  <meta name="theme-color" content="#08110f">
+  <title>Muhammad Umer Sajid — Embedded Electronics Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="projects_data.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="portfolio-container">
-
-        <!-- Hero Section -->
-        <header class="portfolio-header">
-            <div class="header-background">
-                <div class="tech-grid"></div>
-                <div class="floating-elements">
-                    <div class="floating-icon"><i class="fas fa-microchip"></i></div>
-                    <div class="floating-icon"><i class="fas fa-layer-group"></i></div>
-                    <div class="floating-icon"><i class="fas fa-circuit-board"></i></div>
-                    <div class="floating-icon"><i class="fas fa-cogs"></i></div>
-                </div>
-            </div>
-
-            <div class="header-content hero-split">
-                <!-- Left: Text & Info -->
-                <div class="hero-left">
-                    <div class="availability-badge">
-                        <span class="badge-dot"></span>
-                        Available for Opportunities
-                    </div>
-
-                    <h1 class="name-title">Muhammad Umer Sajid</h1>
-                    <h2 class="role-title">Embedded Electronics Engineer</h2>
-                    <p class="role-subtitle">Hardware Design &amp; Firmware Development</p>
-
-                    <p class="profile-description">
-                        2+ years delivering 4 commercial embedded products at RISETech, with aerospace &amp;
-                        defense R&amp;D at NASTP Alpha. I bridge hardware architecture and low-level software —
-                        from multi-layer PCB to production firmware — across medical, defense, and IoT domains.
-                    </p>
-
-                    <div class="specialization-tags">
-                        <span class="spec-tag"><i class="fas fa-microchip"></i> STM32 / Renesas MCUs</span>
-                        <span class="spec-tag"><i class="fas fa-layer-group"></i> EasyEDA / Cadence</span>
-                        <span class="spec-tag"><i class="fas fa-wave-square"></i> Signal Integrity</span>
-                        <span class="spec-tag"><i class="fas fa-cogs"></i> RTOS / Firmware</span>
-                        <span class="spec-tag"><i class="fas fa-heartbeat"></i> Medical Grade PCB</span>
-                        <span class="spec-tag"><i class="fas fa-plane"></i> Aerospace &amp; Defense</span>
-                    </div>
-
-                    <div class="hero-cta">
-                        <button class="btn-hero-primary" onclick="showTab('projects')">
-                            <i class="fas fa-code"></i> View Projects
-                        </button>
-                        <a href="CV.pdf" target="_blank" class="btn-hero-secondary">
-                            <i class="fas fa-download"></i> Download CV
-                        </a>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="mailto:umersajid20208@gmail.com" class="social-link" title="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/muhammed-umer-sajid-361084282" target="_blank" class="social-link" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/scientist444" target="_blank" class="social-link" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://github.com/scientist444/pcb-portfolio" target="_blank" class="social-link" title="PCB Portfolio">
-                            <i class="fas fa-layer-group"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right: Profile Image + Stats -->
-                <div class="hero-right">
-                    <div class="profile-image-wrapper">
-                        <img src="images/mypic.jpg" alt="Muhammad Umer Sajid" class="profile-image">
-                        <div class="profile-ring"></div>
-                        <div class="profile-glow"></div>
-                    </div>
-                    <div class="stats-showcase">
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="15">0</div>
-                            <div class="stat-label">Projects</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="3">0</div>
-                            <div class="stat-label">Years Exp.</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="9">0</div>
-                            <div class="stat-label">Certifications</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- Tab Navigation -->
-        <nav class="tab-navigation">
-            <div class="tab-container">
-                <button class="tab-btn active" data-tab="about">
-                    <i class="fas fa-user"></i> About
-                </button>
-                <button class="tab-btn" data-tab="projects">
-                    <i class="fas fa-code"></i> Projects
-                </button>
-                <button class="tab-btn" data-tab="skills">
-                    <i class="fas fa-cogs"></i> Skills
-                </button>
-                <button class="tab-btn" data-tab="experience">
-                    <i class="fas fa-briefcase"></i> Experience
-                </button>
-                <button class="tab-btn" data-tab="achievements">
-                    <i class="fas fa-trophy"></i> Achievements
-                </button>
-                <button class="tab-btn" data-tab="contact">
-                    <i class="fas fa-envelope"></i> Contact
-                </button>
-            </div>
-        </nav>
-
-        <!-- Tab Content Area -->
-        <main class="tab-content-area">
-
-            <!-- About Tab -->
-            <div class="tab-content active" id="about-content">
-                <div class="page-container">
-                    <h2 class="section-title">About Me</h2>
-                    <div class="about-content">
-                        <div class="about-text">
-                            <p class="about-intro">
-                                Embedded Electronics Engineer with a proven track record of bridging hardware
-                                architecture and low-level software — delivering production-ready systems across
-                                medical, aerospace &amp; defense, IoT, and RF domains.
-                            </p>
-                            <p>
-                                With 2+ years at RISETech (National Science &amp; Technology Park, Islamabad), I
-                                have owned the full product lifecycle for 4 commercial embedded products — Ekko
-                                medical device (EN 60601-1), Tarantula Mouse, AQI Monitor, and EPIC — from
-                                EasyEDA schematic capture and multi-layer PCB layout through JLCPCB manufacturing
-                                to STM32 and Renesas MCU firmware delivery. Signal integrity work includes 90Ω
-                                controlled impedance USB 2.0 differential pairs and DC power domains from 100 mA
-                                to 12 A.
-                            </p>
-                            <p>
-                                Additional experience in aerospace &amp; defense R&amp;D at RIMS (NASTP Alpha,
-                                Rawalpindi) — Test &amp; Measurement Department — where I developed Avionics LRU
-                                and Portable Tester ATP tools in Python, NI myRIO/myDAQ LabVIEW data acquisition
-                                systems, and an RF spectrum monitoring pipeline on USRP X310 up to 5 GHz /
-                                580 Mbps. Formally recommended by RIMS HR management and RISETech Co-Founder
-                                Dr. Muhammad Usman Akram.
-                            </p>
-
-                            <div class="core-competencies">
-                                <h3 class="competencies-heading">Core Competencies</h3>
-                                <div class="competency-grid">
-                                    <div class="competency-item">
-                                        <i class="fas fa-circuit-board"></i>
-                                        <span>High-Speed PCB Design</span>
-                                    </div>
-                                    <div class="competency-item">
-                                        <i class="fas fa-microchip"></i>
-                                        <span>Embedded Firmware</span>
-                                    </div>
-                                    <div class="competency-item">
-                                        <i class="fas fa-wave-square"></i>
-                                        <span>Signal Integrity</span>
-                                    </div>
-                                    <div class="competency-item">
-                                        <i class="fas fa-heartbeat"></i>
-                                        <span>Medical Device Design</span>
-                                    </div>
-                                    <div class="competency-item">
-                                        <i class="fas fa-wifi"></i>
-                                        <span>IoT &amp; Wireless Systems</span>
-                                    </div>
-                                    <div class="competency-item">
-                                        <i class="fas fa-cogs"></i>
-                                        <span>RTOS Development</span>
-                                    </div>
-                                    <div class="competency-item">
-                                        <i class="fas fa-drafting-compass"></i>
-                                        <span>Schematic Capture</span>
-                                    </div>
-                                    <div class="competency-item">
-                                        <i class="fas fa-bolt"></i>
-                                        <span>Power Electronics</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="about-stats">
-                                <div class="stat">
-                                    <span class="stat-number">15+</span>
-                                    <span class="stat-label">Projects Delivered</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">3+</span>
-                                    <span class="stat-label">Years Experience</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">5+</span>
-                                    <span class="stat-label">Industry Domains</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="about-image">
-                            <img src="images/mypic.jpg" alt="Muhammad Umer Sajid — Embedded System Designer & PCB Specialist" class="profile-image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Projects Tab -->
-            <div class="tab-content" id="projects-content">
-                <div class="page-container">
-                    <h2 class="section-title">Engineering Projects</h2>
-
-                    <!-- Dynamic Projects Grid -->
-                    <div class="projects-grid" id="dynamic-projects-grid">
-                        <!-- Filled by JavaScript -->
-                    </div>
-
-                    <!-- PCB Portfolio Link -->
-                    <div class="pcb-portfolio-link" style="margin-top: 40px;">
-                        <div class="portfolio-link-card">
-                            <div class="link-content">
-                                <i class="fab fa-github"></i>
-                                <h4>Complete PCB Design Portfolio</h4>
-                                <p>View my comprehensive collection of PCB designs, schematics, and manufacturing files</p>
-                                <a href="https://github.com/scientist444/pcb-portfolio" target="_blank" class="portfolio-btn">
-                                    Visit PCB Portfolio on GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skills Tab -->
-            <div class="tab-content" id="skills-content">
-                <div class="page-container">
-                    <h2 class="section-title">Technical Expertise</h2>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h3 class="category-title">
-                                <i class="fas fa-microchip"></i>
-                                Embedded Systems
-                            </h3>
-                            <div class="skills-list">
-                                <div class="skill-item">ESP32 / ESP8266</div>
-                                <div class="skill-item">STM32</div>
-                                <div class="skill-item">Renesas MCUs (e2 studio)</div>
-                                <div class="skill-item">PIC Microcontrollers</div>
-                                <div class="skill-item">FreeRTOS</div>
-                                <div class="skill-item">Firmware Architecture</div>
-                                <div class="skill-item">Low-Power Optimization</div>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h3 class="category-title">
-                                <i class="fas fa-circuit-board"></i>
-                                PCB &amp; Hardware Design
-                            </h3>
-                            <div class="skills-list">
-                                <div class="skill-item">High-Speed PCB Design</div>
-                                <div class="skill-item">Signal Integrity</div>
-                                <div class="skill-item">System on Module (SoM)</div>
-                                <div class="skill-item">Schematic Capture</div>
-                                <div class="skill-item">Sensor Integration</div>
-                                <div class="skill-item">Power Electronics</div>
-                                <div class="skill-item">DFM / DFT</div>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h3 class="category-title">
-                                <i class="fas fa-wifi"></i>
-                                Communication Protocols
-                            </h3>
-                            <div class="skills-list">
-                                <div class="skill-item">Wi-Fi / BLE</div>
-                                <div class="skill-item">LoRa / LoRaWAN</div>
-                                <div class="skill-item">USB 2.0 (90Ω Diff. Pairs)</div>
-                                <div class="skill-item">UART / SPI / I2C</div>
-                                <div class="skill-item">TCP / UDP</div>
-                                <div class="skill-item">GRPC</div>
-                                <div class="skill-item">RFID / Wiegand</div>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h3 class="category-title">
-                                <i class="fas fa-code"></i>
-                                Programming
-                            </h3>
-                            <div class="skills-list">
-                                <div class="skill-item">C / C++</div>
-                                <div class="skill-item">Python</div>
-                                <div class="skill-item">MATLAB / Simulink</div>
-                                <div class="skill-item">Structured Text (PLC)</div>
-                                <div class="skill-item">UHD Python API</div>
-                                <div class="skill-item">LaTeX</div>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h3 class="category-title">
-                                <i class="fas fa-tools"></i>
-                                EDA &amp; Design Tools
-                            </h3>
-                            <div class="skills-list">
-                                <div class="skill-item">Cadence Allegro X / Virtuoso</div>
-                                <div class="skill-item">KiCad / Altium</div>
-                                <div class="skill-item">OrCAD</div>
-                                <div class="skill-item">EasyEDA</div>
-                                <div class="skill-item">Proteus / LTSpice</div>
-                                <div class="skill-item">ANSYS HFSS</div>
-                                <div class="skill-item">STM32CubeIDE / e2 studio</div>
-                                <div class="skill-item">LabVIEW / NI myRIO / myDAQ</div>
-                                <div class="skill-item">ModelSim</div>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h3 class="category-title">
-                                <i class="fas fa-wave-square"></i>
-                                Signal Processing &amp; RF
-                            </h3>
-                            <div class="skills-list">
-                                <div class="skill-item">Digital Signal Processing</div>
-                                <div class="skill-item">RF / Microwave Design</div>
-                                <div class="skill-item">SDR (USRP X310)</div>
-                                <div class="skill-item">Spectral Analysis</div>
-                                <div class="skill-item">Filter Design</div>
-                                <div class="skill-item">GNU Radio Companion</div>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h3 class="category-title">
-                                <i class="fas fa-microchip"></i>
-                                Analog / Mixed-Signal IC Design
-                            </h3>
-                            <div class="skills-list">
-                                <div class="skill-item">CMOS Analog Circuit Design</div>
-                                <div class="skill-item">Schematic &amp; Layout Entry</div>
-                                <div class="skill-item">Post-Layout Simulation</div>
-                                <div class="skill-item">Parasitic Extraction</div>
-                                <div class="skill-item">Cadence Virtuoso</div>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h3 class="category-title">
-                                <i class="fas fa-brain"></i>
-                                Emerging Technologies
-                            </h3>
-                            <div class="skills-list">
-                                <div class="skill-item">Machine Learning</div>
-                                <div class="skill-item">Edge AI Inference</div>
-                                <div class="skill-item">Robotics &amp; Path Planning</div>
-                                <div class="skill-item">PID Control</div>
-                                <div class="skill-item">Sensor Fusion</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Experience Tab -->
-            <div class="tab-content" id="experience-content">
-                <div class="page-container">
-                    <h2 class="section-title">Experience &amp; Education</h2>
-
-                    <!-- Work Experience -->
-                    <div class="experience-section">
-                        <h3 class="experience-section-title">
-                            <i class="fas fa-briefcase"></i> Work Experience
-                        </h3>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <h3 class="timeline-title">Embedded Systems Engineer — Intern</h3>
-                                    <span class="timeline-company">Research Instruments &amp; Measurement Systems (RIMS) — NASTP Alpha, Rawalpindi</span>
-                                    <span class="timeline-period">June 30, 2025 – August 22, 2025 · Test &amp; Measurement Dept.</span>
-                                    <p class="timeline-description">
-                                        R&amp;D internship at the National Aerospace Science &amp; Technology Park (NASTP Alpha)
-                                        working on five advanced engineering projects: NI myRIO &amp; NI myDAQ sensor data
-                                        acquisition in LabVIEW; Avionics LRU ATP Application Development in Python
-                                        (avionics testing for aerospace-grade Line Replaceable Units); Portable Tester
-                                        ATP Application Development in Python; RF Spectrum Monitoring with USRP X310
-                                        in GNU Radio (up to 5 GHz / 580 Mbps); and Opta Embedded Controller API in
-                                        LabVIEW. Demonstrated exceptional technical competence in data acquisition,
-                                        avionics testing, and RF spectrum monitoring — formally recommended by HR
-                                        Manager Anam Jameel, RIMS Pvt. Ltd.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <h3 class="timeline-title">Embedded Electronics Engineer</h3>
-                                    <span class="timeline-company">RISETech — National Science &amp; Technology Park, Islamabad</span>
-                                    <span class="timeline-period">February 2024 – Present</span>
-                                    <p class="timeline-description">
-                                        Full product lifecycle ownership across 4 production-ready embedded systems —
-                                        Ekko (medical device), Tarantula Mouse, AQI Monitor, and EPIC — with 100%
-                                        on-time delivery, coordinating manufacturing through JLCPCB. Expert-level
-                                        EasyEDA schematic capture and multi-layer PCB layout with 90Ω controlled
-                                        impedance USB 2.0 differential pairs. Firmware development on STM32 and
-                                        Renesas MCUs using STM32CubeIDE and e2 studio. Hardware maintainer for EKKO
-                                        medical device (EN 60601-1) — delivered 15% PCB defect reduction via
-                                        Multi-Layer PCB + Signal Integrity improvements. Managed DC power domains
-                                        from 100 mA to 12 A. Bridges hardware architecture and low-level software
-                                        — recognized by Co-Founder Dr. Muhammad Usman Akram.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <h3 class="timeline-title">Embedded Systems Developer</h3>
-                                    <span class="timeline-company">Freelance &amp; Contract Projects</span>
-                                    <span class="timeline-period">2021 – Present</span>
-                                    <p class="timeline-description">
-                                        Delivered custom embedded systems solutions including IoT devices, access
-                                        control systems, environmental monitoring platforms, and custom PCB designs
-                                        for various clients across industrial and consumer applications.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Education -->
-                    <div class="experience-section">
-                        <h3 class="experience-section-title">
-                            <i class="fas fa-graduation-cap"></i> Education
-                        </h3>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <h3 class="timeline-title">B.E. Electrical Engineering — CGPA 3.79 / 4.00</h3>
-                                    <span class="timeline-company">National University of Sciences and Technology (NUST)</span>
-                                    <span class="timeline-period">2022 – 2026</span>
-                                    <p class="timeline-description">
-                                        Specialized in Embedded Systems and High-Speed Digital Design. Graduated with
-                                        multiple academic excellence awards. Focused on signal integrity, high-speed
-                                        PCB design with 90Ω impedance control, firmware development on Renesas and
-                                        ESP32 platforms, RF systems, and Edge AI applications.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Achievements Tab -->
-            <div class="tab-content" id="achievements-content">
-                <div class="page-container">
-                    <h2 class="section-title">Achievements &amp; Certifications</h2>
-
-                    <!-- Certifications & Awards -->
-                    <div class="achievement-section">
-                        <h3 class="subsection-title">Certifications &amp; Awards</h3>
-                        <div class="achievements-grid">
-                            <div class="achievement-card">
-                                <div class="achievement-icon">
-                                    <i class="fas fa-plane-departure"></i>
-                                </div>
-                                <h4 class="achievement-title">RIMS Internship Certificate — NASTP Alpha</h4>
-                                <p class="achievement-description">
-                                    Officially certified (Sr# TR-0089) for completing the RIMS Summer Internship 2025
-                                    Program at the National Aerospace Science &amp; Technology Park (NASTP Alpha),
-                                    Rawalpindi. Formally recommended by HR Manager Anam Jameel, RIMS Pvt. Ltd.
-                                </p>
-                            </div>
-
-                            <div class="achievement-card">
-                                <div class="achievement-icon">
-                                    <i class="fas fa-certificate"></i>
-                                </div>
-                                <h4 class="achievement-title">RISETech Experience Letter</h4>
-                                <p class="achievement-description">
-                                    Experience letter signed by Dr. Muhammad Usman Akram, Co-Founder RISETech,
-                                    recognizing full product lifecycle ownership across Ekko, Tarantula Mouse, AQI
-                                    Monitor, and EPIC — and the ability to bridge hardware architecture and low-level
-                                    software.
-                                </p>
-                            </div>
-
-                            <div class="achievement-card">
-                                <div class="achievement-image">
-                                    <img src="images/certificates/easyeda-campus-ambassador.jpg" alt="EasyEDA Campus Ambassador Certificate" loading="lazy">
-                                </div>
-                                <div class="achievement-icon">
-                                    <i class="fas fa-user-tie"></i>
-                                </div>
-                                <h4 class="achievement-title">EasyEDA Campus Ambassador</h4>
-                                <p class="achievement-description">
-                                    Official ambassador for EasyEDA PCB design platform, driving PCB design
-                                    education and professional tool adoption.
-                                </p>
-                            </div>
-
-                            <div class="achievement-card">
-                                <div class="achievement-image">
-                                    <img src="images/certificates/airtech-roboline-winner.jpeg" alt="AirTech Roboline Winner Certificate" loading="lazy">
-                                </div>
-                                <div class="achievement-icon">
-                                    <i class="fas fa-trophy"></i>
-                                </div>
-                                <h4 class="achievement-title">AirTech 24 Roboline — 1st Place</h4>
-                                <p class="achievement-description">
-                                    First place winner with shield and cash prize in the prestigious AirTech 24
-                                    Roboline autonomous robotics competition.
-                                </p>
-                            </div>
-
-                            <div class="achievement-card">
-                                <div class="achievement-image">
-                                    <img src="images/academic.jpeg" alt="Academic Excellence Awards" loading="lazy">
-                                </div>
-                                <div class="achievement-icon">
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4 class="achievement-title">Multiple Academic Excellence Awards</h4>
-                                <p class="achievement-description">
-                                    Consistently recognized with academic excellence awards at NUST for outstanding
-                                    performance throughout the B.E. program.
-                                </p>
-                            </div>
-
-                            <div class="achievement-card">
-                                <div class="achievement-image">
-                                    <img src="images/certificates/matlab-onramp.jpg" alt="MATLAB Onramp Certificate" loading="lazy">
-                                </div>
-                                <div class="achievement-icon">
-                                    <i class="fas fa-calculator"></i>
-                                </div>
-                                <h4 class="achievement-title">MATLAB Onramp Certification</h4>
-                                <p class="achievement-description">
-                                    Certified in MATLAB programming and computational analysis for engineering
-                                    applications.
-                                </p>
-                            </div>
-
-                            <div class="achievement-card">
-                                <div class="achievement-image">
-                                    <img src="images/certificates/cadence-essential-guide.jpg" alt="Cadence Design Systems Essential Guide Certificate" loading="lazy">
-                                </div>
-                                <div class="achievement-icon">
-                                    <i class="fas fa-microchip"></i>
-                                </div>
-                                <h4 class="achievement-title">Cadence Design Systems: Essential Guide</h4>
-                                <p class="achievement-description">
-                                    Completed comprehensive Cadence training covering high-speed PCB design
-                                    and signal integrity analysis workflows.
-                                </p>
-                            </div>
-
-                            <div class="achievement-card">
-                                <div class="achievement-image">
-                                    <img src="images/certificates/ai-for-everyone.jpg" alt="AI For Everyone Certificate" loading="lazy">
-                                </div>
-                                <div class="achievement-icon">
-                                    <i class="fas fa-brain"></i>
-                                </div>
-                                <h4 class="achievement-title">AI For Everyone Certification</h4>
-                                <p class="achievement-description">
-                                    Certified in AI fundamentals and practical applications across engineering
-                                    and industrial domains.
-                                </p>
-                            </div>
-
-                            <div class="achievement-card">
-                                <div class="achievement-image">
-                                    <img src="images/certificates/cmc-mentorship.jpeg" alt="CMC Mentorship Program Certificate" loading="lazy">
-                                </div>
-                                <div class="achievement-icon">
-                                    <i class="fas fa-handshake"></i>
-                                </div>
-                                <h4 class="achievement-title">CMC Mentorship Program</h4>
-                                <p class="achievement-description">
-                                    Completed CMC industry mentorship program, gaining strategic insights into
-                                    professional engineering practice and career development.
-                                </p>
-                            </div>
-
-                            <div class="achievement-card">
-                                <div class="achievement-image">
-                                    <img src="images/certificates/Advance gigbit channel design.jpg" alt="Advance Gigabit Channel Design Certificate" loading="lazy">
-                                </div>
-                                <div class="achievement-icon">
-                                    <i class="fas fa-bolt"></i>
-                                </div>
-                                <h4 class="achievement-title">Advanced Gigabit Channel Design</h4>
-                                <p class="achievement-description">
-                                    Teledyne LeCroy certification in gigabit-speed channel design, high-speed
-                                    signal integrity analysis, and channel optimization techniques.
-                                </p>
-                            </div>
-
-                            <div class="achievement-card">
-                                <div class="achievement-image">
-                                    <img src="images/certificates/High speed Digital Design.jpg" alt="High Speed Digital Design Certificate" loading="lazy">
-                                </div>
-                                <div class="achievement-icon">
-                                    <i class="fas fa-tachometer-alt"></i>
-                                </div>
-                                <h4 class="achievement-title">High Speed Digital Design</h4>
-                                <p class="achievement-description">
-                                    Teledyne LeCroy certification in high-speed digital circuit design, signal
-                                    integrity, and advanced PCB design techniques.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Professional Activities -->
-                    <div class="achievement-section">
-                        <h3 class="subsection-title">Professional Activities</h3>
-                        <div class="achievements-grid">
-                            <div class="achievement-card">
-                                <div class="achievement-icon">
-                                    <i class="fas fa-users-cog"></i>
-                                </div>
-                                <h4 class="achievement-title">President — NUST Electrical Student Body</h4>
-                                <p class="achievement-description">
-                                    Elected President of the Electrical Engineering Student Body (September 2025).
-                                    Organized VoltFest — a flagship industry-academia event bridging professional
-                                    engineering practice with student development initiatives.
-                                </p>
-                            </div>
-
-                            <div class="achievement-card">
-                                <div class="achievement-icon">
-                                    <i class="fas fa-robot"></i>
-                                </div>
-                                <h4 class="achievement-title">Robotics Competition Participation</h4>
-                                <p class="achievement-description">
-                                    Active competitor in robotics events including autonomous navigation and
-                                    line-following competitions — demonstrated hardware-software integration
-                                    under real competitive constraints.
-                                </p>
-                            </div>
-
-                            <div class="achievement-card">
-                                <div class="achievement-icon">
-                                    <i class="fas fa-chalkboard-teacher"></i>
-                                </div>
-                                <h4 class="achievement-title">Technical Workshop Facilitator</h4>
-                                <p class="achievement-description">
-                                    Conducted technical workshops on embedded systems, PCB design, and IoT
-                                    development, sharing hands-on expertise with engineering communities.
-                                </p>
-                            </div>
-
-                            <div class="achievement-card">
-                                <div class="achievement-icon">
-                                    <i class="fas fa-code-branch"></i>
-                                </div>
-                                <h4 class="achievement-title">Open Source Contributor</h4>
-                                <p class="achievement-description">
-                                    Actively sharing PCB designs, schematics, and embedded firmware on GitHub,
-                                    contributing to the open hardware and open source engineering community.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Professional Development -->
-                    <div class="achievement-section">
-                        <h3 class="subsection-title">Professional Development</h3>
-                        <div class="achievements-grid">
-                            <div class="achievement-card">
-                                <div class="achievement-icon">
-                                    <i class="fas fa-wave-square"></i>
-                                </div>
-                                <h4 class="achievement-title">Signal Integrity Academy</h4>
-                                <p class="achievement-description">
-                                    Enrolled in Signal Integrity Academy by Eric Bogatin, advancing professional
-                                    expertise in high-speed PCB design and signal integrity engineering.
-                                </p>
-                            </div>
-
-                            <div class="achievement-card">
-                                <div class="achievement-icon">
-                                    <i class="fas fa-server"></i>
-                                </div>
-                                <h4 class="achievement-title">System on Module (SoM) Development</h4>
-                                <p class="achievement-description">
-                                    Active development of high-speed SoM designs with RK chip technology for
-                                    next-generation embedded computing applications.
-                                </p>
-                            </div>
-
-                            <div class="achievement-card">
-                                <div class="achievement-icon">
-                                    <i class="fas fa-layer-group"></i>
-                                </div>
-                                <h4 class="achievement-title">Advanced PCB Design Practice</h4>
-                                <p class="achievement-description">
-                                    Continuously advancing expertise in multi-layer PCB design, impedance-controlled
-                                    routing, RF layout, and IPC design standards.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Contact Tab -->
-            <div class="tab-content" id="contact-content">
-                <div class="page-container">
-                    <h2 class="section-title">Services</h2>
-                    <div class="services-grid">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <i class="fas fa-microchip"></i>
-                            </div>
-                            <h3 class="service-title">Embedded Systems Development</h3>
-                            <p class="service-description">
-                                Custom firmware development, microcontroller programming, and
-                                RTOS implementation for demanding real-world applications.
-                            </p>
-                            <ul class="service-features">
-                                <li>Firmware Architecture Design</li>
-                                <li>Real-time Systems (RTOS)</li>
-                                <li>Low-power Optimization</li>
-                                <li>Sensor Integration</li>
-                            </ul>
-                        </div>
-
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <i class="fas fa-circuit-board"></i>
-                            </div>
-                            <h3 class="service-title">PCB Design &amp; Hardware</h3>
-                            <p class="service-description">
-                                End-to-end hardware design from schematic capture and component
-                                selection to production-ready PCB layouts.
-                            </p>
-                            <ul class="service-features">
-                                <li>Schematic Design</li>
-                                <li>High-Speed PCB Layout</li>
-                                <li>Signal Integrity Analysis</li>
-                                <li>DFM &amp; Prototype Validation</li>
-                            </ul>
-                        </div>
-
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <i class="fas fa-wifi"></i>
-                            </div>
-                            <h3 class="service-title">IoT Solutions</h3>
-                            <p class="service-description">
-                                End-to-end IoT development including wireless device design,
-                                protocol implementation, and cloud integration.
-                            </p>
-                            <ul class="service-features">
-                                <li>Wi-Fi / BLE / LoRa Design</li>
-                                <li>Cloud &amp; Edge Integration</li>
-                                <li>Data Analytics</li>
-                                <li>Mobile App Integration</li>
-                            </ul>
-                        </div>
-
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <i class="fas fa-heartbeat"></i>
-                            </div>
-                            <h3 class="service-title">Medical Device Development</h3>
-                            <p class="service-description">
-                                Specialized medical device hardware design with regulatory
-                                compliance and safety-critical system expertise.
-                            </p>
-                            <ul class="service-features">
-                                <li>IEC 60601 Compliance</li>
-                                <li>Safety-Critical Systems</li>
-                                <li>Medical Sensor Integration</li>
-                                <li>Regulatory Documentation</li>
-                            </ul>
-                        </div>
-
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <i class="fas fa-wave-square"></i>
-                            </div>
-                            <h3 class="service-title">High-Speed &amp; RF Design</h3>
-                            <p class="service-description">
-                                High-speed digital circuit design, signal integrity analysis,
-                                and RF/microwave design for communication systems.
-                            </p>
-                            <ul class="service-features">
-                                <li>High-Speed Digital Design</li>
-                                <li>RF &amp; Antenna Design</li>
-                                <li>Signal Integrity (SI/PI)</li>
-                                <li>SDR Applications</li>
-                            </ul>
-                        </div>
-
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <i class="fas fa-comments"></i>
-                            </div>
-                            <h3 class="service-title">Technical Consulting</h3>
-                            <p class="service-description">
-                                Expert consultation on hardware projects, design reviews,
-                                technical feasibility, and system architecture decisions.
-                            </p>
-                            <ul class="service-features">
-                                <li>System Architecture</li>
-                                <li>Feasibility Studies</li>
-                                <li>PCB Design Reviews</li>
-                                <li>Troubleshooting &amp; Debug</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="page-container contact-section">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <div class="contact-content">
-                        <div class="contact-info">
-                            <h3>Let's Work Together</h3>
-                            <p>
-                                Open to full-time roles, contract engagements, and consulting opportunities
-                                in embedded systems design, PCB design, and hardware development.
-                            </p>
-
-                            <div class="contact-methods">
-                                <div class="contact-method">
-                                    <i class="fas fa-envelope"></i>
-                                    <div class="method-info">
-                                        <h4>Email</h4>
-                                        <a href="mailto:umersajid20208@gmail.com">umersajid20208@gmail.com</a>
-                                    </div>
-                                </div>
-
-                                <div class="contact-method">
-                                    <i class="fab fa-linkedin"></i>
-                                    <div class="method-info">
-                                        <h4>LinkedIn</h4>
-                                        <a href="https://www.linkedin.com/in/muhammed-umer-sajid-361084282" target="_blank">Connect with me</a>
-                                    </div>
-                                </div>
-
-                                <div class="contact-method">
-                                    <i class="fab fa-github"></i>
-                                    <div class="method-info">
-                                        <h4>GitHub</h4>
-                                        <a href="https://github.com/scientist444" target="_blank">View my repositories</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="contact-form-container">
-                            <form class="contact-form">
-                                <div class="form-group">
-                                    <input type="text" id="name" name="name" required>
-                                    <label for="name">Your Name</label>
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="email" id="email" name="email" required>
-                                    <label for="email">Your Email</label>
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="text" id="subject" name="subject" required>
-                                    <label for="subject">Subject</label>
-                                </div>
-
-                                <div class="form-group">
-                                    <textarea id="message" name="message" rows="5" required></textarea>
-                                    <label for="message">Your Message</label>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary">Send Message</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </main>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <h4>Muhammad Umer Sajid</h4>
-                        <p>Embedded System Designer &amp; PCB Specialist — delivering production-ready hardware solutions.</p>
-                    </div>
-
-                    <div class="footer-section">
-                        <h4>Navigation</h4>
-                        <ul>
-                            <li><a href="#" onclick="showTab('about'); return false;">About</a></li>
-                            <li><a href="#" onclick="showTab('projects'); return false;">Projects</a></li>
-                            <li><a href="#" onclick="showTab('skills'); return false;">Skills</a></li>
-                            <li><a href="#" onclick="showTab('contact'); return false;">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-section">
-                        <h4>Connect</h4>
-                        <div class="social-links">
-                            <a href="mailto:umersajid20208@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://www.linkedin.com/in/muhammed-umer-sajid-361084282" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/scientist444" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="footer-bottom">
-                    <p>&copy; 2026 Muhammad Umer Sajid. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-
-        <!-- Project Details Modal -->
-        <div id="project-modal" class="project-modal-overlay">
-            <div class="project-modal-content">
-                <button id="close-project-modal" class="project-modal-close"><i class="fas fa-times"></i></button>
-                <div class="project-modal-header">
-                    <h2 id="modal-title">Project Title</h2>
-                    <span id="modal-category" class="project-modal-category">Category</span>
-                </div>
-                
-                <div class="project-modal-tabs">
-                    <button class="project-modal-tab active" data-target="modal-overview">Overview</button>
-                    <button class="project-modal-tab" data-target="modal-architecture">Architecture</button>
-                    <button class="project-modal-tab" data-target="modal-facts">Facts & Figures</button>
-                </div>
-
-                <div class="project-modal-body">
-                    <div id="modal-overview" class="project-modal-section active">
-                        <img id="modal-main-image" src="" alt="Project Image" class="project-modal-img">
-                        <p id="modal-description" class="project-modal-desc"></p>
-                        <div id="modal-tech-stack" class="project-modal-tech"></div>
-                    </div>
-                    <div id="modal-architecture" class="project-modal-section">
-                        <img id="modal-arch-image" src="" alt="Architecture Diagram" class="project-modal-img">
-                    </div>
-                    <div id="modal-facts" class="project-modal-section">
-                        <ul id="modal-facts-list" class="project-modal-facts"></ul>
-                    </div>
-                </div>
-            </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Muhammad Umer Sajid, home">
+      <span class="brand-mark" aria-hidden="true">MS</span>
+      <span><strong>Muhammad Umer Sajid</strong><small>Embedded systems · Islamabad</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+      <a href="#projects">Projects</a><a href="#capabilities">Capabilities</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="top">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="kicker"><span class="status-dot"></span> Available for embedded hardware opportunities</p>
+        <h1>I build the layer where <em>signals</em> become products.</h1>
+        <p class="hero-lede">Embedded electronics engineer working across sensing, mixed-signal PCB design, firmware, wireless systems and test engineering—from first architecture to a working MVP.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore selected work <span aria-hidden="true">↘</span></a>
+          <a class="button button-ghost" href="CV- Sajid Muhammad Umer.pdf" target="_blank" rel="noopener">View résumé <span aria-hidden="true">↗</span></a>
         </div>
-
-        <!-- Image Modal -->
-        <div id="imageModal" class="image-modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <img id="modalImage" class="modal-image" alt="">
-                <div class="modal-caption"></div>
-            </div>
+        <dl class="hero-stats" aria-label="Portfolio overview">
+          <div><dt>08</dt><dd>Featured MVPs &amp; products</dd></div>
+          <div><dt>05</dt><dd>Additional selected systems</dd></div>
+          <div><dt>01</dt><dd>Engineer, end to end</dd></div>
+        </dl>
+      </div>
+      <aside class="hero-visual reveal" aria-label="Engineering focus">
+        <div class="portrait-shell">
+          <img src="assets/profile/muhammad-umer-sajid.jpg" alt="Muhammad Umer Sajid" width="720" height="720">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <span class="signal-label label-one">Sensing</span><span class="signal-label label-two">PCB</span><span class="signal-label label-three">Firmware</span>
         </div>
+        <div class="scope-card"><span>Current focus</span><strong>Low-noise medical sensing</strong><small>Smart stethoscope · active development</small></div>
+      </aside>
+    </section>
 
-    </div>
+    <section class="section projects-section" id="projects">
+      <div class="section-heading reveal">
+        <div><p class="kicker">Selected engineering</p><h2>Complete systems, clearly explained.</h2></div>
+        <p>Each case study follows the same path: problem, architecture, key decisions, implementation and honest test status. Sensitive circuit values and source are intentionally withheld.</p>
+      </div>
+      <div class="filter-bar reveal" role="group" aria-label="Filter projects">
+        <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="completed" aria-pressed="false">Completed</button>
+        <button class="filter" type="button" data-filter="in-progress" aria-pressed="false">In progress</button>
+      </div>
+      <div class="project-grid" id="project-grid"></div>
+    </section>
 
-    <script src="projects_data.js?v=5.0"></script>
-    <script src="script.js?v=3.0"></script>
+    <section class="section capability-section" id="capabilities">
+      <div class="section-heading reveal">
+        <div><p class="kicker">How I work</p><h2>One connected engineering loop.</h2></div>
+        <p>I reduce handoff loss by owning the interfaces between electronics, firmware, validation and the physical product.</p>
+      </div>
+      <div class="process-grid">
+        <article class="process-card reveal"><span>01</span><h3>Frame the system</h3><p>Translate the use case into signal, power, mechanical, radio and test requirements.</p><ul><li>Requirements &amp; risk</li><li>Architecture</li><li>Component trade-offs</li></ul></article>
+        <article class="process-card reveal"><span>02</span><h3>Design the hardware</h3><p>Build schematics and layout with signal integrity, power flow, DFM and enclosure constraints in view.</p><ul><li>Mixed-signal PCB</li><li>Power electronics</li><li>3D &amp; DFM review</li></ul></article>
+        <article class="process-card reveal"><span>03</span><h3>Make it behave</h3><p>Bring up peripherals, acquisition timing, wireless protocols and the tools needed to observe the system.</p><ul><li>C / C++ firmware</li><li>BLE, Wi‑Fi &amp; LoRa</li><li>Python / LabVIEW tools</li></ul></article>
+        <article class="process-card reveal"><span>04</span><h3>Prove and iterate</h3><p>Test subsystem boundaries, diagnose the real failure mode and feed evidence into the next revision.</p><ul><li>Board bring-up</li><li>Instrumentation</li><li>Design iteration</li></ul></article>
+      </div>
+      <div class="tool-belt reveal" aria-label="Tools and technologies"><span>C / C++</span><span>Python</span><span>MATLAB</span><span>Altium</span><span>KiCad</span><span>EasyEDA Pro</span><span>Cadence</span><span>STM32</span><span>ESP32</span><span>LabVIEW</span><span>GNU Radio</span><span>HFSS</span></div>
+    </section>
+
+    <section class="section earlier-section" id="earlier-work">
+      <div class="section-heading reveal"><div><p class="kicker">Earlier &amp; adjacent work</p><h2>More evidence, less repetition.</h2></div><p>Overlapping portfolio entries have been consolidated into five compact proof points.</p></div>
+      <div class="earlier-list" id="earlier-list"></div>
+    </section>
+
+    <section class="section experience-section" id="experience">
+      <div class="section-heading reveal"><div><p class="kicker">Experience</p><h2>Products, research and fundamentals.</h2></div></div>
+      <div class="timeline">
+        <article class="timeline-row reveal"><time>Feb 2024 — Present</time><div><p class="kicker">Embedded Electronics Engineer</p><h3>RISETech · National Science &amp; Technology Park</h3><p>End-to-end ownership across connected health, environmental sensing and human-interface products, including EKKO, EPIC, AQI and the smart stethoscope.</p></div></article>
+        <article class="timeline-row reveal"><time>Jun — Aug 2025</time><div><p class="kicker">Test &amp; Measurement Intern</p><h3>RIMS · NASTP Alpha</h3><p>Built avionics test workflows, LabVIEW controller interfaces and GNU Radio / USRP X310 signal-processing pipelines.</p></div></article>
+        <article class="timeline-row reveal"><time>2022 — 2026</time><div><p class="kicker">B.E. Electrical Engineering</p><h3>NUST · CGPA 3.79 / 4.00</h3><p>Electrical engineering foundation spanning electronics, control, signal processing, RF, embedded systems and machine intelligence.</p></div></article>
+      </div>
+      <div class="proof-grid reveal">
+        <a href="RIMS-EXPERIENCE.pdf" target="_blank" rel="noopener"><span>Credential</span><strong>RIMS experience certificate</strong><em>Open PDF ↗</em></a>
+        <a href="Experience Letter.pdf" target="_blank" rel="noopener"><span>Credential</span><strong>RISETech experience letter</strong><em>Open PDF ↗</em></a>
+        <a href="Letter of recomandation.pdf" target="_blank" rel="noopener"><span>Credential</span><strong>Letter of recommendation</strong><em>Open PDF ↗</em></a>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-panel reveal">
+        <p class="kicker">Build something real</p>
+        <h2>Need an engineer who can follow a signal all the way to a product?</h2>
+        <p>I’m open to embedded hardware, electronics R&amp;D, product engineering and research collaborations.</p>
+        <div class="hero-actions"><a class="button button-light" href="mailto:umersajid20208@gmail.com">Start a conversation <span>↗</span></a><a class="button button-outline-light" href="https://github.com/scientist444" target="_blank" rel="noopener">GitHub</a><a class="button button-outline-light" href="https://www.linkedin.com/in/muhammed-umer-sajid-361084282" target="_blank" rel="noopener">LinkedIn</a></div>
+      </div>
+    </section>
+  </main>
+  <footer><p>© 2026 Muhammad Umer Sajid</p><p>Designed around evidence, not buzzwords.</p><a href="#top">Back to top ↑</a></footer>
 </body>
 </html>

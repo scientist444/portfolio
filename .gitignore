@@ -2,8 +2,12 @@
 *.MOV
 *.zip
 *.mp4
+!assets/motion/*.mp4
 .claude
 scratch
 .gemini
 nul
-Projects/
+/Projects/
+PCB WORK/
+motion/node_modules/
+motion/node_modules/.remotion/
