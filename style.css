@@ -41,6 +41,11 @@
 .project-card,.project-card:nth-child(n){grid-column:span 6}
 .project-media::after{background:linear-gradient(to top,rgba(7,17,14,.92) 0%,rgba(7,17,14,.62) 39%,rgba(7,17,14,.04) 72%)}
 .thumbnail-caption{position:absolute;z-index:3;left:20px;right:20px;bottom:18px;color:#fff}
+.diagram-peek{position:absolute;z-index:4;top:58px;right:16px;width:clamp(118px,31%,178px);overflow:hidden;border:1px solid rgba(255,255,255,.72);border-radius:12px;background:#fff;box-shadow:0 10px 30px rgba(4,12,9,.28);text-decoration:none;transform:rotate(1.5deg);transition:transform .25s,box-shadow .25s}
+.diagram-peek:hover{transform:rotate(0) translateY(-3px);box-shadow:0 14px 36px rgba(4,12,9,.38)}
+.project-media .diagram-peek img{display:block;width:100%;height:92px;object-fit:cover;object-position:center;background:#fff;transform:none}
+.project-card:hover .project-media .diagram-peek img{transform:none}
+.diagram-peek span{display:block;padding:7px 9px;color:var(--ink);font:500 .52rem var(--mono);letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .thumbnail-role{margin:0 0 6px;font:500 .6rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#d6e1dc}
 .thumbnail-caption h3{max-width:92%;margin:0;font-size:clamp(1.3rem,2.25vw,2rem);line-height:1.04;letter-spacing:-.045em}
 .thumbnail-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
@@ -71,6 +76,7 @@
 .requirements-grid p{margin:0;font-size:.9rem}
 .schematic-panel{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(260px,.82fr);overflow:hidden;margin-top:30px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 18px 55px rgba(16,26,23,.08)}
 .schematic-canvas{display:flex;min-height:440px;flex-direction:column;margin:0;padding:18px;background:#f8f7f2;border-right:1px solid var(--line)}
+.schematic-canvas a{display:flex;flex:1;min-height:0;border-radius:12px;background:#fff;cursor:zoom-in}
 .schematic-canvas img{width:100%;height:100%;min-height:380px;object-fit:contain;border-radius:12px;background:#fff}
 .schematic-canvas figcaption{padding:11px 2px 0;color:var(--muted);font:400 .58rem var(--mono)}
 .schematic-explanation{display:flex;flex-direction:column;justify-content:center;padding:32px}
@@ -99,6 +105,15 @@
   .case-aside nav{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 24px}
   .schematic-panel{grid-template-columns:1fr}
   .schematic-canvas{border-right:0;border-bottom:1px solid var(--line)}
+}
+
+.case-facts{grid-template-columns:repeat(5,1fr)}
+@media(max-width:680px){.case-facts{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){
+  .diagram-peek{top:38px;right:10px;width:94px;border-radius:10px}
+  .project-media .diagram-peek img{height:58px}
+  .diagram-peek span{padding:5px 7px;font-size:.44rem}
+  .thumbnail-caption h3{max-width:92%;line-height:1.02}
 }
 
 @media(max-width:680px){

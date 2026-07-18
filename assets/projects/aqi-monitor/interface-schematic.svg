@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+<title id="t">AQI monitor sensor interface schematic</title><desc id="d">ESP32 connected to gas, particulate, climate, display and Wi-Fi interfaces.</desc>
+<defs><style>.b{fill:#fff;stroke:#15231e;stroke-width:3}.c{fill:#eef8d8;stroke:#638c14;stroke-width:3}.w{fill:none;stroke:#188447;stroke-width:5}.p{fill:none;stroke:#2166c2;stroke-width:4}.h{font:700 28px Arial;fill:#101a17}.s{font:18px Consolas,monospace;fill:#42524c}.n{font:16px Consolas,monospace;fill:#2166c2}</style></defs>
+<rect width="1200" height="700" fill="#f8f7f2"/><text x="60" y="65" class="h">MULTI-SENSOR AQI · INTERFACE SCHEMATIC</text>
+<rect x="470" y="220" width="270" height="240" rx="18" class="c"/><text x="555" y="285" class="h">ESP32</text><text x="518" y="330" class="s">sensor acquisition</text><text x="535" y="360" class="s">Wi-Fi + display</text>
+<rect x="70" y="130" width="260" height="105" rx="14" class="b"/><text x="112" y="176" class="h">Gas array</text><text x="110" y="207" class="s">analog channels</text>
+<rect x="70" y="295" width="260" height="105" rx="14" class="b"/><text x="108" y="341" class="h">PM sensor</text><text x="125" y="372" class="s">UART stream</text>
+<rect x="70" y="460" width="260" height="105" rx="14" class="b"/><text x="92" y="506" class="h">Climate sensor</text><text x="137" y="537" class="s">I²C bus</text>
+<rect x="870" y="165" width="250" height="105" rx="14" class="b"/><text x="950" y="211" class="h">OLED</text><text x="948" y="242" class="s">I²C display</text>
+<rect x="870" y="340" width="250" height="105" rx="14" class="b"/><text x="943" y="386" class="h">Wi-Fi</text><text x="915" y="417" class="s">logging endpoint</text>
+<rect x="870" y="515" width="250" height="105" rx="14" class="b"/><text x="925" y="561" class="h">Power</text><text x="900" y="592" class="s">USB + battery rail</text>
+<path d="M330 182H410V270H470M330 347H470M330 512H410V410H470" class="w"/><path d="M740 270H810V217H870M740 342H870M740 410H810V567H870" class="p"/>
+<text x="350" y="169" class="n">ADC</text><text x="365" y="334" class="n">UART</text><text x="360" y="499" class="n">I²C</text>
+</svg>

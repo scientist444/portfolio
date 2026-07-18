@@ -25,6 +25,6 @@ export const SystemPreview:React.FC<SystemPreviewProps>=({title,subtitle,image,n
       {nodes.map((node,i)=>{const start=48+i*20;const p=interpolate(frame,[start,start+28],[0,1],{...clamp,easing:Easing.bezier(.16,1,.3,1)});return <React.Fragment key={node}><div style={{position:"relative",height:84,border:`1px solid ${i===2?"#6f9a17":"rgba(16,26,23,.16)"}`,background:i===2?`${accent}44`:"rgba(255,255,255,.92)",boxShadow:"0 12px 30px rgba(16,26,23,.07)",borderRadius:14,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"monospace",fontSize:14,letterSpacing:1.2,color:i===2?"#385609":"#26342f",opacity:p,transform:`translateY(${(1-p)*22}px)`}}><span style={{position:"absolute",left:10,top:8,fontSize:9,color:"#708079"}}>0{i+1}</span>{node}</div>{i<3&&<div style={{position:"absolute",left:`calc(${(i+1)*25}% - 18px)`,bottom:104,width:36,height:2,background:"#6f9a17",transform:`scaleX(${p})`,transformOrigin:"left"}}/>}</React.Fragment>})}
     </div>
     <div style={{position:"absolute",left:sweep,top:0,width:160,height:600,background:`linear-gradient(90deg,transparent,${accent}22,transparent)`,transform:"skewX(-10deg)"}}/>
-    <div style={{position:"absolute",left:52,bottom:30,fontFamily:"monospace",fontSize:11,letterSpacing:1.5,color:"#66736e"}}>SELECTED ARCHITECTURE · IMPLEMENTATION DETAILS WITHHELD</div>
+    <div style={{position:"absolute",left:52,bottom:30,fontFamily:"monospace",fontSize:11,letterSpacing:1.5,color:"#66736e"}}>SYSTEM ARCHITECTURE · BUILT AND TESTED</div>
   </AbsoluteFill>;
 };

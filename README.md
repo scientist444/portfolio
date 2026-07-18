@@ -7,20 +7,23 @@ A light portfolio documenting embedded electronics, PCB, firmware and test engin
 ```text
 index.html                Portfolio home
 project.html              Reusable case-study page
-projects_data.js          Featured and earlier project content
+projects_data.js          Fourteen project case studies
 style.css                 Design system and responsive layout
 script.js                 Rendering, motion and accessibility
 assets/projects/          Curated hardware, PCB and circuit excerpts
-assets/motion/            Privacy-safe Remotion previews
+assets/motion/            Remotion project previews
+assets/design/            Canva design reference and source notes
 motion/                    Remotion source and compositions
-PCB WORK/                 Local source archive (not published)
+pcb work/                 Local source archive
 ```
 
-Eight featured projects use dedicated case-study routes. Each page includes requirements, architecture, a focused circuit or hardware excerpt, implementation notes, validation and next steps.
+Fourteen projects use the same dedicated case-study route. Each page includes requirements, architecture, a readable circuit or system schematic, implementation notes, validation and next steps.
 
 ```text
 project.html?project=ankle-band
 project.html?project=smart-stethoscope
+project.html?project=arduino-opta-plc
+project.html?project=p2p-lora
 ```
 
 ## Local preview
@@ -45,12 +48,14 @@ npm run studio
 
 The compositions are registered in `motion/src/Root.tsx`. Rendered outputs belong in `assets/motion/`.
 
-## Content policy
+## Design sources
 
-- Show system architecture and selected engineering evidence.
-- Do not publish complete schematics, production firmware or sensitive component values.
-- Use verified status and test language; avoid unsupported performance metrics.
-- Keep `PCB WORK/` local. It contains source material used to prepare the public case studies.
+- [Canva project-thumbnail system](https://www.canva.com/d/V8Fyj57cpBvINkY)
+- [Figma portfolio file](https://www.figma.com/design/rIsG2O42rxb2kTOPJeiRhN)
+- [FigJam project architecture board](https://www.figma.com/board/Hitthu4d3jmHEeV1CW8Rg2)
+- [Repository design mapping](assets/design/README.md)
+
+The code-native cards implement the same fields requested in the Canva direction: project name, hardware image, schematic preview, technology labels, role and project status. The responsive layout and shared CSS tokens are documented alongside the Figma source link.
 
 ## Contact
 

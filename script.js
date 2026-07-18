@@ -16,15 +16,19 @@
   function renderHome() {
     const grid = document.querySelector("#project-grid");
     const earlier = document.querySelector("#earlier-list");
-    if (!grid || !earlier) return;
+    if (!grid) return;
 
     grid.innerHTML = data.featured.map((project, index) => `<article class="project-card reveal">
       <div class="project-media">
         ${media(project)}
         <span class="project-index">${String(index + 1).padStart(2, "0")} / ${String(data.featured.length).padStart(2, "0")}</span>
         <span class="project-status ${project.status === "In progress" ? "active" : ""}">${esc(project.status)}</span>
+        <a class="diagram-peek" href="project.html?project=${encodeURIComponent(project.slug)}#circuit" aria-label="Open ${esc(project.schematic.type)} for ${esc(project.title)}">
+          <img src="${esc(project.schematic.src)}" loading="lazy" alt="">
+          <span>${esc(project.schematic.type)}</span>
+        </a>
         <div class="thumbnail-caption">
-          <p class="thumbnail-role">${esc(project.role)}</p>
+          <p class="thumbnail-role">${esc(project.stage)} · ${esc(project.role)}</p>
           <h3>${esc(project.title)}</h3>
           <div class="thumbnail-tags">${project.tags.slice(0, 3).map(tag => `<span>${esc(tag)}</span>`).join("")}</div>
         </div>
@@ -36,7 +40,7 @@
       </div>
     </article>`).join("");
 
-    earlier.innerHTML = data.earlier.map(project => `<${project.link ? "a" : "article"} class="earlier-card reveal" ${project.link ? `href="${esc(project.link)}" target="_blank" rel="noopener"` : ""}>
+    if (earlier) earlier.innerHTML = data.earlier.map(project => `<${project.link ? "a" : "article"} class="earlier-card reveal" ${project.link ? `href="${esc(project.link)}" target="_blank" rel="noopener"` : ""}>
       <img src="${esc(project.image)}" alt="" loading="lazy">
       <div><h3>${esc(project.title)}</h3><small>${esc(project.meta)}</small></div>
       <p>${esc(project.summary)}</p>
@@ -66,6 +70,7 @@
       <p class="case-summary">${esc(project.summary)}</p>
       <div class="tag-row">${project.tags.map(tag => `<span class="tag">${esc(tag)}</span>`).join("")}</div>
       <dl class="case-facts">
+        <div><dt>Stage</dt><dd>${esc(project.stage)}</dd></div>
         <div><dt>Context</dt><dd>${esc(project.context)}</dd></div>
         <div><dt>My role</dt><dd>${esc(project.role)}</dd></div>
         <div><dt>Timeline</dt><dd>${esc(project.period)}</dd></div>
@@ -85,7 +90,6 @@
           <a href="#testing">06 — What I tested</a>
           <a href="#outcome">07 — Where it stands</a>
         </nav>
-        <p class="privacy-note">I show focused circuit and board excerpts here. Full schematics, exact values and production source stay private.</p>
       </aside>
       <div class="case-content">
         <section class="case-block case-opening" id="brief">
@@ -112,7 +116,7 @@
           <p class="kicker">04 · ${esc(project.schematic.type)}</p>
           <h2>${esc(project.schematic.title)}</h2>
           <div class="schematic-panel">
-            <figure class="schematic-canvas"><img src="${esc(project.schematic.src)}" loading="lazy" alt="${esc(project.schematic.title)} from ${esc(project.title)}"><figcaption>Focused public excerpt — not the complete design</figcaption></figure>
+            <figure class="schematic-canvas"><a href="${esc(project.schematic.src)}" target="_blank" rel="noopener" aria-label="Open ${esc(project.schematic.title)} image"><img src="${esc(project.schematic.src)}" loading="lazy" alt="${esc(project.schematic.title)} from ${esc(project.title)}"></a><figcaption>${esc(project.schematic.type)} · click to inspect</figcaption></figure>
             <div class="schematic-explanation">
               <p>${esc(project.schematic.caption)}</p>
               <ul>${project.schematic.points.map(point => `<li>${esc(point)}</li>`).join("")}</ul>

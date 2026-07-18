@@ -5,6 +5,7 @@ const PORTFOLIO_DATA = {
       title: "Connected Ankle Band",
       eyebrow: "Wearable sensing · MVP",
       status: "Completed",
+      stage: "MVP",
       period: "2025–2026",
       duration: "~4 months",
       context: "Independent",
@@ -55,6 +56,7 @@ const PORTFOLIO_DATA = {
       title: "Multi-Sensor AQI Monitor",
       eyebrow: "Environmental sensing · MVP",
       status: "Completed",
+      stage: "MVP",
       period: "2024–2025",
       duration: "~3 months",
       context: "RISETech",
@@ -84,11 +86,11 @@ const PORTFOLIO_DATA = {
         "Connected the measurement path to remote logging."
       ],
       schematic: {
-        type: "PCB layout detail",
-        src: "assets/projects/aqi-monitor/layout-snippet.png",
-        title: "Controller and sensor-routing area",
-        caption: "This focused layout view shows how I brought the controller headers and sensor connections into one board area. The complete power and battery implementation is intentionally outside the crop.",
-        points: ["Controller-centered routing", "Grouped sensor connections", "Clear service and connector access"]
+        type: "Interface schematic",
+        src: "assets/projects/aqi-monitor/interface-schematic.svg",
+        title: "Sensor, display and power interfaces",
+        caption: "The ESP32 brings the gas, particulate and climate sensors into one acquisition path, drives the local OLED and forwards readings over Wi-Fi.",
+        points: ["Analog, UART and I²C sensor paths", "Local display remains useful offline", "USB and battery power feed the complete sensor node"]
       },
       validation: [
         "Assembled and powered the complete sensing board.",
@@ -105,6 +107,7 @@ const PORTFOLIO_DATA = {
       title: "EPIC Biosignal Platform",
       eyebrow: "Biosignal acquisition · Product",
       status: "Completed",
+      stage: "Product",
       period: "2024–2025",
       duration: "~4 months",
       context: "RISETech",
@@ -137,7 +140,7 @@ const PORTFOLIO_DATA = {
         type: "Schematic excerpt",
         src: "assets/projects/epic/schematic-snippet.png",
         title: "Optical heart-rate sensing block",
-        caption: "This excerpt shows the MAX30102 sensing block and its local low-voltage supply. It is enough to explain the sensor interface and decoupling approach without exposing the rest of the signal chain.",
+        caption: "This is the MAX30102 sensing block and its local low-voltage supply. It shows the sensor interface, rail generation and decoupling approach.",
         points: ["Dedicated 1.8 V sensor rail", "Local decoupling around the sensor", "Digital interface returned to the controller domain"]
       },
       validation: [
@@ -145,7 +148,7 @@ const PORTFOLIO_DATA = {
         "Confirmed the acquisition paths on manufactured hardware.",
         "Used prototype results to guide the final board iteration."
       ],
-      testing: "I brought up the power, controller and acquisition paths on manufactured hardware. Detailed signal-chain values and production settings remain private.",
+      testing: "I brought up the power, controller and acquisition paths on manufactured hardware and used the results to guide the final board iteration.",
       result: "I completed EPIC as a product-level embedded platform with a compact fabrication-ready board.",
       nextStep: "Future work would concentrate on production test coverage and larger user datasets rather than changing the core architecture.",
       links: []
@@ -155,6 +158,7 @@ const PORTFOLIO_DATA = {
       title: "Ergonomic BLE Mouse",
       eyebrow: "Assistive input · MVP",
       status: "Completed",
+      stage: "MVP",
       period: "2024–2025",
       duration: "~3 months",
       context: "Product engineering",
@@ -184,11 +188,11 @@ const PORTFOLIO_DATA = {
         "Tested the manufactured and assembled controller board."
       ],
       schematic: {
-        type: "Assembled hardware detail",
-        src: "assets/projects/ergonomic-mouse/hardware-snippet.png",
-        title: "Curved controller PCB",
-        caption: "This close view shows the actual assembled controller. The semicircular outline follows the product geometry while the ESP32 module, USB-C connector and input headers remain accessible.",
-        points: ["Mechanical-outline-aware PCB", "Accessible USB-C development port", "Input headers arranged around the curved edge"]
+        type: "Control schematic",
+        src: "assets/projects/ergonomic-mouse/interface-schematic.svg",
+        title: "Dual-joystick and BLE HID interface",
+        caption: "Both joysticks and the button inputs feed the ESP32, which translates the sampled controls into BLE HID reports for the host.",
+        points: ["Two analog X/Y joystick paths", "Digital switch and button inputs", "BLE HID output with USB-C power and debug access"]
       },
       validation: [
         "Checked joystick, click and scroll behavior in firmware.",
@@ -205,6 +209,7 @@ const PORTFOLIO_DATA = {
       title: "Embedded Microscope Controller",
       eyebrow: "Imaging hardware · MVP",
       status: "Completed",
+      stage: "MVP",
       period: "2025–2026",
       duration: "~3 months",
       context: "Independent",
@@ -237,7 +242,7 @@ const PORTFOLIO_DATA = {
         type: "Schematic excerpt",
         src: "assets/projects/embedded-microscope/schematic-snippet.png",
         title: "Synchronous buck conversion stage",
-        caption: "This excerpt shows the controller, external switching devices and feedback area of the buck stage. I kept the crop focused on the conversion structure rather than publishing the complete power tree.",
+        caption: "This circuit section shows the controller, external switching devices and feedback area of the buck stage.",
         points: ["Controller and external switching stage", "Current-sense and feedback path", "Focused power block separated from system interfaces"]
       },
       validation: [
@@ -255,6 +260,7 @@ const PORTFOLIO_DATA = {
       title: "USB-C PD Power Controller",
       eyebrow: "Power electronics · MVP",
       status: "Completed",
+      stage: "MVP",
       period: "2025–2026",
       duration: "~3 months",
       context: "Independent",
@@ -284,18 +290,18 @@ const PORTFOLIO_DATA = {
         "Completed 3D and DFM review."
       ],
       schematic: {
-        type: "PCB layout detail",
-        src: "assets/projects/pd-charger/layout-snippet.png",
-        title: "Power and control routing area",
-        caption: "This layout crop shows the relationship between the control area, high-current routes and accessible interfaces. Exact component values and the complete power design are not included.",
-        points: ["Short high-current paths", "Separated control area", "Accessible connector and test regions"]
+        type: "Power schematic",
+        src: "assets/projects/pd-charger/power-schematic.svg",
+        title: "USB-C input and regulated load rails",
+        caption: "The negotiated USB-C input passes through protection before the conversion stages create the main and auxiliary rails used by the embedded load.",
+        points: ["PD negotiation and input protection", "Separated high-current conversion path", "9 V, 5 V and 3.3 V load domains"]
       },
       validation: [
         "Completed schematic and layout checks for the power tree.",
         "Reviewed placement and high-current routing in 3D.",
         "Checked the design for fabrication and bring-up access."
       ],
-      testing: "The completed design includes schematic, layout and 3D review. I keep the exact component values and full power schematic private.",
+      testing: "I completed schematic, layout and 3D review, including the power tree, placement and fabrication access checks.",
       result: "I completed a compact, fabrication-ready USB-C power-control MVP.",
       nextStep: "The next step would be a production-oriented thermal and load test matrix on assembled units.",
       links: []
@@ -305,6 +311,7 @@ const PORTFOLIO_DATA = {
       title: "Smart Stethoscope",
       eyebrow: "Medical sensing · MVP",
       status: "In progress",
+      stage: "MVP",
       period: "2026–Present",
       duration: "Active development",
       context: "RISETech",
@@ -355,6 +362,7 @@ const PORTFOLIO_DATA = {
       title: "Edge Vehicle Profiling Node",
       eyebrow: "Sensor fusion · MVP",
       status: "Completed",
+      stage: "MVP",
       period: "2025–2026",
       duration: "~4 months",
       context: "Independent research",
@@ -399,15 +407,315 @@ const PORTFOLIO_DATA = {
       result: "I completed the field-oriented sensing MVP from hardware through analysis tooling.",
       nextStep: "The next research step would be a larger labeled field dataset before choosing and reporting any classifier.",
       links: [{label:"Python plotter", url:"https://github.com/scientist444/Ploter"}]
+    },
+    {
+      slug: "ekko-therapy-system",
+      title: "EKKO Therapy System",
+      eyebrow: "Medical therapy · Product",
+      status: "Completed",
+      stage: "Product",
+      period: "2024–2026",
+      duration: "~4 months per major revision",
+      context: "RISETech",
+      role: "Solo embedded product engineer",
+      summary: "I worked across the electronics and control interfaces for EKKO, a therapy system built around two independently controlled applicator channels.",
+      hero: "images/ekko-device.jpg",
+      gallery: ["images/ekko-device.jpg"],
+      video: "assets/motion/ekko-therapy-system.mp4",
+      tags: ["Medical device", "Embedded control", "Raspberry Pi", "Touch UI", "PCB"],
+      challenge: "The system needed two therapy channels to operate independently while the operator still had one clear interface for setup, timing and status. Hardware revisions also had to remain practical to manufacture and service.",
+      requirements: [
+        "Control two applicator channels independently.",
+        "Provide a touch interface for session setup and status.",
+        "Supervise timing, power and system state during operation.",
+        "Carry hardware changes through schematic, layout and manufacturing review."
+      ],
+      decisions: [
+        "I separated the two applicator channels in the control structure so one session would not depend on the other.",
+        "I kept the operator workflow on a dedicated touch interface while the embedded controller handled timing and supervision.",
+        "I treated manufacturing and service access as design inputs during PCB revisions."
+      ],
+      architecture: ["Touch interface", "Main controller", "Channel supervision", "Dual applicators"],
+      engineering: [
+        "Maintained and improved embedded firmware across hardware revisions.",
+        "Updated schematics and multi-layer PCB implementation.",
+        "Reviewed signal integrity, connectors and manufacturing feedback.",
+        "Supported production bring-up and fault investigation."
+      ],
+      schematic: {
+        type: "Control schematic",
+        src: "assets/projects/ekko/system-schematic.svg",
+        title: "Dual-channel therapy control structure",
+        caption: "The interface configures a session while the main controller supervises two independent applicator paths and the shared power and safety functions.",
+        points: ["Independent applicator channels", "Central timing and status supervision", "Shared power and safety monitoring"]
+      },
+      validation: [
+        "Checked independent channel operation and session timing.",
+        "Used manufacturing feedback to improve board revisions.",
+        "Supported system-level bring-up across the interface, control and applicator paths."
+      ],
+      testing: "I validated the control flow and hardware revisions as part of the complete product lifecycle, from board changes through assembled-system checks.",
+      result: "I completed the assigned electronics and embedded-control work for a production-oriented medical therapy product.",
+      nextStep: "Further work would focus on production test automation and service diagnostics.",
+      links: []
+    },
+    {
+      slug: "avionics-atp",
+      title: "Avionics Automated Test Procedures",
+      eyebrow: "Test engineering · MVP",
+      status: "Completed",
+      stage: "MVP",
+      period: "Jun–Aug 2025",
+      duration: "~3 months",
+      context: "RIMS · NASTP Alpha",
+      role: "Embedded test engineer",
+      summary: "I built Python-based ATP tools for avionics LRUs and portable field testing, alongside a system-health interface for the supporting computer.",
+      hero: "images/python-gui-system-monitor.JPG",
+      gallery: ["images/python-gui-system-monitor.JPG"],
+      video: "assets/motion/avionics-atp.mp4",
+      tags: ["Python", "LabVIEW", "Avionics", "Test automation", "NI hardware"],
+      challenge: "Manual checks make repeatability, traceability and field diagnosis difficult. I needed a test workflow that could guide an operator, acquire the required signals and keep results understandable after the test.",
+      requirements: [
+        "Run repeatable test sequences for an avionics LRU.",
+        "Support a portable tester workflow for field diagnostics.",
+        "Collect measurements and compare them with defined limits.",
+        "Monitor CPU, GPS and Ethernet state on the Ubuntu host."
+      ],
+      decisions: [
+        "I used Python for the ATP sequence, result handling and operator workflow.",
+        "I separated the test executive from the instrumentation interface so the sequence remained maintainable.",
+        "I presented health data per subsystem instead of reducing it to one ambiguous status light."
+      ],
+      architecture: ["Avionics LRU", "Portable test interface", "Python ATP", "Results + health view"],
+      engineering: [
+        "Implemented test steps, limits and result reporting in Python.",
+        "Connected measurement hardware and portable tester interfaces.",
+        "Built real-time CPU temperature, GPS and Ethernet monitoring.",
+        "Structured the interface for operator-led diagnostics."
+      ],
+      schematic: {
+        type: "Test interface schematic",
+        src: "assets/projects/avionics-atp/system-schematic.svg",
+        title: "LRU, instrumentation and test-executive path",
+        caption: "The portable interface sits between the unit under test and the Python executive, while the health monitor keeps the supporting computer visible during the procedure.",
+        points: ["Separated stimulus and measurement interface", "Step, limit and result handling", "Host health and connectivity monitoring"]
+      },
+      validation: [
+        "Exercised the ATP sequence against the intended test workflow.",
+        "Checked measurement presentation and operator prompts.",
+        "Verified live CPU, GPS and Ethernet monitoring on Ubuntu."
+      ],
+      testing: "I completed and exercised the ATP and monitoring tools in the RIMS test environment using the available instrumentation and target workflows.",
+      result: "I delivered working automated-test and host-monitoring tools for avionics maintenance workflows.",
+      nextStep: "The next improvement would be a reusable test-definition layer for adding new LRU procedures faster.",
+      links: [{label:"RIMS experience", url:"RIMS-EXPERIENCE.pdf"}]
+    },
+    {
+      slug: "gnu-radio-sdr",
+      title: "GNU Radio SDR Pipeline",
+      eyebrow: "RF instrumentation · MVP",
+      status: "Completed",
+      stage: "MVP",
+      period: "Jun–Aug 2025",
+      duration: "~3 months",
+      context: "RIMS · NASTP Alpha",
+      role: "SDR systems engineer",
+      summary: "I built GNU Radio transmit, receive and spectral-analysis workflows around a USRP X310 for real-time RF experimentation.",
+      hero: "images/gnu-radio-usrp-x310.jpeg",
+      gallery: ["images/gnu-radio-usrp-x310.jpeg"],
+      video: "assets/motion/gnu-radio-sdr.mp4",
+      tags: ["GNU Radio", "USRP X310", "UHD", "DSP", "Spectrum analysis"],
+      challenge: "The RF chain had to stay understandable from generated samples to the air interface and back to analysis. Sample rate, host transport, tuning and gain settings all affected whether the flowgraph behaved in real time.",
+      requirements: [
+        "Create repeatable transmit and receive flowgraphs.",
+        "Control frequency, gain and sample rate through UHD.",
+        "Inspect received signals in time and frequency domains.",
+        "Keep host transport and processing within real-time limits."
+      ],
+      decisions: [
+        "I separated waveform generation, rate conversion, UHD transport and analysis into clear blocks.",
+        "I used the X310 as the RF frontend and kept tuning parameters exposed in GNU Radio Companion.",
+        "I verified the chain progressively before combining transmit and receive experiments."
+      ],
+      architecture: ["Waveform source", "GNU Radio DSP", "UHD + X310", "Spectrum analysis"],
+      engineering: [
+        "Built and configured transmit and receive flowgraphs.",
+        "Set UHD device, sample-rate, center-frequency and gain parameters.",
+        "Added filtering, resampling and FFT-based inspection.",
+        "Diagnosed host and radio settings affecting real-time flow."
+      ],
+      schematic: {
+        type: "Flowgraph schematic",
+        src: "assets/projects/gnu-radio-sdr/flowgraph-schematic.svg",
+        title: "Transmit, radio and receive signal path",
+        caption: "The flowgraph keeps generation and transmit processing separate from the receive and analysis chain, with UHD connecting both sides to the X310.",
+        points: ["Explicit TX and RX processing blocks", "UHD device control at the radio boundary", "FFT, spectrum and logging at the analysis end"]
+      },
+      validation: [
+        "Confirmed UHD communication with the X310.",
+        "Observed generated and received spectra in GNU Radio.",
+        "Checked flowgraph behavior while changing rate, tuning and gain."
+      ],
+      testing: "I exercised the transmit, receive and analysis paths on the X310 in the RIMS instrumentation lab.",
+      result: "I completed a reusable SDR workflow for RF generation, reception and spectral inspection.",
+      nextStep: "I would next package the common radio settings and captures into repeatable experiment profiles.",
+      links: [{label:"RIMS experience", url:"RIMS-EXPERIENCE.pdf"}]
+    },
+    {
+      slug: "arduino-opta-plc",
+      title: "Arduino Opta PLC Control",
+      eyebrow: "Industrial control · MVP",
+      status: "Completed",
+      stage: "MVP",
+      period: "Jun–Aug 2025",
+      duration: "~3 months",
+      context: "RIMS · NASTP Alpha",
+      role: "Embedded control engineer",
+      summary: "I programmed an Arduino Opta PLC and built a LabVIEW control interface that exchanged commands and live status over TCP and UDP.",
+      hero: "images/arduino-opta-labview.jpg",
+      gallery: ["images/arduino-opta-labview.jpg"],
+      video: "assets/motion/arduino-opta-plc.mp4",
+      tags: ["Arduino Opta", "PLC", "Structured Text", "Ladder Logic", "LabVIEW"],
+      challenge: "The controller had to combine deterministic field I/O with a networked operator interface. I needed a clean boundary between PLC logic, communications and the LabVIEW controls used to observe the system.",
+      requirements: [
+        "Implement field logic using PLC programming methods.",
+        "Expose commands and status over TCP and UDP.",
+        "Provide a LabVIEW interface for control and monitoring.",
+        "Recover cleanly from missing or delayed network messages."
+      ],
+      decisions: [
+        "I kept time-critical I/O behavior inside the Opta controller.",
+        "I used Structured Text and Ladder Logic where each was easiest to inspect.",
+        "I treated the network API as a defined interface between the PLC and LabVIEW."
+      ],
+      architecture: ["Field inputs", "Arduino Opta PLC", "TCP / UDP API", "LabVIEW VI"],
+      engineering: [
+        "Programmed controller behavior in Structured Text and Ladder Logic.",
+        "Implemented TCP and UDP communication paths.",
+        "Built the LabVIEW controls and live status indicators.",
+        "Exercised peripheral control through the complete network path."
+      ],
+      schematic: {
+        type: "Control schematic",
+        src: "assets/projects/arduino-opta/control-schematic.svg",
+        title: "PLC, network API and LabVIEW boundary",
+        caption: "The Opta owns the field I/O and control logic. LabVIEW sends operator commands and receives live state through the TCP and UDP interface.",
+        points: ["Deterministic field logic remains in the PLC", "Defined TCP and UDP command boundary", "LabVIEW operator control and monitoring"]
+      },
+      validation: [
+        "Checked input-to-output behavior on the controller.",
+        "Exercised TCP and UDP commands from LabVIEW.",
+        "Observed peripheral state and communication status in the VI."
+      ],
+      testing: "I completed the controller and LabVIEW integration and tested the full command-and-status path with the connected peripherals.",
+      result: "I delivered a working industrial-control MVP spanning PLC logic, networking and the operator interface.",
+      nextStep: "The next revision would add a formal message schema and automated communication fault tests.",
+      links: [{label:"RIMS experience", url:"RIMS-EXPERIENCE.pdf"}]
+    },
+    {
+      slug: "line-following-robot",
+      title: "Competition Line-Following Robot",
+      eyebrow: "Robotics · MVP",
+      status: "Completed",
+      stage: "MVP",
+      period: "2024",
+      duration: "~3 months",
+      context: "AirTech '24 · 1st place",
+      role: "Solo electronics and control engineer",
+      summary: "I designed the STM32 controller board and control loop for a five-sensor line-following robot that won first place at AirTech '24 Roboline.",
+      hero: "images/lfr-airtech24-winner.jpeg",
+      gallery: ["images/lfr-airtech24-winner.jpeg"],
+      video: "assets/motion/line-following-robot.mp4",
+      tags: ["STM32F103", "TCRT5000", "TB6612FNG", "PID control", "Robotics"],
+      challenge: "The robot had to read the track quickly, correct its path without oscillation and keep the motor power stage reliable during aggressive direction changes.",
+      requirements: [
+        "Read a five-channel infrared sensor array.",
+        "Run a fast and tunable steering-control loop.",
+        "Drive two motors independently from a battery supply.",
+        "Keep the controller compact and easy to repair during competition."
+      ],
+      decisions: [
+        "I used an STM32F103 for fast sensor sampling and PWM generation.",
+        "I selected a dual H-bridge so direction and speed for both motors stayed under one control interface.",
+        "I tuned the control response against the real track instead of relying only on a static bench test."
+      ],
+      architecture: ["5-channel IR array", "STM32 control loop", "Dual motor driver", "Differential drive"],
+      engineering: [
+        "Designed the two-layer controller PCB in EasyEDA.",
+        "Integrated the TCRT5000 sensor array and TB6612FNG motor stage.",
+        "Implemented and tuned the line-position control loop.",
+        "Manufactured, repaired and tested the complete robot."
+      ],
+      schematic: {
+        type: "Controller schematic",
+        src: "assets/projects/line-following-robot/controller-schematic.svg",
+        title: "Sensor, STM32 and motor-drive path",
+        caption: "Five reflected-light channels feed the STM32 control loop, which produces the direction and PWM signals for the dual motor driver.",
+        points: ["Five sensor inputs", "Real-time steering correction", "Independent PWM and direction control for both motors"]
+      },
+      validation: [
+        "Checked all five sensor channels over the track surface.",
+        "Tuned motor response and steering behavior on the competition course.",
+        "Completed the AirTech '24 Roboline event in first place."
+      ],
+      testing: "I tested the complete robot on real track layouts and refined the control response through competition runs.",
+      result: "The completed robot won first place at AirTech '24 Roboline.",
+      nextStep: "I would add logged line-position and motor-command data to make tuning faster and more repeatable.",
+      links: [{label:"Public PCB notes", url:"https://github.com/scientist444/pcb-portfolio/tree/main/projects/line-following-robot"}]
+    },
+    {
+      slug: "p2p-lora",
+      title: "Long-Range P2P LoRa Device",
+      eyebrow: "Wireless systems · MVP",
+      status: "Completed",
+      stage: "MVP",
+      period: "2024–2025",
+      duration: "~3 months",
+      context: "Independent",
+      role: "Solo embedded engineer",
+      summary: "I built a battery-powered ATmega328P and SX1278 device for direct long-range data transfer without relying on local network infrastructure.",
+      hero: "images/p2p-lora-device.jpeg",
+      gallery: ["images/p2p-lora-device.jpeg"],
+      video: "assets/motion/p2p-lora.mp4",
+      tags: ["LoRa", "SX1278", "ATmega328P", "SPI", "RF"],
+      challenge: "The link had to carry small field payloads reliably over long distance using a compact battery-powered board and an external antenna.",
+      requirements: [
+        "Exchange payloads directly between two nodes.",
+        "Interface the radio and controller through a stable SPI path.",
+        "Support an SMA-connected external antenna.",
+        "Operate from a single-cell Li-ion supply in a compact enclosure."
+      ],
+      decisions: [
+        "I paired the ATmega328P with the SX1278 for a simple and inspectable node architecture.",
+        "I kept packet framing and retry behavior in the controller firmware.",
+        "I used an external antenna connection so the RF element could match the deployment."
+      ],
+      architecture: ["Data input", "ATmega packet layer", "SX1278 radio", "Remote peer"],
+      engineering: [
+        "Designed the two-layer controller and radio PCB.",
+        "Implemented the SPI radio interface and packet workflow.",
+        "Integrated the Li-ion power path and SMA connector.",
+        "Built and tested the peer-to-peer link outdoors."
+      ],
+      schematic: {
+        type: "Radio schematic",
+        src: "assets/projects/p2p-lora/radio-schematic.svg",
+        title: "Controller, SX1278 and antenna interface",
+        caption: "The controller frames the payload and exchanges it with the SX1278 over SPI; the radio then drives the external antenna through the SMA interface.",
+        points: ["SPI control and radio interrupts", "Packet sequence and retry handling", "External antenna and battery-powered node"]
+      },
+      validation: [
+        "Checked packet exchange between both hardware nodes.",
+        "Tested the link outdoors over distances up to 10 km.",
+        "Verified the complete controller, radio and antenna path."
+      ],
+      testing: "I tested the assembled pair in outdoor deployments and achieved communication over distances up to 10 km.",
+      result: "I completed a working long-range P2P communication MVP with custom hardware and firmware.",
+      nextStep: "The next improvement would add logged RSSI, sequence-loss and battery measurements across repeatable routes.",
+      links: [{label:"Public PCB notes", url:"https://github.com/scientist444/pcb-portfolio/tree/main/projects/lora-p2p-device"}]
     }
   ],
-  earlier: [
-    {title:"EKKO Wearable System", meta:"RISETech · Product · Completed", summary:"I worked across the connected wearable hardware and product interfaces, then consolidated the story here to avoid repeating the same evidence.", tags:["Wearable", "Embedded", "Product lifecycle"], image:"images/ekko-device.jpg"},
-    {title:"Avionics Automated Test Procedures", meta:"RIMS / NASTP Alpha · 2025", summary:"I built Python and LabVIEW test tooling for avionics LRUs, portable diagnostics and Ubuntu system-health monitoring.", tags:["Python", "LabVIEW", "Test engineering"], image:"images/python-gui-system-monitor.JPG"},
-    {title:"GNU Radio SDR Pipeline", meta:"RIMS / NASTP Alpha · 2025", summary:"I developed USRP X310 transmit/receive workflows and spectral analysis in GNU Radio Companion.", tags:["GNU Radio", "USRP X310", "RF"], image:"images/gnu-radio-usrp-x310.jpeg"},
-    {title:"Competition Line-Following Robot", meta:"AirTech '24 · 1st place", summary:"I designed an STM32 control board with five-channel IR sensing and dual motor drive, then manufactured and tested it.", tags:["STM32", "Robotics", "PCB"], image:"images/lfr-airtech24-winner.jpeg", link:"https://github.com/scientist444/pcb-portfolio"},
-    {title:"Long-Range LoRa Link", meta:"Independent · Tested", summary:"I built ATmega328P and SX1278 point-to-point boards and tested the link over distances up to 10 km.", tags:["LoRa", "ATmega328P", "RF"], image:"images/p2p-lora-device.jpeg", link:"https://github.com/scientist444/pcb-portfolio"}
-  ]
+  earlier: []
 };
 
 if (typeof window !== "undefined") window.PORTFOLIO_DATA = PORTFOLIO_DATA;
