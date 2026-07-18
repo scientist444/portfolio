@@ -25,6 +25,7 @@
 .button-ghost{border-color:#c7cdc5;color:var(--ink);background:rgba(255,255,255,.45)}.button-ghost:hover{background:#fff}
 .hero-stats{border-color:var(--line);background:var(--line)}.hero-stats div{background:rgba(255,255,255,.72)}.hero-stats dt{color:#486a0b}.hero-stats dd{color:var(--muted)}
 .portrait-shell{border-color:rgba(16,26,23,.18);background:rgba(255,255,255,.5)}
+.portrait-shell img{object-position:center;filter:saturate(.92) contrast(1.02)}
 .signal-label{border-color:rgba(16,26,23,.15);background:#fff;color:var(--ink);box-shadow:0 10px 25px rgba(16,26,23,.08)}
 .scope-card{border-color:var(--line);background:#fff}.scope-card span{color:#527a0c}.scope-card small{color:var(--muted)}
 .capability-section{background:#e9eee7;color:var(--ink)}.capability-section .section-heading>p{color:var(--muted)}.capability-section .kicker{color:#527a0c}
