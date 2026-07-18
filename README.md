@@ -19,6 +19,8 @@ pcb work/                 Local source archive
 
 Fourteen projects use the same dedicated case-study route. Each page includes requirements, architecture, a readable circuit or system schematic, implementation notes, validation and next steps.
 
+Experience, education and certifications are separate sections on the homepage. The education record lists the current CGPA as **3.73 / 4.00**, and each certification card links to its source image or PDF.
+
 ```text
 project.html?project=ankle-band
 project.html?project=smart-stethoscope
