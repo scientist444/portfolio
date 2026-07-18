@@ -36,3 +36,85 @@
 .case-facts{background:rgba(16,26,23,.14);border-color:rgba(16,26,23,.14)}.case-facts div{background:rgba(255,255,255,.7)}.case-facts dt{color:var(--muted)}
 .case-media{background:#e3e9e2}
 @media(max-width:680px){.primary-nav{background:#fbfaf5;border-color:rgba(16,26,23,.13)}}
+
+/* Project thumbnail system */
+.project-card,.project-card:nth-child(n){grid-column:span 6}
+.project-media::after{background:linear-gradient(to top,rgba(7,17,14,.92) 0%,rgba(7,17,14,.62) 39%,rgba(7,17,14,.04) 72%)}
+.thumbnail-caption{position:absolute;z-index:3;left:20px;right:20px;bottom:18px;color:#fff}
+.thumbnail-role{margin:0 0 6px;font:500 .6rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#d6e1dc}
+.thumbnail-caption h3{max-width:92%;margin:0;font-size:clamp(1.3rem,2.25vw,2rem);line-height:1.04;letter-spacing:-.045em}
+.thumbnail-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.thumbnail-tags span{padding:5px 8px;border:1px solid rgba(255,255,255,.23);border-radius:6px;background:rgba(7,17,14,.42);font:500 .54rem var(--mono);backdrop-filter:blur(8px)}
+.project-body{display:flex;min-height:230px;flex-direction:column}
+.project-body>p{margin:19px 0 0;min-height:0}
+.project-link{margin-top:auto}
+
+/* Documented project pages */
+.case-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:32px}
+.case-status{flex:none;margin-top:18px;padding:9px 13px;border:1px solid rgba(16,26,23,.16);border-radius:999px;background:#fff;font:500 .62rem var(--mono)}
+.case-status.active{border-color:#8ebd2f;background:var(--lime);color:var(--dark)}
+.case-summary{max-width:820px;font-size:clamp(1.08rem,1.8vw,1.32rem)}
+.case-hero .tag{background:#fff;border:1px solid rgba(16,26,23,.1)}
+.case-layout{grid-template-columns:240px minmax(0,900px);justify-content:center;gap:72px}
+.case-content{max-width:900px}
+.case-aside nav{padding-left:14px;border-left:1px solid var(--line)}
+.case-aside a{position:relative;padding:7px 0;line-height:1.35}
+.case-aside a:hover::before{content:"";position:absolute;left:-15px;top:10px;width:2px;height:16px;background:var(--lime)}
+.privacy-note{border:1px solid rgba(16,26,23,.08);background:#ebe8df}
+.case-block{padding-bottom:96px}
+.case-opening{padding-top:4px}
+.case-lead{max-width:820px;font-size:clamp(1.12rem,2vw,1.38rem)!important;line-height:1.7;color:#34423d!important}
+.subsection-title{margin:38px 0 0;font-size:1.05rem;letter-spacing:-.02em}
+.requirements-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.requirements-grid article{min-height:150px;padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.requirements-grid span{display:block;margin-bottom:28px;font:500 .63rem var(--mono);color:#527a0c}
+.requirements-grid p{margin:0;font-size:.9rem}
+.schematic-panel{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(260px,.82fr);overflow:hidden;margin-top:30px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 18px 55px rgba(16,26,23,.08)}
+.schematic-canvas{display:flex;min-height:440px;flex-direction:column;margin:0;padding:18px;background:#f8f7f2;border-right:1px solid var(--line)}
+.schematic-canvas img{width:100%;height:100%;min-height:380px;object-fit:contain;border-radius:12px;background:#fff}
+.schematic-canvas figcaption{padding:11px 2px 0;color:var(--muted);font:400 .58rem var(--mono)}
+.schematic-explanation{display:flex;flex-direction:column;justify-content:center;padding:32px}
+.schematic-explanation p{margin:0 0 24px;font-size:.96rem}
+.schematic-explanation ul{display:grid;gap:11px;margin:0;padding:0;list-style:none}
+.schematic-explanation li{position:relative;padding:12px 12px 12px 30px;border-radius:10px;background:var(--paper);font-size:.78rem;color:#34423d}
+.schematic-explanation li::before{content:"";position:absolute;left:13px;top:18px;width:6px;height:6px;border-radius:50%;background:#6f9f18}
+.evidence-gallery{margin-top:14px}
+.evidence-gallery img{height:300px}
+.validation-list{display:grid;gap:10px;margin:26px 0}
+.validation-list>div{display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:start;padding:17px 18px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.validation-list span{display:grid;place-items:center;width:28px;height:28px;border-radius:9px;background:#e2f3bd;color:#2f4a00;font-weight:800}
+.validation-list p{margin:0;font-size:.9rem}
+.testing-note{padding:20px 22px;border-left:3px solid #7daa28;background:#eaeee6;border-radius:0 12px 12px 0}
+.outcome-block{padding:42px;border:1px solid rgba(16,26,23,.13);border-radius:24px;background:#fff}
+.outcome-statement{max-width:760px;font-size:clamp(1.2rem,2.4vw,1.7rem)!important;line-height:1.45;color:var(--ink)!important}
+.next-step{margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+.next-step span{font:500 .62rem var(--mono);text-transform:uppercase;letter-spacing:.1em;color:#527a0c}
+.next-step p{margin:8px 0 0;font-size:.92rem}
+.case-links{margin-top:28px}
+
+@media(max-width:900px){
+  .project-card,.project-card:nth-child(n){grid-column:span 6}
+  .case-layout{grid-template-columns:1fr;gap:40px}
+  .case-aside{padding-bottom:18px;border-bottom:1px solid var(--line)}
+  .case-aside nav{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 24px}
+  .schematic-panel{grid-template-columns:1fr}
+  .schematic-canvas{border-right:0;border-bottom:1px solid var(--line)}
+}
+
+@media(max-width:680px){
+  .project-card,.project-card:nth-child(n){grid-column:auto}
+  .project-body{min-height:0}
+  .thumbnail-caption{left:16px;right:16px;bottom:15px}
+  .thumbnail-caption h3{font-size:1.4rem}
+  .case-title-row{display:block}
+  .case-status{display:inline-flex;margin-top:22px}
+  .case-title{font-size:3.25rem}
+  .case-aside nav{display:none}
+  .requirements-grid{grid-template-columns:1fr}
+  .requirements-grid article{min-height:0}
+  .requirements-grid span{margin-bottom:16px}
+  .schematic-canvas{min-height:300px;padding:12px}
+  .schematic-canvas img{min-height:260px}
+  .schematic-explanation{padding:24px 20px}
+  .outcome-block{padding:28px 22px}
+}

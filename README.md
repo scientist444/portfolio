@@ -1,6 +1,6 @@
 # Muhammad Umer Sajid — Engineering Portfolio
 
-A light, evidence-led portfolio for embedded electronics, PCB, firmware and test engineering work.
+A light portfolio documenting embedded electronics, PCB, firmware and test engineering work in Muhammad Umer Sajid's own voice.
 
 ## Structure
 
@@ -9,14 +9,14 @@ index.html                Portfolio home
 project.html              Reusable case-study page
 projects_data.js          Featured and earlier project content
 style.css                 Design system and responsive layout
-script.js                 Rendering, filters, motion and accessibility
-assets/projects/          Curated public hardware views
+script.js                 Rendering, motion and accessibility
+assets/projects/          Curated hardware, PCB and circuit excerpts
 assets/motion/            Privacy-safe Remotion previews
 motion/                    Remotion source and compositions
 PCB WORK/                 Local source archive (not published)
 ```
 
-Eight featured projects use dedicated case-study routes such as:
+Eight featured projects use dedicated case-study routes. Each page includes requirements, architecture, a focused circuit or hardware excerpt, implementation notes, validation and next steps.
 
 ```text
 project.html?project=ankle-band
